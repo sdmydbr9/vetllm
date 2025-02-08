@@ -1,0 +1,8 @@
+numpy
+faiss-cpu
+sentence-transformers
+spacy
+flashrank
+gradio
+google-genai
+ollama

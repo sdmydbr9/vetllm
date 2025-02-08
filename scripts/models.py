@@ -30,12 +30,38 @@ def simple_fulltext_score(query: str, doc: str) -> float:
         return 0.0
     return len(query_tokens.intersection(doc_tokens)) / len(query_tokens)
 
-# Set up spaCy and PhraseMatcher for simple keyword matching
+def progressive_condition_score(query: str, doc: str) -> float:
+    """
+    Extracts the condition from the document (assumed to be in the line starting with "Disease:")
+    and computes a score based on the longest common prefix of tokens.
+    """
+    lines = doc.splitlines()
+    disease_line = None
+    for line in lines:
+        if line.strip().lower().startswith("disease:"):
+            disease_line = line
+            break
+    if not disease_line:
+        return 0.0
+    # Remove the "Disease:" prefix and split into tokens.
+    condition = disease_line.split(":", 1)[1].strip().lower()
+    query_tokens = query.lower().split()
+    condition_tokens = condition.split()
+    match_count = 0
+    # Compare tokens in order (progressively matching)
+    for qt, ct in zip(query_tokens, condition_tokens):
+        if qt == ct:
+            match_count += 1
+        else:
+            break
+    return match_count / len(query_tokens)
+
+# Set up spaCy and PhraseMatcher for simple keyword matching (used for other categories)
 nlp = spacy.load("en_core_web_sm")
 pharma_keywords = [
     "indication", "tradename", "brand name", "active ingredient", "dose rate",
     "dosage", "administration", "contraindication", "food timing",
-    "meal timing", "when shall i give", "mechanism", "mechanism of action", "products",
+    "meal timing", "mechanism", "mechanism of action", "products",
     "medications", "drugs"
 ]
 clinical_keywords = [
@@ -96,7 +122,10 @@ def hybrid_search(query: str, doc_collections: dict, top_k_vector: int = 3, top_
     
     fulltext_candidates = []
     for i, doc in enumerate(docs):
-        ft_score = simple_fulltext_score(query, doc)
+        if category == "disease":
+            ft_score = progressive_condition_score(query, doc)
+        else:
+            ft_score = simple_fulltext_score(query, doc)
         if ft_score > 0:
             fulltext_candidates.append({
                 "id": i,
