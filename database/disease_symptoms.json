@@ -1,0 +1,1997 @@
+[
+    {
+        "Disease": "Abdominal Paracentesis",
+        "Symptoms": "No symptoms are specifically associated with abdominal paracentesis as it is a procedure rather than a disease.",
+        "Clinical_Signs": "Abdominal fluid accumulation, distension, pain, respiratory distress, lethargy, anorexia, vomiting, diarrhea"
+    },
+    {
+        "Disease": "Abomasal Displacement",
+        "Symptoms": "Anorexia, depression, rumen fill, decreased milk production, weight loss, rapid respiration, tachycardia",
+        "Clinical_Signs": "Tympany on the left side, splashing sounds on auscultation, decreased rumen contractions"
+    },
+    {
+        "Disease": "Abomasal Ulcer",
+        "Symptoms": "- Loss of appetite - Weight loss - Chronic intermittent diarrhea - Anemia - Depression - Tachycardia",
+        "Clinical_Signs": "- Signs of pain such as reluctance to move, grinding of teeth, and standing with the back arched - Rapid breathing - Blood in the feces (melena) - Tarry goop in the feces - Abdominal distension - Crackles on abdominal auscultation - Peritonitis"
+    },
+    {
+        "Disease": "Acarodematitis",
+        "Symptoms": "- Intense itching - Skin irritation - Redness and inflammation of the skin - Hair loss - Crusted or thickened skin - Secondary bacterial or fungal infections",
+        "Clinical_Signs": "- Pruritic skin lesions - Erythema and edema - Excoriations and crusts - Alopecia - Secondary pyoderma or Malassezia dermatitis"
+    },
+    {
+        "Disease": "Acid Indigestion",
+        "Symptoms": "- Vomiting - Diarrhea - Abdominal pain - Loss of appetite - Lethargy",
+        "Clinical_Signs": "- Dehydration - Electrolyte imbalance - Metabolic acidosis"
+    },
+    {
+        "Disease": "Acid Reflux (Gastroesophageal Reflux Disease - GERD)",
+        "Symptoms": "Vomiting, Regurgitation, Heartburn, Nausea, Hiccups, Cough, Sore throat, Hoarseness, Bad breath",
+        "Clinical_Signs": "Erosion of the esophagus, Ulcers in the esophagus, Strictures in the esophagus, Barrett's esophagus"
+    },
+    {
+        "Disease": "Acute Gastritis",
+        "Symptoms": "- Vomiting - Anorexia (loss of appetite) - Diarrhea (may or may not be present) - Abdominal pain - Lethargy",
+        "Clinical_Signs": "- Dehydration - Electrolyte imbalances - Weight loss - Anemia - Sepsis (in severe cases)"
+    },
+    {
+        "Disease": "Acute Renal Failure (ARF)",
+        "Symptoms": "**Symptoms** - Polyuria (increased urine production) - Polydipsia (increased thirst) - Oliguria (decreased urine production) - Anuria (no urine production) - Lethargy - Weakness - Vomiting - Diarrhea - Inappetence - Weight loss",
+        "Clinical_Signs": "**Clinical Signs** - Dehydration - Electrolyte imbalances - Acid-base imbalances - Azotemia (increased blood urea nitrogen) - Creatininemia (increased blood creatinine) - Hyperphosphatemia (increased blood phosphorus) - Hypocalcemia (decreased blood calcium) - Anemia - Metabolic acidosis"
+    },
+    {
+        "Disease": "Acute Rhinitis",
+        "Symptoms": "Sneezing, Nasal discharge, Nasal congestion, Difficulty breathing, Loss of appetite, Depression",
+        "Clinical_Signs": "Inflammation of the nasal mucosa, Hyperemia, Edema, Ulceration, Erosion"
+    },
+    {
+        "Disease": "Addison's Disease",
+        "Symptoms": "Loss of appetite, Weight loss, Lethargy, Weakness, Vomiting, Diarrhea, Tremors, Seizures, Coma",
+        "Clinical_Signs": "Hyponatremia (low sodium levels), Hyperkalemia (high potassium levels), Hypochloremia (low chloride levels), Metabolic acidosis, Hypoglycemia (low blood sugar levels), Skin hyperpigmentation, Alopecia (hair loss), Muscle weakness, Cardiac arrhythmias"
+    },
+    {
+        "Disease": "Addison's Disease (Hypoadrenocorticism)",
+        "Symptoms": "Lethargy, weakness, weight loss, decreased appetite, vomiting, diarrhea, abdominal pain, polyuria (excessive urination), polydipsia (excessive thirst), electrolyte imbalances, hyperpigmentation of the skin and mucous membranes, and Addisonian crisis (a life-threatening emergency that can occur if the condition is not treated)",
+        "Clinical_Signs": "Dehydration, low blood pressure, low blood sugar, low sodium levels, high potassium levels, and metabolic acidosis"
+    },
+    {
+        "Disease": "Addisonian Crisis",
+        "Symptoms": "None",
+        "Clinical_Signs": "Extreme weakness, collapse, dehydration, vomiting, diarrhoea, abdominal pain, electrolyte imbalance, low blood pressure, shock, seizures, coma"
+    },
+    {
+        "Disease": "Alkaline Indigestion",
+        "Symptoms": "Vomiting, diarrhea, abdominal pain",
+        "Clinical_Signs": "Altered pH, lethargy, dehydration"
+    },
+    {
+        "Disease": "Allergic Dermatoses (Eczematous Dermatoses)",
+        "Symptoms": "Intense pruritus (itching), erythema (redness), papules (small, raised bumps), vesicles (small blisters), pustules (small, pus-filled bumps), crusts, and scaling.",
+        "Clinical_Signs": "Facial swelling, waxy or oily skin, recurrent skin infections, and hair loss."
+    },
+    {
+        "Disease": "Allergies",
+        "Symptoms": "- Itching (pruritus) - Redness (erythema) - Swelling (edema) - Hair loss (alopecia) - Skin infections (pyoderma)",
+        "Clinical_Signs": "- Atopy (a type of allergy to environmental allergens) - Flea allergy dermatitis - Food allergy - Contact dermatitis - Drug reactions"
+    },
+    {
+        "Disease": "Alopecia (Baldness)",
+        "Symptoms": "- Itching",
+        "Clinical_Signs": "- Patchy or generalized hair loss"
+    },
+    {
+        "Disease": "Ammonia Intoxication",
+        "Symptoms": "Unable to eat or drink, Vomiting, Diarrhea, Coughing, Sneezing, Eye irritation, Skin irritation, Respiratory distress",
+        "Clinical_Signs": "Acute onset of ammonia dermatitis, respiratory distress, and gastrointestinal signs, Hepatic dysfunction, Central nervous system depression, seizures, or coma may occur"
+    },
+    {
+        "Disease": "Anaemia",
+        "Symptoms": "- Lethargy - Weakness - Fatigue - Pale gums - Rapid heart rate - Rapid breathing - Collapse",
+        "Clinical_Signs": "- PCV less than 35% - Hemoglobin less than 12 g/dL - Red blood cell count less than 5 million/uL - Increased erythropoietin levels - Reticulocytosis"
+    },
+    {
+        "Disease": "Anaplasmosis",
+        "Symptoms": "* Fever * Lethargy * Loss of appetite * Anemia * Jaundice * Lymphadenopathy * Splenomegaly",
+        "Clinical_Signs": "* Anemia * Thrombocytopenia * Leukopenia * Increased bilirubin levels * Elevated liver enzymes"
+    },
+    {
+        "Disease": "Anemia",
+        "Symptoms": "Lethargy",
+        "Clinical_Signs": "Pale gums, Tachycardia, Tachypnea, Decreased appetite, Weight loss"
+    },
+    {
+        "Disease": "Anestrous",
+        "Symptoms": "No symptoms are associated with this condition",
+        "Clinical_Signs": "Absence of estrus cycles, Prolonged interval between estrus cycles, Failure to ovulate, Infertility"
+    },
+    {
+        "Disease": "Anterior Uveitis",
+        "Symptoms": "Pain; Photophobia; Blepharospasm; Epiphora; Miosis",
+        "Clinical_Signs": "Conjunctival hyperemia; Corneal edema; Anterior chamber flare; Aqueous flare; Hypopyon; Keratic precipitates; Nodular lesions on the iris; Miosis; Anisocoria"
+    },
+    {
+        "Disease": "Arsenic Poisoning",
+        "Symptoms": "- Vomiting - Diarrhea - Abdominal pain - Lethargy - Loss of appetite - Dehydration",
+        "Clinical_Signs": "- Gastritis - Enteritis - Liver damage - Kidney damage - Nervous system damage"
+    },
+    {
+        "Disease": "Arthritis",
+        "Symptoms": "- Lameness - Stiffness - Pain - Swelling - Joint effusion - Heat",
+        "Clinical_Signs": "- Crepitus - Decreased range of motion - Muscle atrophy - Weight loss - Anorexia - Depression"
+    },
+    {
+        "Disease": "Arthritis (Polyarthritis)",
+        "Symptoms": "- Lameness - Stiffness - Pain - Swelling - Heat - Redness",
+        "Clinical_Signs": "- Inability to bear weight on affected leg(s) - Reluctance to move or jump - Favoring one leg over the other - Limping - Muscle atrophy - Joint effusion - Crepitus"
+    },
+    {
+        "Disease": "Ascites",
+        "Symptoms": "Abdominal distension, weight gain, lethargy, anorexia, dyspnea, oliguria, weakness",
+        "Clinical_Signs": "Distended abdomen filled with fluid, bulging flanks, muffled heart sounds, increased respiratory rate, pale mucous membranes, jugular distension, hepatomegaly, splenomegaly"
+    },
+    {
+        "Disease": "Aspergillosis",
+        "Symptoms": "Respiratory distress, Coughing, Sneezing, Wheezing, Dyspnea, Lethargy, Loss of appetite, Weight loss, Ocular discharge, Neurological signs",
+        "Clinical_Signs": "Lung nodules or masses, Tracheal or bronchial enlargement, Pleural effusion, Pneumonia, Peritonitis, Meningitis, Encephalitis"
+    },
+    {
+        "Disease": "Aspiration Pneumonia",
+        "Symptoms": "Coughing, difficulty breathing, rapid breathing, fever, lethargy, anorexia, weight loss",
+        "Clinical_Signs": "Crackles or wheezes on auscultation of the lungs, decreased lung sounds on the affected side, consolidation of the lungs on radiographs"
+    },
+    {
+        "Disease": "Azoturia or Monday Morning Disease",
+        "Symptoms": "Muscle stiffness, Muscle pain, Muscle weakness, Myoglobinuria (red urine), Elevated heart rate, Elevated respiratory rate, Sweating, Shivering",
+        "Clinical_Signs": "Dark urine, Muscle cramps, Muscle tenderness, Lameness, Recumbency, Tachypnea, Tachycardia, Diaphoresis, Hyperthermia, Renal failure"
+    },
+    {
+        "Disease": "Babesiosis",
+        "Symptoms": "* Fever * Lethargy * Anorexia * Pale mucous membranes * Jaundice * Hemoglobinuria",
+        "Clinical_Signs": "* Enlarged spleen * Enlarged liver * Anemia * Thrombocytopenia * Coagulation disorders * Nervous system signs"
+    },
+    {
+        "Disease": "Bartonellosis",
+        "Symptoms": "Fever, lethargy, anorexia, weight loss, anemia, pale gums, swollen lymph nodes",
+        "Clinical_Signs": "Jaundice, hepatomegaly, splenomegaly, lymphadenopathy, conjunctivitis, uveitis, keratitis, respiratory signs, gastrointestinal signs, neurologic signs"
+    },
+    {
+        "Disease": "Biochemical Tests for Deletion of Ketone Bodies in Urine",
+        "Symptoms": "",
+        "Clinical_Signs": ""
+    },
+    {
+        "Disease": "Blastomycosis",
+        "Symptoms": "Fever, Lethargy, Anorexia, Weight loss, Cough, Respiratory distress, Ocular discharge, Skin lesions",
+        "Clinical_Signs": "Enlarged lymph nodes, Hepatomegaly, Splenomegaly, Pulmonary nodules, Bone lesions, Skin lesions"
+    },
+    {
+        "Disease": "Blindness",
+        "Symptoms": "Inability to see, Bumping into objects, Hesitation to move around, Anxiety or fearfulness, Dilated pupils, Cloudy or opaque eyes, Nystagmus (involuntary eye movements)",
+        "Clinical_Signs": "Ophthalmoscopic examination revealing abnormalities in the eye structure, Electroretinography (ERG) showing decreased or absent electrical responses, Pupillary light reflex absent or diminished, Menace response absent or diminished, Vision tests revealing impaired visual acuity"
+    },
+    {
+        "Disease": "Bloat (Gastric Dilation and Volvulus) in Dogs",
+        "Symptoms": "Anorexia, Vomiting, Rapid shallow breathing, Anxiety/agitation, Bloated Abdomen (distended and firm to the touch), Gagging or attempts to vomit",
+        "Clinical_Signs": "Ptyalism (excessive salivation), Retching, Abdominal pain, Mucous membranes may be pale or cyanotic, Collapse, Shock"
+    },
+    {
+        "Disease": "Bordetella Bronchiseptica",
+        "Symptoms": "Sneezing, coughing, nasal discharge, lethargy, anorexia, fever",
+        "Clinical_Signs": "Tracheobronchitis, pneumonia, otitis media, conjunctivitis"
+    },
+    {
+        "Disease": "Bovine Enzootic Hematuria",
+        "Symptoms": "Hematuria (blood in urine), lethargy, anorexia, weight loss",
+        "Clinical_Signs": "Pale mucous membranes, weakness, rapid heart rate, pica (eating non-food items)"
+    },
+    {
+        "Disease": "Brain Abscess",
+        "Symptoms": "- Depression - Lethargy - Anorexia - Weight loss - Vomiting - Diarrhea - Seizures - Head tilt - Circling - Nystagmus (involuntary eye movement)",
+        "Clinical_Signs": "- Neurological signs (e.g., seizures, head tilt, circling, nystagmus) - Depression - Lethargy - Anorexia - Weight loss - Vomiting - Diarrhea - Fever - Pain"
+    },
+    {
+        "Disease": "Braken Fern",
+        "Symptoms": "Weight loss, lethargy, diarrhea, vomiting, abdominal pain, dehydration, and bloody feces",
+        "Clinical_Signs": "Elevated liver enzymes, jaundice, abdominal fluid, and liver failure"
+    },
+    {
+        "Disease": "Bronchiectasis",
+        "Symptoms": "None",
+        "Clinical_Signs": "Cough, dyspnea, wheezing, exercise intolerance and crackles on pulmonary auscultation"
+    },
+    {
+        "Disease": "Bronchitis",
+        "Symptoms": "\u2022 Cough \u2022 Wheezing \u2022 Difficulty breathing \u2022 Fatigue \u2022 Loss of appetite",
+        "Clinical_Signs": "\u2022 Fever \u2022 Crackles in the lungs \u2022 Rales in the lungs \u2022 Increased respiratory rate \u2022 Increased heart rate"
+    },
+    {
+        "Disease": "Caecal Obstruction",
+        "Symptoms": "* Anorexia * Weight loss * Lethargy * Colic * Diarrhea * Constipation",
+        "Clinical_Signs": "* Dehydration * Palpable abdominal mass * Borborygmi * Tympany * Rectal examination may reveal a distended cecum"
+    },
+    {
+        "Disease": "Canine Adenovirus Type 1 (Infectious Canine Hepatitis)",
+        "Symptoms": "List of symptoms for the disease",
+        "Clinical_Signs": "List of clinical signs associated with the disease"
+    },
+    {
+        "Disease": "Canine Adenovirus Type 2 (Canine Infectious Laryngotracheitis)",
+        "Symptoms": "* Cough * Sneezing * Nasal discharge * Loss of appetite * Lethargy",
+        "Clinical_Signs": "* Hoarseness * Difficulty breathing * Enlarged tonsils * Reddened or swollen larynx * Tracheitis * Bronchitis * Pneumonia"
+    },
+    {
+        "Disease": "Canine Anaplasmosis",
+        "Symptoms": "- Fever - Lethargy - Loss of appetite - Stiffness - Joint pain - Muscle pain - Vomiting - Diarrhea - Lymphadenopathy - Splenomegaly - Hepatomegaly",
+        "Clinical_Signs": "- Anemia - Thrombocytopenia - Leukopenia - Elevated liver enzymes - Elevated bilirubin - Creatinine kinase (CK) elevation - Polyuria - Polydipsia"
+    },
+    {
+        "Disease": "Canine Atopy",
+        "Symptoms": "- Pruritus (itchiness) - Erythema (redness) - Papules (small, raised bumps) - Urticaria (hives) - Otitis externa (inflammation of the ear canal) - Conjunctivitis (inflammation of the conjunctiva)",
+        "Clinical_Signs": "- Licking or chewing at the skin - Rubbing against objects - Recurrent skin infections - Hair loss - Thickened or darkened skin - Facial swelling"
+    },
+    {
+        "Disease": "Canine Babesiosis",
+        "Symptoms": "* Fever * Lethargy * Depression * Anorexia * Vomiting * Diarrhea * Abdominal pain * Jaundice * Anemia * Thrombocytopenia * Hemoglobinuria",
+        "Clinical_Signs": "* Enlargement of spleen * Enlargement of liver * Pale mucous membranes * Rapid heart rate * Irregular heart rhythm * Neurological signs (e.g., seizures, tremors, circling) * Death"
+    },
+    {
+        "Disease": "Canine Bordetella Bronchiseptica (Kennel Cough)",
+        "Symptoms": "Dry, hacking cough, Sneezing, Nasal discharge, Lethargy, Loss of appetite",
+        "Clinical_Signs": "Rapid respiration, Increased respiratory effort, Cyanosis (bluish tint to mucous membranes), Fever, Pneumonia"
+    },
+    {
+        "Disease": "Canine Coccidiosis",
+        "Symptoms": "* Diarrhea (sometimes bloody) * Vomiting * Weight loss * Abdominal pain * Lethargy * Anorexia * Dehydration",
+        "Clinical_Signs": "* Fever * Enlarged lymph nodes * Swollen abdomen * Pale gums * Rapid heart rate"
+    },
+    {
+        "Disease": "Canine Coronavirus (CCV)",
+        "Symptoms": "Diarrhea, vomiting, dehydration, lethargy, and loss of appetite",
+        "Clinical_Signs": "Serology, RT-PCR, ELISA, virus isolation"
+    },
+    {
+        "Disease": "Canine Distemper",
+        "Symptoms": "- Fever - Lethargy - Anorexia - Vomiting - Diarrhea",
+        "Clinical_Signs": "- Respiratory distress - Nervous signs (e.g., seizures, tremors, circling) - Skin lesions - Ocular discharge - Hyperkeratosis on footpads and nose"
+    },
+    {
+        "Disease": "Canine Ehrlichiosis",
+        "Symptoms": "Lethargy, anorexia, weight loss, fever, polyuria/polydipsia, vomiting, diarrhea, neurologic signs (e.g., tremors, ataxia, seizures)",
+        "Clinical_Signs": "Lymphadenopathy, splenomegaly, hepatomegaly, thrombocytopenia, anemia, leukopenia, pancytopenia"
+    },
+    {
+        "Disease": "Canine Eosinophilic Granuloma Complex",
+        "Symptoms": "\u2022 Pruritus \u2022 Skin lesions (e.g., plaques, nodules, ulcers)",
+        "Clinical_Signs": "\u2022 Eosinophilia \u2022 Increased serum IgE levels \u2022 Skin biopsy showing eosinophilic inflammation"
+    },
+    {
+        "Disease": "Canine Flea Allergy Dermatitis (FAD)",
+        "Symptoms": "**Symptoms** * Intense itching and scratching * Skin irritation and inflammation * Formation of papules and pustules * Crusty and thickened skin * Hot spots (moist, inflamed areas of skin) * Hair loss in affected areas",
+        "Clinical_Signs": "**Clinical Signs** * Flea infestation * Pruritic (itchy) skin * Erythema (redness) of the skin * Dermatitis (inflammation of the skin) * Papules (small, raised bumps) * Pustules (small, pus-filled bumps) * Crusty skin * Thickened skin * Hot spots * Hair loss"
+    },
+    {
+        "Disease": "Canine Food Allergies",
+        "Symptoms": "- Itchy skin, especially on the feet, belly, and ears - Hives - Red, inflamed skin - Hair loss - Vomiting - Diarrhea - Weight loss",
+        "Clinical_Signs": "- Pruritic dermatitis, characterized as generalized or focal areas of erythema and alopecia - Otitis externa - Gastrointestinal signs, such as vomiting, diarrhea, and flatulence - Weight loss or failure to gain weight despite adequate food intake"
+    },
+    {
+        "Disease": "Canine Gingivitis",
+        "Symptoms": "- Halitosis (bad breath) - Red and swollen gums - Bleeding gums - Pain or discomfort when eating - Receding gums - Loose teeth - Pus or discharge from the gums",
+        "Clinical_Signs": "- Dental plaque and calculus accumulation - Gingival inflammation and bleeding - Periodontal pockets - Bone loss around the teeth - Increased salivation - Anorexia or weight loss (in severe cases)"
+    },
+    {
+        "Disease": "Canine Heartworm Disease",
+        "Symptoms": "Sudden death, exercise intolerance, coughing, lethargy, vomiting, diarrhea, weight loss, swollen abdomen, difficulty breathing, and seizures",
+        "Clinical_Signs": "Coughing, rapid breathing, weight loss, lethargy, heart murmur, arrhythmias, and ascites (fluid in the abdomen)"
+    },
+    {
+        "Disease": "Canine Hepatozoonosis",
+        "Symptoms": "Weight loss, anorexia, lethargy, fever, diarrhea, vomiting, and pale mucous membranes",
+        "Clinical_Signs": "Hepatomegaly, splenomegaly, lymphadenopathy, and pancytopenia"
+    },
+    {
+        "Disease": "Canine Herpesvirus (CHV)",
+        "Symptoms": "Lethargy, Anorexia, Respiratory distress, Ocular discharge, Nasal discharge, Stillbirth, Neonatal death",
+        "Clinical_Signs": "Pneumonia, Keratitis, Conjunctivitis, Meningoencephalitis, Infertility, Abortion"
+    },
+    {
+        "Disease": "Canine Influenza",
+        "Symptoms": "* Fever * Cough * Sneezing * Nasal discharge * Lethargy * Loss of appetite * Vomiting * Diarrhea",
+        "Clinical_Signs": "* Respiratory signs (coughing, sneezing, nasal discharge, labored breathing) * Ocular signs (conjunctivitis, keratitis) * Gastrointestinal signs (vomiting, diarrhea, loss of appetite) * Neurological signs (seizures, depression) * Musculoskeletal signs (lameness, stiffness)"
+    },
+    {
+        "Disease": "Canine Influenza Virus (CIV)",
+        "Symptoms": "Sneezing, coughing, lethargy, loss of appetite, nasal discharge",
+        "Clinical_Signs": "Fever, respiratory distress, conjunctivitis, pneumonia"
+    },
+    {
+        "Disease": "Canine Leptospirosis",
+        "Symptoms": "Lethargy, Loss of appetite, Vomit, Diarrhea, Abdominal pain, Jaundice, Muscular pain, Uveitis, Neurological signs, Renal failure, Liver failure",
+        "Clinical_Signs": "Fever, Polyuria, Polydipsia, Weight loss, Dehydration, Pallor, Bradycardia, Irregular heart rhythm, Ascites, Pulmonary edema, Icterus, Petechial hemorrhages, Ecchymosis, Skin lesions"
+    },
+    {
+        "Disease": "Canine Lyme Disease",
+        "Symptoms": "Fever, lethargy, decreased appetite, lameness, swollen lymph nodes, joint pain, and stiffness",
+        "Clinical_Signs": "Erythema migrans (bull's-eye rash), arthritis, myocarditis, glomerulonephritis, and neurological abnormalities"
+    },
+    {
+        "Disease": "Canine Lyme Disease (Borrelia Burgdorferi)",
+        "Symptoms": "Fever, lethargy, lameness, swelling of joints, loss of appetite, weight loss, vomiting, diarrhea",
+        "Clinical_Signs": "Erythema migrans (bulls-eye rash), fever, lameness, swollen joints, enlarged lymph nodes, cardiac arrhythmias, neurological symptoms (e.g., facial paralysis, seizures), uveitis"
+    },
+    {
+        "Disease": "Canine Mange",
+        "Symptoms": "Persistent itching, hair loss, skin thickening, inflammation, redness, crusting, scaling, and secondary infections",
+        "Clinical_Signs": "Dandruff, alopecia (hair loss) with or without pustules, excoriations, and hyperpigmented plaques"
+    },
+    {
+        "Disease": "Canine Oral Eosinophilic Granuloma",
+        "Symptoms": "- Swollen, red gums - Ulceration and erosion of the gums - Pain and discomfort when eating or drinking - Excessive drooling - Bad breath",
+        "Clinical_Signs": "- Raised, firm, pale plaques or nodules on the gums, lips, or tongue - Ulceration and erosion of the oral mucosa - Hemorrhage and necrosis of the oral tissues - Swelling of the lymph nodes - Weight loss"
+    },
+    {
+        "Disease": "Canine Oral Fibrosarcoma",
+        "Symptoms": "Clinical signs associated with the disease include:",
+        "Clinical_Signs": "- Swelling or mass in the mouth - Bleeding from the mouth - Difficulty eating or chewing - Weight loss - Lethargy - Enlarged lymph nodes in the head and neck"
+    },
+    {
+        "Disease": "Canine Oral Lymphoma",
+        "Symptoms": "Swelling or enlargement of the gums, mouth, or jaw; Difficulty eating or drinking; Weight loss; Lethargy; Bad breath; Bleeding or discharge from the mouth; Pain in the mouth or jaw; Loose teeth; Facial deformity",
+        "Clinical_Signs": "Lymph node enlargement; Anemia; Thrombocytopenia; Leukocytosis; Hypercalcemia; Increased liver enzymes; Increased blood urea nitrogen"
+    },
+    {
+        "Disease": "Canine Oral Melanoma",
+        "Symptoms": "Reluctance to eat,  Drooling,  Bleeding from the mouth",
+        "Clinical_Signs": "Swelling of the gums,  Ulceration of the gums,  Loose teeth,  Radiographic evidence of bone destruction"
+    },
+    {
+        "Disease": "Canine Oral Osteosarcoma",
+        "Symptoms": "**Symptoms:**  - Excessive salivation  - Difficulty eating or drinking  - Weight loss  - Lameness  - Swollen face or jaw  - Bleeding from the mouth  - Bad breath",
+        "Clinical_Signs": "**Clinical Signs:**  - Abnormal growth or mass in the mouth  - Loose teeth  - Fractured teeth  - Pain or discomfort in the mouth  - Enlarged lymph nodes"
+    },
+    {
+        "Disease": "Canine Oral Papillomas",
+        "Symptoms": "Soft, warty growths in the mouth",
+        "Clinical_Signs": "Discomfort while eating or drinking, drooling, weight loss"
+    },
+    {
+        "Disease": "Canine Oral Squamous Cell Carcinoma",
+        "Symptoms": "Abnormal eating or drinking habits, Bad breath, Bleeding from the mouth, Difficulty chewing or swallowing, Drooling, Facial swelling, Loose teeth, Pain in the mouth, Swelling of the lymph nodes in the neck",
+        "Clinical_Signs": "Ulcerative or proliferative lesions on the oral mucosa, Asymmetrical growth, Raised borders, Exophytic or endophytic growth pattern, Infiltration of surrounding tissues, Enlargement of regional lymph nodes, Distant metastasis"
+    },
+    {
+        "Disease": "Canine Parainfluenza Virus (CPIV)",
+        "Symptoms": "Nasal discharge, coughing, sneezing, lethargy, loss of appetite",
+        "Clinical_Signs": "Fever, respiratory distress, pneumonia, conjunctivitis, keratitis"
+    },
+    {
+        "Disease": "Canine Parvovirus",
+        "Symptoms": "- Lethargy - Vomiting - Diarrhea (often bloody) - Loss of appetite - Depression",
+        "Clinical_Signs": "- Fever - Dehydration - Electrolyte imbalance - Anemia - Leukopenia - Thrombocytopenia"
+    },
+    {
+        "Disease": "Canine Periodontal Disease",
+        "Symptoms": "- Halitosis (bad breath) - Pain or discomfort while eating or chewing - Bleeding gums - Loose or missing teeth - Swollen or receding gums - Red or inflamed gums",
+        "Clinical_Signs": "- Tartar and plaque accumulation on the teeth - Gingivitis (inflammation of the gums) - Periodontitis (inflammation and infection of the structures supporting the teeth) - Bone loss around the teeth - Tooth root exposure - Abscesses or fistulas in the gums"
+    },
+    {
+        "Disease": "Canine Plasma Cell Pododermatitis",
+        "Symptoms": "Discrete, circumscribed, generally bilateral, slightly raised, red, erosive paw lesions generally affecting the digits and the carpal or tarsal joint pads",
+        "Clinical_Signs": "List of clinical signs is not available for this disease"
+    },
+    {
+        "Disease": "Canine Rabies",
+        "Symptoms": "- Fever - Vomiting - Diarrhea - Respiratory distress - Seizures - Paralysis",
+        "Clinical_Signs": "- Aggression - Hydrophobia (fear of water) - Drooling - Abnormal vocalizations - Muscle spasms - Coma"
+    },
+    {
+        "Disease": "Canine Ringworm (Dermatophytosis)",
+        "Symptoms": "- Circular or irregular areas of hair loss - Scaling and crusting of the skin - Itching and irritation - Redness and inflammation",
+        "Clinical_Signs": "- Dermatophytosis is a fungal infection of the skin that is caused by a variety of different species of fungi. - The most common species of fungi that cause ringworm in dogs are Microsporum canis and Microsporum gypseum. - Ringworm is a contagious disease that can be spread through direct contact with an infected animal or through contact with contaminated objects. - Dogs with ringworm are often asymptomatic, but some dogs may develop clinical signs such as:     - Circular or irregular areas of hair loss     - Scaling and crusting of the skin     - Itching and irritation     - Redness and inflammation - Ringworm can be diagnosed by a veterinarian through a physical examination and a fungal culture."
+    },
+    {
+        "Disease": "Canine Rocky Mountain Spotted Fever",
+        "Symptoms": "- Fever - Lethargy - Loss of appetite - Vomiting - Diarrhea - Abdominal pain - Joint pain - Coughing - Difficulty breathing",
+        "Clinical_Signs": "- Anemia - Thrombocytopenia - Leukocytosis - Elevated liver enzymes - Elevated creatinine - Proteinuria - Hematuria - Petechiae - Ecchymoses - Jaundice"
+    },
+    {
+        "Disease": "Canine Stomatitis",
+        "Symptoms": "* Halitosis (bad breath) * Excessive drooling * Difficulty eating or drinking * Pawing at the mouth * Head shaking * Weight loss",
+        "Clinical_Signs": "* Red, swollen, and bleeding gums * Ulcers on the gums and tongue * Tooth loss * Bone loss in the jaw * Lymphadenopathy (enlarged lymph nodes)"
+    },
+    {
+        "Disease": "Canine Tooth Resorption",
+        "Symptoms": "* Difficulty chewing * Drooling * Rubbing the face * Pawing at the mouth * Bad breath (halitosis)",
+        "Clinical_Signs": "* Tooth pain * Receding gums * Loose teeth * Tooth root exposure * Swelling of the gums * Sinusitis"
+    },
+    {
+        "Disease": "Canine Toxoplasmosis",
+        "Symptoms": "- Fever - Lethargy - Loss of appetite - Vomiting - Diarrhea - Neurological signs (e.g., seizures, circling, head tilt)",
+        "Clinical_Signs": "- Lymphadenopathy - Ocular lesions (e.g., uveitis, retinitis) - Respiratory signs (e.g., coughing, sneezing) - Skin lesions (e.g., maculopapular rash, ulcers) - Abortion - Stillbirth"
+    },
+    {
+        "Disease": "Carbonate Insecticides poisoning",
+        "Symptoms": "Vomiting Diarrhea Abdominal pain Muscle weakness Tremors Convulsions Respiratory depression",
+        "Clinical_Signs": "Reddened or irritated skin Conjunctivitis Hypersalivation Rales Dyspnea Cyanosis"
+    },
+    {
+        "Disease": "Cardiac Arrhythmia",
+        "Symptoms": "- Coughing - Exercise intolerance - Fainting - Lethargy - Rapid heart rate - Slow heart rate - Irregular heart rate - Cyanosis",
+        "Clinical_Signs": "- Arrhythmia on auscultation - Weak pulse - Murmur - Cardiomegaly - Congestive heart failure"
+    },
+    {
+        "Disease": "Cardiac Tamponade",
+        "Symptoms": "- Dyspnea - Cough - Weakness - Lethargy - Syncope",
+        "Clinical_Signs": "- Muffled heart sounds - Jugular distension - Ascites - Hepatomegaly - Pleural effusion - Pericardial effusion"
+    },
+    {
+        "Disease": "Cardio-Pulmonary Cerebral Resuscitation",
+        "Symptoms": "Information not applicable to this context",
+        "Clinical_Signs": "Information not applicable to this context"
+    },
+    {
+        "Disease": "Cataract",
+        "Symptoms": "Gradual loss of vision, clouding or opacity of the lens, changes in eye color, sensitivity to light, excessive tearing, squinting or holding the eye closed",
+        "Clinical_Signs": "Dilated pupils, abnormal pupillary light reflexes, decreased menace response, corneal edema, uveitis, glaucoma, phthisis bulbi"
+    },
+    {
+        "Disease": "Cataracts",
+        "Symptoms": "None",
+        "Clinical_Signs": "* Gradual or sudden onset of vision impairment * Painless * Eye appears opaque and cloudy (blue, off-white, gray or milky-white)"
+    },
+    {
+        "Disease": "Cerebellar Ataxia",
+        "Symptoms": "- Unsteady gait",
+        "Clinical_Signs": "- Wide-based stance - Head tremors - Nystagmus (involuntary eye movements) - Intention tremors (tremors that occur when the animal attempts to perform a voluntary movement) - Difficulty with balance and coordination"
+    },
+    {
+        "Disease": "Chlorinated Hydrocarbon Compound",
+        "Symptoms": "- Vomiting - Diarrhoea - Tremors - Seizures - Coma",
+        "Clinical_Signs": "- Skin irritation - Respiratory distress - Hepatomegaly - Splenomegaly - Nervous system disorders"
+    },
+    {
+        "Disease": "Chorea in Dog",
+        "Symptoms": null,
+        "Clinical_Signs": "Involuntary, purposeless, irregular, jerky muscle movements that may affect the head, limbs, or entire body; sudden onset; may be worse on one side of the body; may progress to generalized seizures"
+    },
+    {
+        "Disease": "Chronic Diarrhea in Cats and Dogs",
+        "Symptoms": "- Loose or watery stools lasting for more than 3 weeks - Increased frequency of bowel movements - Straining or urgency to defecate - Abdominal pain or discomfort - Loss of appetite - Weight loss",
+        "Clinical_Signs": "- Dehydration - Electrolyte imbalances - Vitamin deficiencies - Anemia - Protein-losing enteropathy - Colonic inflammation or ulceration - Neoplasia"
+    },
+    {
+        "Disease": "Chronic Gastric Impaction",
+        "Symptoms": "Vomiting",
+        "Clinical_Signs": "Abdominal pain, anorexia, lethargy, weight loss, dehydration, and electrolyte imbalances"
+    },
+    {
+        "Disease": "Chronic Gastritis",
+        "Symptoms": "- Vomiting - Weight loss - Loss of appetite - Regurgitation - Halitosis (bad breath) - Abdominal pain",
+        "Clinical_Signs": "- Gastrointestinal endoscopy reveals mucosal thickening, erosion, and ulceration - Histopathology shows chronic inflammation with fibrosis and glandular atrophy"
+    },
+    {
+        "Disease": "Chronic Iron Deficiency Anaemia",
+        "Symptoms": "Weakness, Lethargy, Pale mucous membranes",
+        "Clinical_Signs": "Pallor, Tachycardia, Poor growth, Hepatomegaly, Splenomegaly, Anorexia"
+    },
+    {
+        "Disease": "Chronic Renal Failure (CRF)",
+        "Symptoms": "The most common symptoms of CRF in cats and dogs include:  - Increased thirst and urination - Weight loss - Decreased appetite - Lethargy - Vomiting and/or diarrhea - Dental disease and stomatitis (inflammation of the mouth)",
+        "Clinical_Signs": "Physical examination findings that may be associated with CRF include: - Dehydration - Muscle wasting - Anemia - High blood pressure - Enlargement of the kidneys (in some cases)"
+    },
+    {
+        "Disease": "Chronic Rhinitis",
+        "Symptoms": "* Nasal discharge (clear, serous, mucopurulent, or purulent) * Sneezing * Nasal congestion * Snorting * Epistaxis (nosebleeds) * Facial pain or pressure * Loss of smell * Difficulty breathing * Halitosis (bad breath) * Lethargy * Anorexia",
+        "Clinical_Signs": "* Nasal discharge * Sneezing * Nasal congestion * Snorting * Epistaxis (nosebleeds) * Facial pain or pressure * Loss of smell * Difficulty breathing * Halitosis (bad breath) * Lethargy * Anorexia"
+    },
+    {
+        "Disease": "Clinical Neurological Examinations",
+        "Symptoms": "A clinical neurological examination may be performed when a neurological problem is suspected in an animal. The exam helps to localize the problem to a specific area of the nervous system and to determine the severity of the problem. Some of the symptoms that may indicate a neurological problem include:",
+        "Clinical_Signs": "difficulty walking or standing, head tilt, circling, nystagmus (rapid eye movement), seizures, loss of consciousness, and changes in behavior."
+    },
+    {
+        "Disease": "Cobalt deficiency",
+        "Symptoms": "* Weight loss * Poor appetite * Weakness * Anemia * Rough hair coat",
+        "Clinical_Signs": "* Reduced appetite * Weight loss * Weakness * Pale mucous membranes * Anemia"
+    },
+    {
+        "Disease": "Coccidioidomycosis",
+        "Symptoms": "Loss of appetite, weight loss, lethargy, fever, coughing, sneezing, difficulty breathing, lameness, joint pain, skin lesions, eye lesions",
+        "Clinical_Signs": "Pneumonia, arthritis, meningitis, uveitis, skin granulomas, subcutaneous abscesses, osteomyelitis, lymphadenopathy"
+    },
+    {
+        "Disease": "Coccidiosis",
+        "Symptoms": "* Diarrhea * Bloody diarrhea * Weight loss * Poor appetite * Lethargy",
+        "Clinical_Signs": "* Anemia * Dehydration * Malnutrition * Abdominal pain * Intestinal perforation"
+    },
+    {
+        "Disease": "Colic",
+        "Symptoms": "- Restlessness or agitation - Pawing at the ground - Rolling - Lying down and getting up frequently - Looking at the flanks - Kicking at the belly - Straining to defecate or urinate - Decreased appetite or complete anorexia - Depression",
+        "Clinical_Signs": "- Increased heart rate - Increased respiratory rate - Sweating - Dilated pupils - Dehydration - Impaction (hardened feces in the colon) - Gas distension of the intestines - Twisted gut - Strangulated intestine"
+    },
+    {
+        "Disease": "Congestive Cardiac Failure",
+        "Symptoms": "- Lethargy - Exercise intolerance - Cough - Difficulty breathing - Fluid accumulation in the abdomen (ascites) - Fluid accumulation in the lungs (pulmonary edema)",
+        "Clinical_Signs": "- Tachycardia - Dyspnea - Ascites - Crackles on lung auscultation - Hepatomegaly - Cardiomegaly"
+    },
+    {
+        "Disease": "Conjunctivitis",
+        "Symptoms": "- Watery discharge from the eye - Redness of the eye - Squinting or holding the eye closed - Rubbing or pawing at the eye - Discharge that may be clear, white, yellow, green, or bloody - Thickened or crusty discharge that may cause the eyelids to stick together - Swelling of the conjunctiva - Pain or discomfort in the eye",
+        "Clinical_Signs": "- Presence of discharge - Redness or inflammation of the conjunctiva - Corneal ulcers or scarring - Blepharospasm (involuntary closure of the eyelids) - Epiphora (excessive tearing) - Chemosis (swelling of the conjunctiva)"
+    },
+    {
+        "Disease": "Conjunctivitis (Pink Eye)",
+        "Symptoms": "- Redness and inflammation of the conjunctiva (the membrane that lines the eyelid and covers the white part of the eye) - Excessive tearing - Discharge from the eye (may be clear, white, yellow, or green) - Squinting or holding the eye closed - Rubbing or pawing at the eye - Sensitivity to light",
+        "Clinical_Signs": "- Conjunctival hyperemia (redness) - Conjunctival edema (swelling) - Conjunctival discharge (exudate) - Blepharospasm (squinting) - Epiphora (excessive tearing)"
+    },
+    {
+        "Disease": "Constipation",
+        "Symptoms": "- Straining to defecate - Hard, dry stools - Infrequent bowel movements - Painful defecation - Tenesmus (constant feeling of needing to defecate, but inability to do so)",
+        "Clinical_Signs": "- Dry, hard feces - Straining during defecation - Abdominal pain - Loss of appetite - Lethargy - Vomiting"
+    },
+    {
+        "Disease": "Copper deficiency",
+        "Symptoms": "Reduced growth rate, rough hair coat, poor hair pigmentation, decreased appetite, diarrhea, reproductive problems, anemia, and neurological abnormalities.",
+        "Clinical_Signs": "Pale mucous membranes, weight loss, weakness, incoordination, and anemia."
+    },
+    {
+        "Disease": "Corneal Ulcers",
+        "Symptoms": "Squinting, pawing at the eye, tearing, redness, and cloudiness of the cornea",
+        "Clinical_Signs": "Corneal opacity, corneal erosion, corneal perforation"
+    },
+    {
+        "Disease": "Cruciate Ligament Tears",
+        "Symptoms": "Difficulty rising from a sitting or lying position, Limping or lameness, Swelling or pain in the knee, Reduced range of motion in the knee, Instability or giving way of the knee",
+        "Clinical_Signs": "Drawer sign (excessive forward movement of the tibia relative to the femur), Cranial tibial thrust test (positive if the tibia can be moved forward relative to the femur), Caudal tibial thrust test (positive if the tibia can be moved backward relative to the femur), External rotation test (positive if the tibia can be rotated externally relative to the femur), Internal rotation test (positive if the tibia can be rotated internally relative to the femur)"
+    },
+    {
+        "Disease": "Cryptococcosis",
+        "Symptoms": "",
+        "Clinical_Signs": "Sneezing, Nasal discharge, Coughing, Dyspnea, Neurological signs (e.g., seizures, circling, head tilt), Skin lesions (e.g., nodules, ulcers), Ocular signs (e.g., uveitis, glaucoma), Weight loss, Lethargy, Anorexia"
+    },
+    {
+        "Disease": "Cryptorchidism",
+        "Symptoms": "No visible testicles within the scrotum",
+        "Clinical_Signs": "Small or empty scrotum on physical examination, may have associated inguinal hernia"
+    },
+    {
+        "Disease": "Cushing's Disease",
+        "Symptoms": "* Increased thirst and drinking * Increased urination * Increased appetite * Lethargy * Weight gain or loss * Muscle weakness * Thinning hair or alopecia * Skin infections * Ocular changes, such as cataracts or glaucoma * Reproductive disorders * Neurological signs, such as seizures or dementia",
+        "Clinical_Signs": "* Polyuria/polydipsia * Polyphagia * Abdominal enlargement * Muscle atrophy * Thinning skin * Hirsutism * Corneal lipid deposits * Increased blood pressure * Diabetes mellitus * Polycythemia * Hyperlipidemia"
+    },
+    {
+        "Disease": "Cushing's Syndrome (Hyperadrenocorticism)",
+        "Symptoms": "Increased thirst and urination, Increased appetite, Weight gain, Lethargy, Muscle weakness, Thinning skin, Hair loss",
+        "Clinical_Signs": "Polyuria (excessive urination), Polydipsia (excessive thirst), Polyphagia (excessive eating), Cushingoid appearance (round face, pot belly), Thinning skin, Hair loss, Lethargy, Muscle weakness"
+    },
+    {
+        "Disease": "Cyanide poisoning",
+        "Symptoms": "- Dyspnea - Tachypnea - Tachycardia - Vomiting - Diarrhea - Seizures - Coma",
+        "Clinical_Signs": "- Cherry-red mucous membranes - Dilated pupils - Muscle tremors - Paralysis"
+    },
+    {
+        "Disease": "Cystitis",
+        "Symptoms": "- Dysuria (painful urination) - Pollakiuria (frequent urination) - Stranguria (difficulty urinating) - Haematuria (blood in the urine) - Cloudy or foul-smelling urine",
+        "Clinical_Signs": "- Pain on palpation of the bladder - Enlarged or distended bladder - Increased frequency of urination - Straining to urinate - Urinating in small amounts - Dribbling of urine - Licking of the genital area"
+    },
+    {
+        "Disease": "Cytauxzoonosis",
+        "Symptoms": "- Fever - Anemia - Jaundice - Lethargy - Weight loss - Splenomegaly - Hepatomegaly - Lymphadenopathy",
+        "Clinical_Signs": "- Anemia - Thrombocytopenia - Leukopenia - Polycythemia - Hyperbilirubinemia - Hypoalbuminemia - Hyperglobulinemia"
+    },
+    {
+        "Disease": "Deafness in Animals",
+        "Symptoms": "Lack of response to verbal commands or loud noises, Difficulty following verbal directions, Head tilting or circling, Confusion or disorientation, Increased sleepiness or lethargy",
+        "Clinical_Signs": "Hearing loss can be unilateral (one ear) or bilateral (both ears), Deafness can be temporary or permanent, Hearing loss can occur suddenly or gradually, Deafness can be caused by a variety of factors, including genetic, environmental, and infectious, Deafness can have a significant impact on a pet's quality of life"
+    },
+    {
+        "Disease": "Demodectic Mange (Demodicosis, Demodicidosis)",
+        "Symptoms": "- Hair loss (alopecia) is usually the first sign - Redness and itching of the skin - Skin pustules or scabs - Thickening and wrinkling of the skin - Bacterial skin infections (secondary to the demodicosis)",
+        "Clinical_Signs": "- Generalized demodicosis: This is the most common form of demodicosis and affects dogs of all ages and breeds. It typically causes hair loss, redness, and itching of the skin, and skin pustules or scabs. The lesions are often symmetrical and may be distributed over the entire body. - Localized demodicosis: This form of demodicosis is less common and typically affects young puppies. It causes hair loss, redness, and itching of the skin in localized areas, such as the face, paws, or tail. - Demodex folliculitis: This is a rare form of demodicosis that causes inflammation of the hair follicles. It can lead to hair loss, redness, and itching of the skin, as well as the formation of pustules or scabs."
+    },
+    {
+        "Disease": "Dermatophytosis (Ringworm)",
+        "Symptoms": "- Circular or oval, sharply demarcated lesions - Pruritus",
+        "Clinical_Signs": "- Lesions are often dry and scaly - Lesions may be erythematous or hyperpigmented - Lesions may have a raised, edematous border - Lesions may coalesce to form larger areas of alopecia - Nails may become brittle and thickened - Lymphadenopathy may be present"
+    },
+    {
+        "Disease": "Diabetes Mellitus",
+        "Symptoms": "Increased thirst, increased urination, weight loss, increased appetite, lethargy, weakness",
+        "Clinical_Signs": "Polyuria, polydipsia, polyphagia, glucosuria, ketonuria, hyperglycemia, dehydration, electrolyte imbalance"
+    },
+    {
+        "Disease": "Diabetes in Cat",
+        "Symptoms": "- Increased thirst - Increased urination - Weight loss despite increased appetite - Dullness or lethargy",
+        "Clinical_Signs": "- Polyuria (increased urination) - Polydipsia (increased thirst) - Polyphagia (increased appetite) - Weight loss - Hyperglycemia (high blood sugar) - Glycosuria (sugar in the urine) - Ketonuria (ketones in the urine) - Dehydration"
+    },
+    {
+        "Disease": "Diabetes in Dogs",
+        "Symptoms": "Increased thirst, Increased urination, Weight loss, Increased hunger, Lethargy and weakness, Cloudy eyes, Slow-healing wounds or infections, Recurrent urinary tract infections",
+        "Clinical_Signs": "Hyperglycemia (high blood sugar), Glucosuria (glucose in the urine), Ketonuria (ketones in the urine), Elevated liver enzymes, Elevated blood triglycerides, Low blood pressure, Rapid heart rate"
+    },
+    {
+        "Disease": "Diabetic Ketoacidosis (DKA)",
+        "Symptoms": "* Polydipsia (excessive thirst) * Polyuria (excessive urination) * Polyphagia (excessive hunger in early stages) * Weight loss * Lethargy * Vomiting * Diarrhea",
+        "Clinical_Signs": "* Mild dehydration * Dehydration and electrolyte imbalance * Ketonuria (presence of ketones in urine) * Hyperglycemia (high blood sugar) * Metabolic acidosis * Fruity breath odor * Abdominal pain"
+    },
+    {
+        "Disease": "Diaphragmatic Hernia",
+        "Symptoms": "- Respiratory distress - Dyspnea - Cyanosis - Tachycardia - Coughing",
+        "Clinical_Signs": "- Abnormal breathing pattern - Muffled heart sounds - Abdominal distension - Decreased appetite - Lethargy"
+    },
+    {
+        "Disease": "Dietary Abomasal Impaction",
+        "Symptoms": "Unable to identify any symptoms for this disease",
+        "Clinical_Signs": "Pain when palpating the abomasum, Cow may bloat or have a loss of appetite, Increase in heart rate, Increased respirations, Depression, Abomasal distension, Dehydration, Feces may be dry and hard or absent, Grunting or moaning, Standing with an arched back and head down, Recumbency, Tachycardia, Tachypnea, Teeth grinding, Rumen hypomotility or atony"
+    },
+    {
+        "Disease": "Dietary Diarrhoea",
+        "Symptoms": "- Loose, watery stools - Increased frequency of defecation - Straining during defecation - Abdominal pain - Vomiting",
+        "Clinical_Signs": "- Dehydration - Electrolyte imbalance - Weight loss - Lethargy - Dull coat"
+    },
+    {
+        "Disease": "Distemper",
+        "Symptoms": "Sneezing, Coughing, Conjunctivitis, Nasal discharge, Anorexia, Vomiting, Diarrhea, Depression, Lethargy",
+        "Clinical_Signs": "Hyperkeratosis of the footpads, Skin lesions, Neurological signs (e.g., seizures, tremors, ataxia)"
+    },
+    {
+        "Disease": "Downer Cow Syndrome",
+        "Symptoms": "Loss of production, decreased appetite, reduced milk production, recumbency, electrolyte imbalances, muscle weakness, respiratory distress, metabolic acidosis, rumen stasis",
+        "Clinical_Signs": "Inability to stand or rise, muscle tremors, hypothermia, pale mucous membranes, jugular distension, tachycardia, bradycardia, arrhythmias"
+    },
+    {
+        "Disease": "Dysphagia",
+        "Symptoms": "* Regurgitation * Difficulty swallowing * Coughing after eating or drinking * Gagging * Nausea * Vomiting",
+        "Clinical_Signs": "* Increased salivation * Halitosis * Weight loss * Lethargy * Ptyalism"
+    },
+    {
+        "Disease": "Dystocia (Difficult Birth)",
+        "Symptoms": "Straining, restlessness, pawing at the ground, licking the vulva, and vocalizing",
+        "Clinical_Signs": "Cervical dilation incomplete or not progressing; uterine inertia; fetal malpositioning; fetal oversize; maternal exhaustion; maternal disease; uterine rupture; vaginal prolapse; and umbilical cord prolapsed"
+    },
+    {
+        "Disease": "Ear Infections (Otitis externa)",
+        "Symptoms": "Head shaking, Ear scratching, Pain when touched around the ear, Redness or swelling of the ear, Discharge from the ear (may be clear, yellow, or bloody), Bad odor from the ear, Deafness in severe cases",
+        "Clinical_Signs": "Otoscopic examination reveals inflammation and discharge within the ear canal, Deafness in severe cases"
+    },
+    {
+        "Disease": "Eclampsia (Milk Fever) in Dogs and Cats",
+        "Symptoms": "Symptoms of eclampsia include restlessness and anxiety, muscle twitching, tremors, seizures, stiffness, panting, vomiting, and diarrhea.",
+        "Clinical_Signs": "Clinical signs of eclampsia may include a low blood calcium level, high blood phosphorus level, and an electrolyte imbalance."
+    },
+    {
+        "Disease": "Eclampsia in Bitches",
+        "Symptoms": "- Restlessness - Agitation - Hyperventilation - Panting - Tremors - Seizures - Disorientation - Muscle spasms",
+        "Clinical_Signs": "- History of recent whelping and lactation - Serum calcium levels below 8.5 mg/dL - Clinical signs of hypocalcemia (see Symptoms)"
+    },
+    {
+        "Disease": "Ehrlichiosis",
+        "Symptoms": "Fever, lethargy, weight loss, inappetance, vomiting, diarrhea, nasal discharge, lymphadenopathy",
+        "Clinical_Signs": "Anemia, thrombocytopenia, leukopenia, neutropenia, mild hepatomegaly, splenomegaly, and ocular abnormalities"
+    },
+    {
+        "Disease": "Encephalitis",
+        "Symptoms": "- Fever - Depression - Lethargy - Anorexia - Vomiting - Diarrhea",
+        "Clinical_Signs": "- Seizures - Ataxia - Head tilt - Nystagmus - Blindness - Deafness"
+    },
+    {
+        "Disease": "Encephalomalacia",
+        "Symptoms": "**Neurological signs:** - Head tilt, incoordination, circling, tremors, seizures **Behavioral changes:** - Depression, lethargy, aggression **Ocular signs:** - Blindness, nystagmus, miosis",
+        "Clinical_Signs": "- Sudden onset of neurological symptoms - Absence of fever or gastrointestinal signs - Progression of symptoms over hours to days - Spinal cord signs may be present - Seizures may be refractory to treatment"
+    },
+    {
+        "Disease": "Endocarditis",
+        "Symptoms": "- Exercise intolerance - Lethargy - Weight loss - Loss of appetite",
+        "Clinical_Signs": "- Heart murmur - Irregular heartbeat - Tachypnea (rapid breathing) - Cyanosis (bluish discoloration of the gums or tongue) - Ascites (fluid accumulation in the abdomen) - Edema (swelling) of the limbs or face"
+    },
+    {
+        "Disease": "Endocrine Disorders",
+        "Symptoms": "Increased thirst, increased urination, weight loss, increased appetite, lethargy, vomiting, diarrhea, muscle weakness, changes in behavior, hair loss, skin problems",
+        "Clinical_Signs": "Polyuria, polydipsia, polyphagia, weight loss, lethargy, vomiting, diarrhea, muscle weakness, behavior changes, alopecia, skin lesions"
+    },
+    {
+        "Disease": "Enteritis",
+        "Symptoms": "* Vomiting * Diarrhea * Abdominal pain * Loss of appetite * Lethargy",
+        "Clinical_Signs": "* Dehydration * Electrolyte imbalance * Hypothermia * Weight loss * Sepsis"
+    },
+    {
+        "Disease": "Epilepsy",
+        "Symptoms": "* Abnormal behavior * Seizures * Loss of consciousness * Stiffening of the body",
+        "Clinical_Signs": "* Dilated pupils * Foaming at the mouth * Involuntary muscle contractions * Jerking movements"
+    },
+    {
+        "Disease": "Epistaxis",
+        "Symptoms": "Blood coming out of the nostrils",
+        "Clinical_Signs": "Pale gums, lethargy, weakness, rapid heart rate, rapid breathing"
+    },
+    {
+        "Disease": "Equine Renal Failure",
+        "Symptoms": "Anorexia, lethargy, weight loss, polyuria, polydipsia, vomiting, diarrhea, dehydration, weakness, seizures",
+        "Clinical_Signs": "Oliguria, anuria, blood urea nitrogen (BUN), creatinine, hypocalcemia, hyperphosphatemia, hyperkalemia, metabolic acidosis, azotemia"
+    },
+    {
+        "Disease": "Ergotism",
+        "Symptoms": "**Gastrointestinal:** - Vomiting - Diarrhea - Abdominal pain - Anorexia - Weight loss **Neurological:** - Tremors - Ataxia - Seizures - Paralysis - Coma **Cardiovascular:** - Tachycardia - Arrhythmias - Hypertension **Other:** - Skin lesions - Abortion - Fetal malformations - Death",
+        "Clinical_Signs": "**Gastrointestinal:** - Vomiting - Diarrhea - Abdominal pain **Neurological:** - Tremors - Ataxia - Seizures **Cardiovascular:** - Tachycardia - Hypertension **Other:** - Skin lesions"
+    },
+    {
+        "Disease": "Exocrine Pancreatic Insufficiency (EPI)",
+        "Symptoms": "Weight loss Poor appetite Frequent, bulky stools Diarrhea Vomiting Increased thirst Increased urination Flatulence",
+        "Clinical_Signs": "Failure to gain weight or loss of weight or poor growth Steatorrhea (presence of fat in feces) Azotemia (increased levels of nitrogen compounds in the blood) Hemolytic anemia (destruction of red blood cells)"
+    },
+    {
+        "Disease": "Facial Eczema",
+        "Symptoms": "\u2022 Loss of appetite \u2022 Salivation \u2022 Bruising and swelling of the face \u2022 Runny nose \u2022 Watery eyes \u2022 Sensitivity to light \u2022 Itching and scratching of the face \u2022 Depression \u2022 Lethargy",
+        "Clinical_Signs": "\u2022 Damage to the liver \u2022 Kidney damage \u2022 Jaundice \u2022 Photosensitivity \u2022 Skin irritation \u2022 Weight loss \u2022 Diarrhea \u2022 Vomiting"
+    },
+    {
+        "Disease": "Fatty Cow Syndrome",
+        "Symptoms": "None",
+        "Clinical_Signs": "- Lethargy - Depression - Loss of appetite - Decreased milk production - Infertility - Increased body weight - Pale or yellowish mucous membranes - Liver enlargement - Jaundice - Death"
+    },
+    {
+        "Disease": "Feline Acne",
+        "Symptoms": "- Blackheads - Whiteheads - Red, inflamed bumps - Itching - Pain",
+        "Clinical_Signs": "- Skin lesions - Secondary bacterial infection - Hair loss - Scarring"
+    },
+    {
+        "Disease": "Feline Atopy",
+        "Symptoms": "- Itching (pruritus) - Skin irritation and redness - Excessive licking and chewing at the skin - Hair loss - Scabs and crusts on the skin - Secondary skin infections",
+        "Clinical_Signs": "- Chronic, itchy skin, especially on the face, paws, and abdomen - Recurrent skin infections - Dry, flaky skin - Increased skin pigmentation - Pruritic eosinophilic plaques and miliary dermatitis"
+    },
+    {
+        "Disease": "Feline Calicivirus (FCV)",
+        "Symptoms": "- Sneezing - Nasal discharge - Conjunctivitis - Oral ulcers - Fever - Lethargy - Anorexia",
+        "Clinical_Signs": "- Swollen lymph nodes - Ulcerated or inflamed gums - Difficulty eating or drinking - Respiratory distress - Dehydration"
+    },
+    {
+        "Disease": "Feline Chlamydiosis",
+        "Symptoms": "Conjunctivitis (pink eye), Squinting, Discharge from eyes (clear to mucopurulent), Sneezing, Nasal discharge",
+        "Clinical_Signs": "Conjunctival hyperemia (redness), Chemosis (swelling of the conjunctiva), Corneal ulcers (rare), Enlarged lymph nodes, Fever (rare)"
+    },
+    {
+        "Disease": "Feline Coccidiosis",
+        "Symptoms": "- Diarrhea, which may be watery, bloody, or mucoid - Vomiting - Anorexia - Weight loss - Lethargy - Abdominal pain",
+        "Clinical_Signs": "- Fever - Dehydration - Lymphadenopathy - Icterus - Anemia"
+    },
+    {
+        "Disease": "Feline Cryptosporidiosis",
+        "Symptoms": "Diarrhea (typically watery and yellow or green), Vomiting, Lethargy, Dehydration, Weight loss",
+        "Clinical_Signs": "Abdominal pain, Fever, Enlarged lymph nodes, Jaundice, Respiratory distress"
+    },
+    {
+        "Disease": "Feline Eosinophilic Granuloma Complex",
+        "Symptoms": "* Pruritus (itching)* * Self-mutilation (due to itching)* * Hair loss (alopecia)* * Skin lesions (ulcers, erosions, crusts)* * Gastrointestinal signs (vomiting, diarrhea)* * Respiratory signs (coughing, sneezing)* * Neurological signs (seizures, ataxia)*",
+        "Clinical_Signs": "* Elevated eosinophil count on bloodwork* * Presence of eosinophils in skin lesions on cytology* * Skin biopsy showing eosinophilic inflammation* * Response to corticosteroids or other immunosuppressive therapy*"
+    },
+    {
+        "Disease": "Feline Flea Allergy Dermatitis (FAD)",
+        "Symptoms": "- Intense itching - Excessive grooming - Skin irritation and redness - Hair loss - Miliary dermatitis (small, raised, red bumps) - Crusting or scabbing of the skin - Hot spots (moist, inflamed areas of the skin)",
+        "Clinical_Signs": "- Feline Flea Allergy Dermatitis (FAD) is a common allergic skin condition in cats caused by an allergic reaction to flea saliva. - The severity of the symptoms can vary depending on the individual cat's sensitivity to flea bites. - FAD can be a chronic condition that requires ongoing management to control symptoms and prevent secondary infections. - Diagnosis is typically based on a physical examination and the cat's history of flea exposure. - Treatment involves flea control measures and symptomatic treatment to relieve itching and inflammation."
+    },
+    {
+        "Disease": "Feline Food Allergies",
+        "Symptoms": "* Pruritic skin lesions (itching, redness, scabs)",
+        "Clinical_Signs": "* Gastrointestinal signs (vomiting, diarrhea, flatulence)"
+    },
+    {
+        "Disease": "Feline Giardiasis",
+        "Symptoms": "Diarrhea, vomiting, weight loss, lethargy, dehydration",
+        "Clinical_Signs": "Fecal examination demonstrating Giardia spp. cysts or trophozoites, abdominal pain, borborygmus, tenesmus"
+    },
+    {
+        "Disease": "Feline Gingivitis",
+        "Symptoms": "Bad breath Excessive drooling Pawing at the mouth Difficulty eating or drinking Loss of appetite Weight loss",
+        "Clinical_Signs": "Redness and swelling of the gums Bleeding gums Receding gums Loose teeth Dental tartar and calculus Dental erosion"
+    },
+    {
+        "Disease": "Feline Heartworm Disease",
+        "Symptoms": "None to mild respiratory signs, especially coughing, wheezing, or exercise intolerance",
+        "Clinical_Signs": "Sudden death is possible but uncommon. Coughing, respiratory distress, vomiting, diarrhea, lethargy, weight loss, and ascites"
+    },
+    {
+        "Disease": "Feline Herpesvirus (FHV-1)",
+        "Symptoms": "Upper respiratory signs (sneezing, nasal discharge, conjunctivitis, keratitis), Coughing, Fever, Anorexia, Lethargy",
+        "Clinical_Signs": "Corneal ulcers, Stromal keratitis, Uveitis, Retinitis, Glaucoma"
+    },
+    {
+        "Disease": "Feline Hookworms",
+        "Symptoms": "Lethargy, weakness, weight loss, anemia, pale gums, loss of appetite, diarrhea, vomiting, pot-bellied appearance",
+        "Clinical_Signs": "Blood in stool, anemia, dehydration, weakness, emaciation"
+    },
+    {
+        "Disease": "Feline Immunodeficiency Virus (FIV)",
+        "Symptoms": "None in early stages, later stages may include:  - Lethargy  - Weight loss  - Fever  - Swollen lymph nodes  - Pale gums  - Diarrhea  - Vomiting  - Skin and respiratory infections",
+        "Clinical_Signs": "None in early stages, later stages may include:  - Anemia  - Neutropenia  - Lymphopenia  - Hyperglobulinemia  - Immune-mediated diseases  - Opportunistic infections"
+    },
+    {
+        "Disease": "Feline Infectious Peritonitis (FIP)",
+        "Symptoms": "- Lethargy - Anorexia - Weight loss - Fever - Abdominal distension - Respiratory distress",
+        "Clinical_Signs": "- Effusion in the peritoneal cavity (ascites) - Effusion in the pleural cavity (pleural effusion) - Liver enlargement (hepatomegaly) - Splenomegaly - Lymphadenopathy - Ocular lesions - Neurological signs"
+    },
+    {
+        "Disease": "Feline Leukemia Virus (FeLV)",
+        "Symptoms": "- Lethargy - Weight loss - Poor appetite - Diarrhea - Vomiting - Anemia - Immunosuppression",
+        "Clinical_Signs": "- Enlarged lymph nodes - Swollen gums - Pale mucous membranes - Skin infections - Respiratory infections - Eye infections - Neurological signs"
+    },
+    {
+        "Disease": "Feline Mange",
+        "Symptoms": "- Intense itching - Skin irritation - Skin redness - Hair loss - Scabs or crusts on the skin - Secondary bacterial infections - Lethargy",
+        "Clinical_Signs": "- Erythema - Pruritus - Alopecia - Scaling - Crusting - Folliculitis - Pyoderma"
+    },
+    {
+        "Disease": "Feline Non-Obstructive Urinary Tract Disease",
+        "Symptoms": "Straining to urinate, frequent urination, hematuria (blood in the urine), dysuria (painful urination), increased water consumption, and inappropriate urination outside the litter box.",
+        "Clinical_Signs": "Pollakiuria (frequent urination), stranguria (difficulty urinating), urinary incontinence, and pyuria (pus in the urine)."
+    },
+    {
+        "Disease": "Feline Obstructive Urinary Tract Disease",
+        "Symptoms": "Frequent urination and straining to urinate Urinary incontinence Blood in the urine Difficulty urinating Painful urination Lethargy Loss of appetite Vomiting",
+        "Clinical_Signs": "A palpable bladder Abdominal pain Urethral obstruction Urethral discharge"
+    },
+    {
+        "Disease": "Feline Oral Eosinophilic Granuloma",
+        "Symptoms": "- Stomatitis  - Oral pain  - Difficulty eating  - Weight loss  - Lethargy",
+        "Clinical_Signs": "- Oral ulcers  - Cobblestone appearance of the oral mucosa  - Eosinophilic plaques and nodules  - Increased salivation  - Enlarged lymph nodes"
+    },
+    {
+        "Disease": "Feline Oral Fibrosarcoma",
+        "Symptoms": "Irregular bleeding from the mouth, Dysphagia, Halitosis, Weight loss, Anorexia",
+        "Clinical_Signs": "Friable, ulcerated mass in the oral cavity, Calcified appearance, Rapid growth rate, Invasion of surrounding tissue, Facial distortion, Bone destruction"
+    },
+    {
+        "Disease": "Feline Oral Lymphoma",
+        "Symptoms": "- Halitosis (bad breath) - Difficulty eating - Weight loss - Lethargy",
+        "Clinical_Signs": "- Swollen or enlarged lymph nodes in the head and neck - Ulcerative or proliferative lesions in the oral cavity - Gingival hyperplasia - Soft tissue swelling of the face or neck - Bone erosion"
+    },
+    {
+        "Disease": "Feline Oral Melanoma",
+        "Symptoms": null,
+        "Clinical_Signs": "Oral bleeding, Pain in the mouth, Dental abnormalities, Swelling of the lips, gums, or palate, Difficulty eating or swallowing, Weight loss"
+    },
+    {
+        "Disease": "Feline Oral Osteosarcoma",
+        "Symptoms": "* Difficulty eating or drinking * Weight loss * Drooling * Bleeding from the mouth * Facial swelling * Loose teeth * Pain in the mouth * Bad breath",
+        "Clinical_Signs": "* Mass or swelling in the mouth * Bone destruction * Radiographic evidence of bone cancer * Metastasis to other organs"
+    },
+    {
+        "Disease": "Feline Oral Papillomas",
+        "Symptoms": "- Oral pain - Difficulty eating or drinking - Drooling - Weight loss",
+        "Clinical_Signs": "- Raised, wart-like lesions on the lips, gums, tongue, or other oral tissues - Lesions may be single or multiple - Lesions may be white or pink - Lesions may bleed or become infected"
+    },
+    {
+        "Disease": "Feline Oral Plasmacytoma",
+        "Symptoms": "This disease does not typically cause symptoms in cats.",
+        "Clinical_Signs": "Red, swollen, firm gingival and palatal masses"
+    },
+    {
+        "Disease": "Feline Oral Squamous Cell Carcinoma",
+        "Symptoms": "- Difficulty eating or drinking - Drooling or bleeding from the mouth - Swelling or pain in the mouth - Loose teeth or tooth loss - Bad breath",
+        "Clinical_Signs": "- Oral masses or swellings - Ulcerated or eroded oral mucosa - Bone destruction of the mandible or maxilla - Enlarged lymph nodes - Cachexia or weight loss"
+    },
+    {
+        "Disease": "Feline Panleukopenia (Feline Distemper)",
+        "Symptoms": "- Lethargy - Anorexia - Vomiting - Diarrhea (often bloody) - Dehydration - Loss of appetite - Depression - Fever - Abdominal pain",
+        "Clinical_Signs": "- Hematological abnormalities (e.g., neutropenia, lymphopenia, thrombocytopenia) - Gastrointestinal signs (e.g., vomiting, diarrhea, abdominal pain) - Neurological signs (e.g., ataxia, seizures) - Respiratory signs (e.g., coughing, sneezing) - Ophthalmic signs (e.g., conjunctivitis, uveitis)"
+    },
+    {
+        "Disease": "Feline Periodontal Disease",
+        "Symptoms": "* Halitosis * Difficulty eating or chewing * Excessive salivation * Bleeding gums * Receding gums * Loose teeth * Tooth loss * Pawing at the mouth * Facial swelling * Abscess formation",
+        "Clinical_Signs": "* Gingivitis (inflammation of the gums) * Periodontitis (inflammation of the periodontal tissues) * Dental caries (cavities) * Root exposure * Bone loss"
+    },
+    {
+        "Disease": "Feline Plasma Cell Pododermatitis",
+        "Symptoms": "1. Licking/chewing at the affected paws 2. Swelling and redness of the paw pads 3. Ulceration of the paw pads 4. Limping on the affected paw(s) 5. Reluctance to walk or jump",
+        "Clinical_Signs": "1. Plasma cells present in the dermis and subcutis of the paw pads"
+    },
+    {
+        "Disease": "Feline Ringworm",
+        "Symptoms": "Redness, Itching, Skin lesions",
+        "Clinical_Signs": "Circular or oval areas of\u8131\u6bdb, Crusty or scaling skin, Hair loss"
+    },
+    {
+        "Disease": "Feline Stomatitis",
+        "Symptoms": "- Difficulty or refusal to eat - Drooling - Pawing at the mouth - Bad breath - Weight loss",
+        "Clinical_Signs": "- Redness and swelling of the gums - Ulceration of the gums and oral mucosa - Plaque and tartar accumulation - Bone loss in the jaw - Enlarged lymph nodes"
+    },
+    {
+        "Disease": "Feline Tapeworms",
+        "Symptoms": "- Weight loss or other signs of malnutrition, such as a dull, dry coat, flaky skin, or loss of muscle mass.  - Abdominal pain and discomfort - Diarrhea or vomiting - Scooting or rubbing the anal area on the ground - Restlessness or irritability - Increased appetite",
+        "Clinical_Signs": "- Presence of rice-like segments in the cat's stool or vomitus - Enlarged abdomen  - Pale gums - Lethargy and weakness - Loss of appetite or weight loss - Dehydration"
+    },
+    {
+        "Disease": "Feline Tooth Resorption",
+        "Symptoms": "Reduced appetite, Drooling, Pawing at the mouth, Difficulty chewing, Facial swelling",
+        "Clinical_Signs": "Dentin resorption, Pulp exposure, Irregular tooth shape, Tooth mobility, Gingival inflammation"
+    },
+    {
+        "Disease": "Feline Toxoplasmosis",
+        "Symptoms": "- Lethargy",
+        "Clinical_Signs": "- Fever - Respiratory distress - Ocular lesions - CNS signs (paresis, seizures) - Abortion - Stillbirth"
+    },
+    {
+        "Disease": "Feline Tritrichomoniasis",
+        "Symptoms": "None",
+        "Clinical_Signs": "None"
+    },
+    {
+        "Disease": "Fibrosarcoma",
+        "Symptoms": "- Hard, raised swelling or lump on the skin or under the skin - May be painful or not - May grow slowly or rapidly - May ulcerate or bleed - May cause lameness if located on a limb",
+        "Clinical_Signs": "- Firm, non-painful mass that is attached to the overlying skin or deeper structures - Mass may be fixed or mobile - Mass may be ulcerated or have a draining tract - Regional lymphadenopathy may be present - Lameness may be present if the mass is located on a limb"
+    },
+    {
+        "Disease": "Fibrosis of liver (cirrhosis)",
+        "Symptoms": "* Weight loss * Loss of appetite * Lethargy * Vomiting * Diarrhea * Polyuria (excessive urination) * Polydipsia (excessive thirst)",
+        "Clinical_Signs": "* Jaundice (yellowing of the skin and mucous membranes) * Ascites (fluid accumulation in the abdomen) * Hepatomegaly (enlarged liver) * Splenomegaly (enlarged spleen) * Hyperbilirubinemia (elevated bilirubin levels in the blood) * Hypoalbuminemia (low albumin levels in the blood) * Coagulopathies (bleeding disorders) * Encephalopathy (brain dysfunction)"
+    },
+    {
+        "Disease": "Flea Allergy Dermatitis (FAD)",
+        "Symptoms": "Intense itching, Redness, Lesions, Skin irritation, Hair loss, Excessive scratching, Hot spots, Scabs, Crusty or flaky skin, Inflamed skin, Chewing at the skin, Licking the paws, Rubbing the face on the ground, Restlessness, Sleep disturbance",
+        "Clinical_Signs": "Papules, Erythema, Excoriations, Pruritus, Alopecia, Lichenification, Hyperpigmentation, Secondary pyoderma"
+    },
+    {
+        "Disease": "Fluoride poisoning",
+        "Symptoms": "* Vomiting * Diarrhea * Weakness * Depression * Dehydration * Tremors",
+        "Clinical_Signs": "* Hypocalcemia * Hypermagnesemia * Hypokalemia * Dental fluorosis * Skeletal fluorosis"
+    },
+    {
+        "Disease": "Free-martins",
+        "Symptoms": "None",
+        "Clinical_Signs": "* Intersex characteristics * Sterility"
+    },
+    {
+        "Disease": "Gastric Dilatation and Volvulus (GDV or Bloat)",
+        "Symptoms": "Abdominal distension, Retching/vomiting without producing much, Restlessness/anxiety, Salivation, Rapid heart rate, Panting, Weakness/collapse",
+        "Clinical_Signs": "Tympany (gas-filled stomach), Torsion of the stomach and its contents"
+    },
+    {
+        "Disease": "Gastric Ulcer",
+        "Symptoms": "- Vomiting - Abdominal pain - Weight loss - Lethargy - Anorexia",
+        "Clinical_Signs": "- Melena - Hematemesis - Anemia"
+    },
+    {
+        "Disease": "Gastritis (Abomasitis)",
+        "Symptoms": "Vomiting, anorexia, depression, abdominal pain, diarrhea, and weight loss",
+        "Clinical_Signs": "Gastric or abomasal distension, dehydration, electrolyte imbalance, and hypothermia"
+    },
+    {
+        "Disease": "Gastrointestinal Diseases",
+        "Symptoms": "Vomiting, Diarrhea, Constipation, Anorexia, Weight loss, Abdominal pain, Flatulence, Hematemesis (vomiting blood), Melena (black, tarry stools), Rectal prolapse, Tenesmus (straining to defecate)",
+        "Clinical_Signs": "Dehydration, Electrolyte imbalances, Abdominal distension, Borborygmi (abdominal sounds), Hyperthermia (fever), Hypothermia (low body temperature), Jaundice (yellowing of the skin and mucous membranes), Ascites (fluid accumulation in the abdomen), Peritonitis (inflammation of the peritoneum, the membrane lining the abdominal cavity), Sepsis (systemic infection)"
+    },
+    {
+        "Disease": "Glaucoma",
+        "Symptoms": "Pain, Redness, Squinting, Cloudiness, Tearing",
+        "Clinical_Signs": "Increased intraocular pressure, Cupping of the optic nerve, Dilated and non-reactive pupil, Corneal edema, Phthisis bulbi"
+    },
+    {
+        "Disease": "Gossypol poisoning",
+        "Symptoms": null,
+        "Clinical_Signs": "Hepatopathy, anemia, photosensitivity, abortion, reproductive disorders"
+    },
+    {
+        "Disease": "Haematoma (Othematoma)",
+        "Symptoms": "Swelling, pain, and heat in the affected ear",
+        "Clinical_Signs": "Abnormal ear carriage, head shaking, and decreased hearing"
+    },
+    {
+        "Disease": "Haematuria",
+        "Symptoms": "None",
+        "Clinical_Signs": "Pink or red urine, blood clots in urine, frequent urination, straining to urinate, pain or discomfort during urination"
+    },
+    {
+        "Disease": "Haemorrhagic Enteropathies",
+        "Symptoms": "Diarrhea (may be bloody or black), vomiting, abdominal pain, depression, anorexia, weakness, pale mucous membranes, weight loss",
+        "Clinical_Signs": "Fever, dehydration, electrolyte imbalances, anemia, hypovolemia, shock"
+    },
+    {
+        "Disease": "Haemorrhagic Gastroenteritis in Dog",
+        "Symptoms": "Loss of appetite, lethargy, vomiting, diarrhoea (often bloody or 'raspberry jam'-like), abdominal pain, weight loss",
+        "Clinical_Signs": "Tachycardia, dehydration, pale mucous membranes, electrolyte imbalance, haemoconcentration"
+    },
+    {
+        "Disease": "Haemothorax",
+        "Symptoms": "- Cough - Dyspnoea - Tachypnoea - Weakness",
+        "Clinical_Signs": "- Muffled lung sound - Increased respiratory rate - Tachycardia - Cyanosis - Jugular distension"
+    },
+    {
+        "Disease": "Halogenated Cyclin Hydrocarbon",
+        "Symptoms": "Anorexia, Vomiting, Diarrhea, Weight loss, Depression, Tremors, Ataxia, Seizures, Liver damage, Kidney damage",
+        "Clinical_Signs": "Increased respiratory rate, Increased heart rate, Cyanosis, Jaundice, Ascites, Edema, Neurological signs"
+    },
+    {
+        "Disease": "Heart Block",
+        "Symptoms": "Bradycardia, weakness, lethargy, syncope, seizures, sudden death",
+        "Clinical_Signs": "Low pulse rate by auscultation, hypotension, weak femorals, prolonged PR interval on ECG"
+    },
+    {
+        "Disease": "Heart Disease",
+        "Symptoms": "* Fatigue * Weakness * Shortness of breath * Coughing * Chest pain * Dizziness or fainting * Rapid or irregular heart rate",
+        "Clinical_Signs": "* Murmurs * Arrhythmias * Cardiomegaly * Pulmonary edema * Ascites * Cachexia * Syncope"
+    },
+    {
+        "Disease": "Heartworm Disease",
+        "Symptoms": "- Persistent dry cough - Lethargy - Difficulty breathing - Weight loss - Vomiting - Diarrhea",
+        "Clinical_Signs": "- Abnormal heart sounds - Enlarged heart - Lung disease - Liver disease - Kidney disease"
+    },
+    {
+        "Disease": "Heat Stress (Hyperthermia)",
+        "Symptoms": "- Increased body temperature - Rapid breathing or panting - Drooling or excessive salivation - Lethargy or weakness - Staggering or loss of coordination - Vomiting or diarrhea - Tremors or seizures - Collapse or coma",
+        "Clinical_Signs": "- Red or flushed gums - Bright red or purple tongue - Rapid and bounding pulse - Increased capillary refill time - Mucous membranes that are dry or tacky - Sunken eyes - Dry and brittle skin - Muscle rigidity"
+    },
+    {
+        "Disease": "Heat Stroke",
+        "Symptoms": "Panting, Confusion, Seizures, Vomiting, Diarrhea, Bright red or purple gums, Rapid heart rate, Loss of appetite, Lethargy, Weakness, Collapse",
+        "Clinical_Signs": "Elevated body temperature (rectal temperature > 105 degrees Fahrenheit), Dehydration, Electrolyte imbalance, Organ damage (e.g., liver, kidney, brain)"
+    },
+    {
+        "Disease": "Hematopoietic Tumors",
+        "Symptoms": "- Lethargy - Weight loss - Anorexia - Weakness - Anemia - Thrombocytopenia - Leukopenia",
+        "Clinical_Signs": "- Palpable masses - Hepatosplenomegaly - Lymph node enlargement - Bone marrow suppression"
+    },
+    {
+        "Disease": "Hepatitis",
+        "Symptoms": "- Lethargy - Inappetence - Vomiting - Diarrhea - Abdominal pain - Jaundice - Polyuria - Polydipsia",
+        "Clinical_Signs": "- Hepatomegaly - Splenomegaly - Ascites - Encephalopathy - Coagulopathy - Anemia - Hypoalbuminemia - Hyperbilirubinemia"
+    },
+    {
+        "Disease": "Hepatozoonosis",
+        "Symptoms": "- Fever - Weight loss - Lethargy - Anorexia",
+        "Clinical_Signs": "- Anemia - Thrombocytopenia - Hepatomegaly - Splenomegaly - Lymphadenopathy"
+    },
+    {
+        "Disease": "Herbicide poisoning",
+        "Symptoms": "Vomiting, diarrhea, abdominal pain, weakness, depression, incoordination, muscle tremors, convulsions, and respiratory distress",
+        "Clinical_Signs": "Gastrointestinal irritation, central nervous system depression, and respiratory distress"
+    },
+    {
+        "Disease": "Histoplasmosis",
+        "Symptoms": "Weight loss, exercise intolerance, respiratory distress, coughing",
+        "Clinical_Signs": "Hepatomegaly, lymphadenomegaly, splenomegaly, oral ulcers, skin lesions, uveitis"
+    },
+    {
+        "Disease": "Hydronephrosis",
+        "Symptoms": "* Polyuria * Dysuria * Stranguria * Hematuria * Urinary incontinence * Frequency of urination",
+        "Clinical_Signs": "* Enlarged kidney * Thickened bladder wall * Dilated ureters * Increased urinary protein levels * Increased urinary specific gravity"
+    },
+    {
+        "Disease": "Hydrothorax",
+        "Symptoms": "Difficulty breathing, Coughing, Increased respiratory rate, Exercise intolerance, Lethargy",
+        "Clinical_Signs": "Abnormal lung sounds (rales or crackles), Distended abdomen, Jugular vein distension, Muffled heart sounds, Cyanosis, Hepatomegaly"
+    },
+    {
+        "Disease": "Hyperadrenocorticism",
+        "Symptoms": "Increased thirst, Increased urination, Increased appetite, Weight loss, Muscle weakness, Lethargy, and Panting.",
+        "Clinical_Signs": "Polydipsia, Polyuria, Polyphagia, Weight loss, Muscle atrophy, Lethargy, and Tachypnea."
+    },
+    {
+        "Disease": "Hyperparathyroidism",
+        "Symptoms": "- Polyuria - Polydipsia - Weight loss - Poor appetite - Lethargy - Weakness - Bone pain or stiffness - Dental problems - Gastrointestinal problems - Muscle weakness or paralysis",
+        "Clinical_Signs": "- Increased serum calcium levels - Decreased serum phosphorus levels - Increased parathyroid hormone levels - Osteoporosis - Bone deformities - Dental problems - Gastrointestinal problems - Muscle weakness or paralysis"
+    },
+    {
+        "Disease": "Hyperthyroidism (Cats)",
+        "Symptoms": "Weight loss despite increased appetite, Polydipsia, Polyuria, Increased vocalisation, Hyperactivity, Restlessness, Anxiety",
+        "Clinical_Signs": "Tachycardia, Arrhythmias, Hypertension, Cardiomyopathy, Hepatomegaly, Muscle wasting, Ocular proptosis, Tremors, Seizures, Hyperthermia"
+    },
+    {
+        "Disease": "Hypoadrenocorticism",
+        "Symptoms": "- Lethargy - Anorexia - Vomiting - Diarrhea - Weight loss",
+        "Clinical_Signs": "- Addisonian crisis - Hyperpigmentation of the skin and mucous membranes - Electrolyte imbalances - Hypotension - Bradycardia - Hypothermia"
+    },
+    {
+        "Disease": "Hypoglycaemia",
+        "Symptoms": "* Weakness * Lethargy * Tremors * Seizures * Coma",
+        "Clinical_Signs": "* Tachycardia * Pale mucous membranes * Dilated pupils * Increased respiratory rate * Decreased body temperature"
+    },
+    {
+        "Disease": "Hypoglycemia",
+        "Symptoms": "Lethargy, weakness, tremors, seizures, ataxia",
+        "Clinical_Signs": "Hypothermia, tachycardia, pale mucous membranes, dilated pupils, decreased mentation"
+    },
+    {
+        "Disease": "Hypomagnesaemic Tetany",
+        "Symptoms": "\u2022 Twitching ears \u2022 Sensitivity to noise or touch \u2022 Muscle tremors \u2022 Abnormal gait \u2022 Stiffness \u2022 Seizures \u2022 Coma",
+        "Clinical_Signs": "\u2022 Hyperaesthesia \u2022 Ataxia \u2022 Muscle tremors \u2022 Convulsion \u2022 Tetanic spasms \u2022 Opisthotonus \u2022 Recumbency"
+    },
+    {
+        "Disease": "Hypothermia",
+        "Symptoms": "- Shivering - Lethargy - Weakness - Confusion - Loss of coordination - Dilated pupils - Slow heart rate - Slow breathing - Coma",
+        "Clinical_Signs": "- Rectal temperature below 95\u00b0F (35\u00b0C) - Cold to the touch - Pale or blue gums - Stiff muscles - Shallow breathing - Weak pulse"
+    },
+    {
+        "Disease": "Hypothyroidism",
+        "Symptoms": "- Lethargy - Weight gain - Poor appetite - Cold intolerance - Constipation - Dry skin and hair - Alopecia (hair loss) - Muscle weakness",
+        "Clinical_Signs": "- Bradycardia (slow heart rate) - Pericardial effusion (fluid around the heart) - Ascites (fluid in the abdomen) - Anemia (low red blood cell count) - Hypercholesterolemia (high cholesterol levels) - Elevated liver enzymes"
+    },
+    {
+        "Disease": "Hypoxia",
+        "Symptoms": "- Rapid, shallow breathing - Cyanosis (bluish tint to the gums, tongue, or skin) - Weakness - Lethargy - Confusion - Seizures - Coma",
+        "Clinical_Signs": "- Increased heart rate - Increased respiratory rate - Dilated pupils - Abnormal lung sounds (e.g., crackles, wheezes) - Bradycardia (slow heart rate) in severe cases"
+    },
+    {
+        "Disease": "Immune-Mediated Hemolytic Anemia (IMHA)",
+        "Symptoms": "- Fatigue - Weakness - Lethargy - Pale mucous membranes - Jaundice - Dark urine - Increased thirst - Increased urination - Weight loss",
+        "Clinical_Signs": "- Anemia - Splenomegaly - Hepatomegaly - Lymphadenopathy - Thrombocytopenia - Leukopenia - Autoimmune hemolytic anemia (AIHA)"
+    },
+    {
+        "Disease": "Impaction of Ileo-Caecal Vulve",
+        "Symptoms": "Anorexia, Lethargy, Vomiting, Diarrhea, Abdominal pain, Straining to defecate, Tenesmus, Constipation, Fever",
+        "Clinical_Signs": "Abdominal distension, Palpable mass in the abdomen, Tympany, Dehydration, Tachycardia, Tachypnea, Jaundice, Icterus, Ascites, Anuria, Oliguria, Uremia, Hyperkalemia, Hyponatremia, Hypocalcemia, Hypoglycemia, Metabolic acidosis, Respiratory acidosis, Cardiogenic shock, Septic shock, Endotoxemia, Disseminated intravascular coagulation, Multi-organ dysfunction syndrome, Death"
+    },
+    {
+        "Disease": "Impaction of Large Intestine",
+        "Symptoms": "* Straining to defecate * Dry, hard, small-diameter feces * Visible abdominal discomfort * Decreased appetite * Lethargy",
+        "Clinical_Signs": "* Abdominal distension * Palpable fecal mass in the colon * Decreased borborygmus * Rectal examination reveals a firm, dry fecal mass * Radiographs may show a gas-filled colon and rectum"
+    },
+    {
+        "Disease": "Impactive Colic",
+        "Symptoms": "- Decreased appetite - Lethargy - Depression - Signs of abdominal discomfort (e.g., pawing at abdomen, lying down and getting up frequently) - Straining or colic signs when defecating - May pass small, dry feces or no feces at all",
+        "Clinical_Signs": "- Rectal examination: Impacted feces palpable in the rectum and colon - Abdominal palpation: Distended large colon with firm feces palpable"
+    },
+    {
+        "Disease": "Infectious Tracheobronchitis",
+        "Symptoms": "* Coughing * Sneezing * Nasal discharge * Fever * Lethargy * Loss of appetite",
+        "Clinical_Signs": "* Respiratory distress * Wheezing * Rales * Crackles * Cyanosis * Fever * Lethargy * Dehydration"
+    },
+    {
+        "Disease": "Inflammatory Bowel Disease",
+        "Symptoms": "- Vomiting - Diarrhea (may be bloody or mucoid) - Weight loss - Loss of appetite - Abdominal pain - Lethargy - Fever",
+        "Clinical_Signs": "- Thickened intestinal walls - Ulcers or erosions in the intestinal mucosa - Abscesses or fistulas in the intestinal wall - Strictures or adhesions in the intestine - Lymphadenopathy - Peritonitis"
+    },
+    {
+        "Disease": "Insecticide and Acaricide poisoning",
+        "Symptoms": "Vomiting, Diarrhea, Excessive salivation, Tremors, Seizures, Respiratory distress, Cyanosis",
+        "Clinical_Signs": "Miosis (constricted pupils), Bradycardia (slow heart rate), Hypotension (low blood pressure), Muscle weakness, Paralysis"
+    },
+    {
+        "Disease": "Interpretation of Abdominal Effusion",
+        "Symptoms": "- Lethargy",
+        "Clinical_Signs": "- Abnormal fluid accumulation in the abdominal cavity"
+    },
+    {
+        "Disease": "Interstitial Nephritis",
+        "Symptoms": "Increased thirst, Increased urination, Frequent urination, Drinking more water than usual, Urinating more often than usual, Difficulty urinating, Straining to urinate, Abdominal pain, Flank pain, Back pain, Cloudy urine, Bloody urine, Loss of appetite, Weight loss, Lethargy, Weakness",
+        "Clinical_Signs": "Proteinuria, Hematuria, Pyuria, Azotemia, Hyperphosphatemia, Hypertension, Anemia, Electrolyte imbalances, Acid-base disturbances, Polydipsia, Polyuria, Pollakiuria, Dysuria, Stranguria, Abdominal pain, Flank pain, Back pain, Cloudy urine, Bloody urine, Loss of appetite, Weight loss, Lethargy, Weakness"
+    },
+    {
+        "Disease": "Intervertebral Disc Disease (IVDD)",
+        "Symptoms": "- Pain - Weakness or paralysis - Urinary or fecal incontinence - Abnormal gait - Muscle atrophy - Loss of appetite",
+        "Clinical_Signs": "- Spinal pain - Difficulty walking or standing - Weakness or paralysis in one or more limbs - Abnormal reflexes - Loss of sensation in one or more limbs - Urinary or fecal incontinence"
+    },
+    {
+        "Disease": "Intussusception",
+        "Symptoms": "- Vomiting - Bloody diarrhea - Abdominal pain - Loss of appetite - Lethargy",
+        "Clinical_Signs": "- Sausage-shaped mass on abdominal palpation - Abdominal distension - Dehydration - Tachycardia - Shock"
+    },
+    {
+        "Disease": "Iodine deficiency",
+        "Symptoms": "* Lethargy * Weight loss * Poor hair coat * Thickened skin * Goiter (enlarged thyroid gland) * Reproductive problems * Neurological problems (e.g., seizures, tremors)",
+        "Clinical_Signs": "* Hypothyroidism * Infertility * Abortion * Stillbirth * Weak or deformed offspring * Increased susceptibility to infections"
+    },
+    {
+        "Disease": "Iron deficiency",
+        "Symptoms": "Pale mucous membranes, weakness, lethargy, and poor appetite",
+        "Clinical_Signs": "Pale gums, rapid heart rate, rapid breathing, weakness, lethargy, and poor appetite"
+    },
+    {
+        "Disease": "Kennel Cough (Infectious Tracheobronchitis)",
+        "Symptoms": "- Harsh, dry cough - Honking cough - Gagging - Retching - Sneezing - Nasal discharge",
+        "Clinical_Signs": "- Fever - Lethargy - Reduced appetite - Coughing fits that may last for several minutes - Coughing that is worse at night or when the dog is excited - Coughing that produces white or yellow mucus"
+    },
+    {
+        "Disease": "Keratitis",
+        "Symptoms": "Pain, Squinting, Rubbing eye, Excessive tear production, Holding eye closed",
+        "Clinical_Signs": "Redness, Cloudiness, Ulceration, Swelling, Discharge, Corneal edema"
+    },
+    {
+        "Disease": "Ketosis",
+        "Symptoms": "- Decreased appetite - Depressed - Weight loss",
+        "Clinical_Signs": "- Ketone bodies in the blood or urine - Milk production may be decreased - The cow may have a sweet, fruity breath"
+    },
+    {
+        "Disease": "Kidney Disease",
+        "Symptoms": "- Increased thirst - Increased urination - Loss of appetite - Weight loss - Vomiting - Diarrhea",
+        "Clinical_Signs": "- Dehydration - Electrolyte imbalances - Anemia - High blood pressure - Proteinuria (protein in the urine) - Creatinine elevation - Azotemia (high levels of nitrogenous waste products in the blood)"
+    },
+    {
+        "Disease": "Lameness",
+        "Symptoms": "Difficulty or unwillingness to move, decreased activity level, limping, favoring one limb, reluctance to bear weight on the affected limb",
+        "Clinical_Signs": "Asymmetrical gait, shortened stride on the affected limb, reluctance to rise or lie down, stiffness, swelling, pain, heat, discoloration, wounds or abrasions on the affected limb"
+    },
+    {
+        "Disease": "Laryngeal Oedema",
+        "Symptoms": "* Respiratory distress * Stridor * Dyspnoea * Cough * Tachypnoea * Cyanosis * Laryngeal paralysis * Inability to swallow",
+        "Clinical_Signs": "* Examination of the larynx may reveal swelling, redness and oedema of the laryngeal mucosa * Laryngeal endoscopy may be necessary to confirm the diagnosis"
+    },
+    {
+        "Disease": "Laryngitis",
+        "Symptoms": "Coughing, hoarseness, difficulty breathing, loss of voice, sore throat, swallowing difficulties",
+        "Clinical_Signs": "Inflammation and swelling of the larynx, thickening of the vocal cords, increased mucus production, difficulty breathing, hoarseness"
+    },
+    {
+        "Disease": "Lead poisoning",
+        "Symptoms": "- Gastrointestinal: Vomiting, diarrhea, anorexia, abdominal pain, constipation - Neurological: Seizures, tremors, ataxia, lethargy, depression, blindness, deafness - Renal: Polyuria, polydipsia, azotemia, oliguria - Hematological: Anemia, basophilic stippling of red blood cells, Heinz body formation, leukocytosis, thrombocytopenia",
+        "Clinical_Signs": "- Gastrointestinal: Vomiting, diarrhea, anorexia, abdominal pain, constipation - Neurological: Seizures, tremors, ataxia, lethargy, depression, blindness, deafness - Renal: Polyuria, polydipsia, azotemia, oliguria - Hematological: Anemia, basophilic stippling of red blood cells, Heinz body formation, leukocytosis, thrombocytopenia"
+    },
+    {
+        "Disease": "Leishmaniasis",
+        "Symptoms": "- Weight loss - Lethargy - Lack of appetite - Skin lesions - Enlarged lymph nodes - Fever - Diarrhea - Vomiting",
+        "Clinical_Signs": "- Anemia - Thrombocytopenia - Hyperglobulinemia - Proteinuria - Renal failure - Hepatomegaly - Splenomegaly - Lymphadenopathy"
+    },
+    {
+        "Disease": "Leptospirosis",
+        "Symptoms": "Fever, Chills, Headache, Muscle aches, Joint pain, Nausea, Vomiting, Diarrhea, Jaundice, Dark urine, Light-colored stools, Bleeding from gums or nose, Skin rash, Eye inflammation, Meningitis, Kidney failure, Liver failure, Respiratory failure, Death",
+        "Clinical_Signs": "Fever, Depression, Anorexia, Jaundice, Hepatomegaly, Splenomegaly, Lymphadenopathy, Renal failure, Neurologic signs (e.g., seizures, tremors, paralysis), Respiratory signs (e.g., coughing, difficulty breathing), Conjunctivitis, Uveitis, Myocarditis, Pneumonia, Meningitis, Encephalitis"
+    },
+    {
+        "Disease": "Leukaemia",
+        "Symptoms": "- Lethargy - Weight loss - Pale gums - Enlarged lymph nodes - Anemia - Thrombocytopenia - Neutropenia",
+        "Clinical_Signs": "- Fever - Dyspnea - Hepatomegaly - Splenomegaly - Lymphadenopathy - Neurological signs - Ocular signs - Skin lesions"
+    },
+    {
+        "Disease": "Liver Disease",
+        "Symptoms": "- Lethargy - Depression - Anorexia - Vomiting - Diarrhea - Weight Loss - Polydipsia - Polyuria - Jaundice",
+        "Clinical_Signs": "- Hepatomegaly - Ascites - Icterus - Encephalopathy - Hypoglycemia - Coagulopathy - Anemia - Increased serum liver enzymes - Increased serum bilirubin - Increased serum ammonia - Decreased serum albumin - Decreased blood urea nitrogen"
+    },
+    {
+        "Disease": "Liver Disease (Hepatitis, Cirrhosis)",
+        "Symptoms": "Lethargy, Loss of appetite, Weight loss, Vomiting, Diarrhea, Jaundice, Abdominal pain or discomfort, Foul-smelling breath, Changes in urine or stool color or consistency",
+        "Clinical_Signs": "Abnormal liver function tests, Enlarged liver, Ascites (fluid accumulation in the abdomen), Edema (swelling) in the legs and feet, Portosystemic encephalopathy (confusion, seizures, coma), Hepatic encephalopathy, Hypoglycemia, Hyperbilirubinemia"
+    },
+    {
+        "Disease": "Lung Abscess",
+        "Symptoms": "- Cough  - Purulent nasal discharge  - Dyspnea - Exercise intolerance - Fever - Depression - Loss of appetite",
+        "Clinical_Signs": "- Lung crackles - Increased lung sounds - Pleural effusion - Enlargement of the lung lobes - Mediastinal shift"
+    },
+    {
+        "Disease": "Lyme Disease (Borrelia Burgdorferi)",
+        "Symptoms": "Fever, lethargy, loss of appetite, joint pain and swelling, lameness, swollen lymph nodes",
+        "Clinical_Signs": "Erythema migrans (bull's-eye rash), arthritis, myocarditis, encephalitis, nephritis"
+    },
+    {
+        "Disease": "Major Epilepsy",
+        "Symptoms": "* Seizures that last for more than 5 minutes * Seizures that occur in clusters (two or more seizures within 24 hours) * Seizures that are followed by a period of confusion or disorientation (postictal phase)",
+        "Clinical_Signs": "* Loss of consciousness * Convulsions (jerking or shaking movements) * Drooling * Chewing or licking movements * Urinary or fecal incontinence"
+    },
+    {
+        "Disease": "Mammary Tumors",
+        "Symptoms": "* Hard or firm lump or mass in the mammary tissue * Swelling or enlargement of the mammary gland * Skin changes, such as redness, thickening, or ulceration * Discoloration or discharge from the mammary gland * Pain or discomfort in the mammary gland * Difficulty nursing or producing milk",
+        "Clinical_Signs": "* Palpable mass or swelling in the mammary tissue * Enlargement or asymmetry of the mammary gland * Mamillary discharge (milky, bloody, or serous) * Skin changes over the mass (ulceration, discoloration) * Pain or discomfort on palpation * Regional lymphadenopathy (enlarged lymph nodes) * Metastasis to other organs (e.g., lungs, liver, brain)"
+    },
+    {
+        "Disease": "Manganese deficiency",
+        "Symptoms": "Reduced feed intake, weight loss, impaired growth, reproductive failure, congenital skeletal defects",
+        "Clinical_Signs": "Bone lesions, perosis, slipped tendon, enlarged joints, ataxia, incoordination, impaired immune function"
+    },
+    {
+        "Disease": "Mange",
+        "Symptoms": "- Intense itching - Skin redness and inflammation - Hair loss in patches - Crusty or scaly skin",
+        "Clinical_Signs": "- Pruritic dermatitis - Alopecia - Erythema - Scaling - Crusting"
+    },
+    {
+        "Disease": "Meningitis",
+        "Symptoms": "\u2022 Fever \u2022 Stiff neck \u2022 Painful back \u2022 Sensitivity to light \u2022 Loss of appetite \u2022 Lethargy \u2022 Depression \u2022 Seizures",
+        "Clinical_Signs": "\u2022 Abnormal posture \u2022 Head tilt \u2022 Circling \u2022 Nystagmus \u2022 Ataxia \u2022 Paralysis \u2022 Seizures \u2022 Coma"
+    },
+    {
+        "Disease": "Mercuric poisoning",
+        "Symptoms": "- Behavioral changes, such as depression or restlessness - Tremors - Seizures - Gastrointestinal upset, such as vomiting and diarrhea - Kidney damage - Liver damage - Central nervous system damage, such as blindness and deafness",
+        "Clinical_Signs": "- Rapid pulse and breathing - Pale mucous membranes - Conjunctivitis - Stomatitis - Gastrointestinal hemorrhage - Pulmonary edema"
+    },
+    {
+        "Disease": "Minor Epilepsy",
+        "Symptoms": "Seizures lasting less than 30 seconds, may be focal or generalized, may include loss of consciousness, muscle twitching, and paddling",
+        "Clinical_Signs": "Head tilting, nystagmus, ataxia, and behavioral changes"
+    },
+    {
+        "Disease": "Moist sound (Rales)",
+        "Symptoms": "Coughing, difficulty breathing, wheezing, fatigue, fever",
+        "Clinical_Signs": "Crackling or gurgling sounds when breathing, rapid breathing, increased respiratory rate, nasal discharge, cyanosis"
+    },
+    {
+        "Disease": "Molybdenum poisoning",
+        "Symptoms": "Diarrhea, vomiting, incoordination, weakness, muscle tremors, convulsions, and death",
+        "Clinical_Signs": "Hepatic necrosis, renal tubular necrosis, and bone marrow depression"
+    },
+    {
+        "Disease": "Murmur",
+        "Symptoms": "None",
+        "Clinical_Signs": "Abnormal heart sound detected during auscultation"
+    },
+    {
+        "Disease": "Mycotoxis",
+        "Symptoms": "- Vomiting - Diarrhea - Loss of appetite - Lethargy - Tremors - Convulsions",
+        "Clinical_Signs": "- Yellowing of the skin and gums (icterus) - Jaundice - Liver damage - Kidney damage - Respiratory problems - Neurological problems - Death"
+    },
+    {
+        "Disease": "Myocarditis",
+        "Symptoms": "Lethargy, exercise intolerance, coughing, dyspnea, syncope",
+        "Clinical_Signs": "Tachycardia, arrhythmias, gallop rhythm, cardiomegaly, pulmonary edema, ascites, jugular distension"
+    },
+    {
+        "Disease": "Myopathy",
+        "Symptoms": "Muscle weakness, stiffness, pain, and fatigue",
+        "Clinical_Signs": "Muscle atrophy, decreased range of motion, abnormal gait, and exercise intolerance"
+    },
+    {
+        "Disease": "Nephritis",
+        "Symptoms": "Increased thirst, Increased urination, Vomiting, Diarrhea, Weight loss, Lethargy, Anorexia, Painful urination, Cloudy or bloody urine",
+        "Clinical_Signs": "Uremia, Hypertension, Edema, Ascites, Oliguria, Anuria, Renal failure"
+    },
+    {
+        "Disease": "Nephrotic Syndrome",
+        "Symptoms": "Polydipsia, polyuria, hypertension, lethargy, vomiting, diarrhea, anorexia",
+        "Clinical_Signs": "Edema, ascites, pleural effusion, proteinuria, hypoalbuminemia, hyperlipidemia, anemia, azotemia, hypercholesterolemia"
+    },
+    {
+        "Disease": "Neurological Diseases",
+        "Symptoms": "* Seizures * Tremors * Ataxia * Paresis/Paralysis * Behavioral changes * Cognitive dysfunction",
+        "Clinical_Signs": "* Nystagmus * Horner's syndrome * Anisocoria * Ptosis * Strabismus * Spinal cord lesions"
+    },
+    {
+        "Disease": "Nitrate and Nitrite poisoning",
+        "Symptoms": "* Weakness * Depression * Staggering * Tremors * Convulsions * Blue-tinged mucous membranes (methemoglobinemia) * Increased heart rate * Difficulty breathing",
+        "Clinical_Signs": "* Cyanosis * Tachycardia * Tachypnea * Methemoglobinemia * Abdominal pain * Diarrhea * Abortion in pregnant animals"
+    },
+    {
+        "Disease": "Obstructive Colic",
+        "Symptoms": "- Loss of appetite - Depression - Pain - Restlessness - Rolling - Pawing at abdomen - Straining to defecate - Absence of feces",
+        "Clinical_Signs": "- Distended abdomen - Tympany - Borborygmus - High heart rate - Increased respiratory rate - Dehydration - Electrolyte imbalance - Acidosis"
+    },
+    {
+        "Disease": "Obturator Nerve Paralysis",
+        "Symptoms": "Inability to extend the stifle joint and flex the hock joint",
+        "Clinical_Signs": "Toe-dragging or knuckling over due to weakness of the quadriceps muscle and inability to flex the hock"
+    },
+    {
+        "Disease": "Ocular Emergency",
+        "Symptoms": "- Squinting - Pawing at the eye - Redness or swelling of the eye or surrounding area - Discharge from the eye - Cloudiness of the eye - Pain or discomfort in the eye",
+        "Clinical_Signs": "- Corneal ulcer - Conjunctivitis - Glaucoma - Uveitis - Retinal detachment - Proptosis - Orbital cellulitis"
+    },
+    {
+        "Disease": "Ocular Lesions in Diseases of Other Body Systems",
+        "Symptoms": "Inflammation of the eyelid, Conjunctival discharge, Corneal ulceration, uveitis, Retinal detachment, Loss of vision",
+        "Clinical_Signs": "Bilateral or unilateral ocular lesions, Ocular pain, Photophobia, Blepharospasm, Pupillary abnormalities"
+    },
+    {
+        "Disease": "Oesophageal Groove Dysfunction",
+        "Symptoms": "- Coughing or gagging after eating or drinking",
+        "Clinical_Signs": "- Regurgitation (bringing up undigested food) within 20 minutes of eating - Dysphagia (difficulty swallowing) - Weight loss - Respiratory signs (e.g., coughing, wheezing, pneumonia) - Dental disease"
+    },
+    {
+        "Disease": "Oesophageal Obstruction (Choke)",
+        "Symptoms": "Unable to swallow, regurgitation, coughing, gagging, salivation, pawing at the mouth, restlessness or depression",
+        "Clinical_Signs": "Thumping along the oesophagus on auscultation, distension of the oesophagus on clinical examination, foreign body or mass may be palpable"
+    },
+    {
+        "Disease": "Oesophagitis",
+        "Symptoms": "",
+        "Clinical_Signs": "Dysphagia (difficulty swallowing), Regurgitation, Vomiting, Anorexia (decreased appetite), Weight loss, Coughing or gagging, Excessive salivation (drooling), Bad breath (halitosis), Oral ulcers or lesions"
+    },
+    {
+        "Disease": "Orchitis",
+        "Symptoms": "Swelling and pain in one or both testicles, Fever, Lethargy, Decreased appetite, Infertility",
+        "Clinical_Signs": "Enlargement and inflammation of the testicles, Presence of pus or fluid in the testicles, Redness and swelling of the scrotum, Increased scrotal temperature, Pain on palpation of the testicles, Abnormal gait due to discomfort"
+    },
+    {
+        "Disease": "Organo Phosphate",
+        "Symptoms": "Vomiting, Diarrhea, Seizures, Muscle weakness, Difficulty breathing, Excessive salivation, Constricted pupils, Head tilt, Lethargy, Incoordination, Death",
+        "Clinical_Signs": "Increased heart rate, Increased respiratory rate, Cyanosis (bluish discoloration of the skin and mucous membranes), Pupillary constriction (miosis), Fasciculations (muscle twitches), Opisthotonus (arching of the back), Ataxia (difficulty walking), Bradycardia (slow heart rate)"
+    },
+    {
+        "Disease": "Osteomalacia (Adult Ricket)",
+        "Symptoms": "**Symptoms for Osteomalacia (Adult Ricket):**  1.  Muscle weakness or fractures 2.  Fatigue 3.  Loss of energy  4.  Pain in the back, legs, or pelvis 5.  Difficulty walking or standing 6.  Tenderness to the touch 7.  Poor appetite 8.  Weight loss",
+        "Clinical_Signs": "**Clinical Signs associated with Osteomalacia (Adult Ricket):**  1. **Hypocalcemia:** Decreased levels of calcium in the blood 2. **Hypophosphatemia:** Decreased levels of phosphorus in the blood 3. **Increased alkaline phosphatase:** An enzyme that is released by osteoblasts (bone-forming cells) in response to increased bone turnover 4. **Radiographic findings:** X-rays may show areas of decreased bone density, thinning of the bones, and fractures 5. **Bone biopsy:** A biopsy of the bone can confirm the diagnosis of osteomalacia"
+    },
+    {
+        "Disease": "Osteosarcoma",
+        "Symptoms": "* Pain * Lameness * Swelling or a mass near the affected bone",
+        "Clinical_Signs": "* Radiographic evidence of a bone tumor * Metastasis to other organs (e.g., lungs) * Hypercalcemia"
+    },
+    {
+        "Disease": "Otitis",
+        "Symptoms": "- Head shaking - Scratching at the ears - Pawing at the ears - Redness and swelling of the ears - Discharge from the ears - Odor from the ears - Pain in the ears - Hearing loss",
+        "Clinical_Signs": "- Inflammation of the ear canal - Thickened or narrowed ear canal - Debris in the ear canal - Polyp formation in the ear canal - Ruptured eardrum - Osteomyelitis of the temporal bone - Seizures - Respiratory distress"
+    },
+    {
+        "Disease": "Pancreatic Insufficiency (EPI)",
+        "Symptoms": "Increased thirst (polydipsia), Increased urination (polyuria), Increased appetite (polyphagia), Weight loss",
+        "Clinical_Signs": "Steatorrhea (fatty stools), Diarrhea, Flatulence, Abdominal pain, Vomiting, Lethargy"
+    },
+    {
+        "Disease": "Pancreatitis",
+        "Symptoms": "- Lethargy - Loss of appetite - Abdominal pain - Vomiting - Diarrhea - Weight loss",
+        "Clinical_Signs": "- Fever - Tachycardia - Dehydration - Palpable abdominal mass - Abnormal pancreatic enzymes - Hyperglycemia"
+    },
+    {
+        "Disease": "Paralytic Myoglobinuria",
+        "Symptoms": "Sudden onset of weakness, reluctance to move, muscle spasms, dark urine, and rapid breathing.",
+        "Clinical_Signs": "Muscle stiffness, tremors, and paralysis."
+    },
+    {
+        "Disease": "Parasitic Diseases",
+        "Symptoms": "* Weight loss * Diarrhea * Vomiting * Lethargy * Abdominal pain * Skin lesions * Respiratory problems * Neurological problems",
+        "Clinical_Signs": "* Anemia * Eosinophilia * Hypoalbuminemia * Hyperglobulinemia * Parasites or parasite eggs on physical exam * Radiographic abnormalities * Ultrasonographic abnormalities"
+    },
+    {
+        "Disease": "Parasitic Pneumonia",
+        "Symptoms": "- Coughing - Difficulty breathing - Exercise intolerance - Weight loss - Lethargy - Loss of appetite",
+        "Clinical_Signs": "- Fever - Tachypnea (rapid breathing) - Dyspnea (labored breathing) - Cyanosis (bluish tint to the gums) - Crackles or wheezes on auscultation of the lungs - Consolidation (solidification) of the lungs on radiographs"
+    },
+    {
+        "Disease": "Parotitis",
+        "Symptoms": "Swelling and pain of the parotid salivary gland, Difficulty opening the mouth, Drooling, Fever, Lethargy, Anorexia",
+        "Clinical_Signs": "Swelling and hardening of the parotid salivary gland, Redness and inflammation of the parotid duct, Discharge of pus or saliva from the parotid duct, Enlarged lymph nodes in the neck, Fever, Lethargy"
+    },
+    {
+        "Disease": "Parturient Paresis",
+        "Symptoms": "None reported",
+        "Clinical_Signs": "- Lethargy - Inappetance - Decreased milk production - Stiffness or reluctance to move - Knuckling over or inability to stand - Tremors or convulsions - Rapid heart rate - Increased respiratory rate - Fever"
+    },
+    {
+        "Disease": "Pemphigus (Pemphigus Vulgaris)",
+        "Symptoms": "Skin lesions, Pruritus, Pain, Lethargy, Weight loss, Anorexia",
+        "Clinical_Signs": "Bullae on the skin, Erosions on the skin, Ulcers on the skin, Crusting on the skin, Pruritus, Pain, Pyoderma, Otitis externa"
+    },
+    {
+        "Disease": "Peptic Ulcer",
+        "Symptoms": "- Vomiting, sometimes with blood - Diarrhea - Weight loss - Abdominal pain - Loss of appetite - Lethargy",
+        "Clinical_Signs": "- Blood in the stool - Anemia - Dehydration - Electrolyte imbalances - Shock"
+    },
+    {
+        "Disease": "Pericardial Rub",
+        "Symptoms": "None",
+        "Clinical_Signs": "Loud, scratchy, superficial heart murmur that stops if pressure is applied to the xiphoid region; rarely heard"
+    },
+    {
+        "Disease": "Pericarditis",
+        "Symptoms": "Reduced appetite, lethargy, exercise intolerance, coughing, and rapid breathing",
+        "Clinical_Signs": "Cardiac murmurs, muffled heart sounds, arrhythmias, and pericardial effusion"
+    },
+    {
+        "Disease": "Peripheral Nerve Paralysis",
+        "Symptoms": "- Weakness or lameness in one or more limbs - Loss of sensation in the affected area - Muscle atrophy - Decreased or absent reflexes - Pain",
+        "Clinical_Signs": "- Difficulty walking or standing - Dragging of the affected limb - Abnormal posture - Tremors or twitching of the affected muscles - Changes in skin color or temperature in the affected area"
+    },
+    {
+        "Disease": "Peritonitis",
+        "Symptoms": "Fever, lethargy, loss of appetite, abdominal pain, vomiting, diarrhea",
+        "Clinical_Signs": "Abdominal distension, guarding, pain upon palpation, muffled abdominal sounds, fluid wave, pyrexia, tachycardia, tachypnea, hypothermia, anemia, leukopenia, neutrophilia, increased serum amylase and lipase"
+    },
+    {
+        "Disease": "Peroneal Nerve Paralysis",
+        "Symptoms": "Inability to bear weight on the affected limb, Knuckling over of the affected paw, Dragging of the affected limb, Atrophy of the muscles of the lower leg and foot, Lameness, Pain",
+        "Clinical_Signs": "Absence of the patellar reflex, Weakness or paralysis of the muscles of the lower leg and foot, Loss of sensation in the lower leg and foot"
+    },
+    {
+        "Disease": "Pharyngitis",
+        "Symptoms": "- Difficulty swallowing - Sore throat - Hoarseness - Cough - Sneezing",
+        "Clinical_Signs": "- Redness and swelling of the pharynx - Enlarged tonsils - Pus or exudate on the pharynx - Pain on palpation of the pharynx"
+    },
+    {
+        "Disease": "Photosensitization (Slough Sickness, Grass Poisoning)",
+        "Symptoms": "Clinical signs caused by liver damage in the form of icterus, photosensitization, and hepatic encephalopathy, which commonly presents with behavioral changes, aimless wandering, and head pressing.",
+        "Clinical_Signs": "Photosensitization with pruritus, swelling, and erythema of exposed skin areas. Jaundice. Hepatic encephalopathy. Ulceration in severe cases. Abortion in pregnant mares."
+    },
+    {
+        "Disease": "Piroplasmosis",
+        "Symptoms": "- Fever - Lethargy - Anorexia - Weight loss - Anemia - Jaundice - Hemoglobinuria - Lymphadenopathy - Splenomegaly",
+        "Clinical_Signs": "- Acute or chronic disease - Dogs may be more severely affected than cats - Clinical signs may vary depending on the species of Babesia"
+    },
+    {
+        "Disease": "Pituitary Dependent Hyperadrenocorticism (PDH)",
+        "Symptoms": "Increased thirst and urination, increased appetite, lethargy, weakness, weight loss, muscle wasting, pot-bellied appearance, thinning skin, hair loss, poor coat quality, increased panting, heat intolerance, vomiting, diarrhea, constipation, urinary incontinence, diabetes mellitus, Cushing's syndrome",
+        "Clinical_Signs": "Polyuria, polydipsia, polyphagia, lethargy, weakness, weight loss, muscle wasting, pot-bellied appearance, thinning skin, hair loss, poor coat quality, increased panting, heat intolerance, vomiting, diarrhea, constipation, urinary incontinence, diabetes mellitus, Cushing's syndrome"
+    },
+    {
+        "Disease": "Pleurisy",
+        "Symptoms": "- Tachypnea (rapid breathing)  - Dyspnea (difficulty breathing) - Thoracic pain - Coughing (may be painful) - Exercise intolerance - Lethargy - Anorexia - Weight loss",
+        "Clinical_Signs": "- Auscultation of pleural friction rub - Percussion of dullness over affected lung field - Thoracic radiographs showing pleural effusion - Thoracentesis revealing serous or sanguineous pleural fluid - Bloodwork may show elevated white blood cell count and inflammatory markers"
+    },
+    {
+        "Disease": "Pneumonia",
+        "Symptoms": "* Cough * Difficulty breathing * Nasal discharge * Fever * Lethargy * Loss of appetite * Weight loss",
+        "Clinical_Signs": "* Tachypnea (rapid breathing) * Dyspnea (labored breathing) * Crackles or wheezes on auscultation of the lungs * Decreased lung sounds on auscultation * Consolidation of the lungs on radiographs * Pleural effusion (fluid in the chest cavity)"
+    },
+    {
+        "Disease": "Pneumothorax",
+        "Symptoms": "Dyspnea, Tachypnea, Cough",
+        "Clinical_Signs": "Muffled lung sounds on the affected side, Increased respiratory rate, Cyanosis, Jugular distension, Tracheal deviation towards the unaffected side, Subcutaneous emphysema"
+    },
+    {
+        "Disease": "Polyneuritis",
+        "Symptoms": "* Weakness and lameness  * Pain  * Muscle atrophy  * Sensory deficits  * Tremors  * Seizures",
+        "Clinical_Signs": "* Decreased reflexes  * Abnormal gait  * Muscle fasciculations  * Flaccid or spastic paralysis  * Cranial nerve deficits (e.g., ptosis, facial paralysis, dysphagia)"
+    },
+    {
+        "Disease": "Porcine Stress Syndrome",
+        "Symptoms": "Sudden death, Pale, watery muscles, Muscle rigidity, Rapid breathing, Hyperexcitability",
+        "Clinical_Signs": "Pale, firm, and exudative (PFE) muscle tissue, Low muscle pH, High muscle water content, Abnormal muscle structure, Increased muscle enzyme activity"
+    },
+    {
+        "Disease": "Post Parturient Haemoglobinuria",
+        "Symptoms": "None",
+        "Clinical_Signs": "- Haemoglobinuria (red urine) within 24 hours of giving birth - Weakness and depression - Rapid breathing - Jaundice"
+    },
+    {
+        "Disease": "Primary Tympany",
+        "Symptoms": "Abdominal distension, weight gain, decreased appetite, depression, reduced milk production, straining to defecate, decreased fecal output.",
+        "Clinical_Signs": "Distended rumen, reduced or absent ruminal motility, gas accumulation on rectal palpation."
+    },
+    {
+        "Disease": "Proctitis",
+        "Symptoms": "* Straining to defecate * Tenesmus",
+        "Clinical_Signs": "* Rectal pain * Diarrhea * Blood in stool * Prolapse of the rectum * Discharge from the rectum * Perianal irritation or inflammation * Lethargy * Weight loss"
+    },
+    {
+        "Disease": "Production of Volatile Fatty Acids and pH control",
+        "Symptoms": "Not applicable for this disease",
+        "Clinical_Signs": "Not applicable for this disease"
+    },
+    {
+        "Disease": "Prostate Disease",
+        "Symptoms": "- Straining to urinate - Frequent urination - Difficulty urinating - Painful urination - Blood in the urine - Dribbling urine - Inability to urinate",
+        "Clinical_Signs": "- Enlarged prostate - Hard or irregular prostate - Painful prostate - Inflammation of the prostate - Infection of the prostate"
+    },
+    {
+        "Disease": "Protothecosis",
+        "Symptoms": "Cutaneous, subcutaneous, or systemic lesions",
+        "Clinical_Signs": "Nodules, plaques, abscesses, fistulas, draining tracts, cellulitis, lymphadenopathy, fever, lethargy, weight loss"
+    },
+    {
+        "Disease": "Pruritus (Itching)",
+        "Symptoms": "Intense, persistent itching, Excessive scratching, Rubbing against objects, Licking or biting at paws or skin, Skin irritation and inflammation, Redness, Swelling",
+        "Clinical_Signs": "Excoriations, Papules, Pustules, Hyperpigmentation, Lichenification"
+    },
+    {
+        "Disease": "Pulmonary Congestion and Oedema",
+        "Symptoms": "* Dyspnoea at rest, exercise intolerance or tachypnoea * Rapid/bounding pulse * Muffled heart sounds * Cyanosis * Abnormal respiratory sounds (e.g. wheezes, crackles) * Cough (may be productive) * Weakness/lethargy * Loss of appetite * Weight loss",
+        "Clinical_Signs": "* Physical examination: Tachypnea, dyspnea, increased respiratory effort, wheezing, crackles, and/or muffled heart sounds * Thoracic radiographs: Increased interstitial and/or alveolar opacity, often with a perihilar or diffuse distribution * Echocardiogram: Dilated pulmonary arteries, thickened left atrium, and/or increased left atrial pressure * Blood work: PCV/TS may be elevated, and there may be an increase in BUN and creatinine if renal function is affected"
+    },
+    {
+        "Disease": "Pulmonary Defence Mechanisms",
+        "Symptoms": null,
+        "Clinical_Signs": null
+    },
+    {
+        "Disease": "Pulmonary Emphysema",
+        "Symptoms": "Shortness of breath, Exercise intolerance, Wheezing, Coughing",
+        "Clinical_Signs": "Barrel chest, Increased respiratory rate, Increased lung sounds, Crackles, Rales"
+    },
+    {
+        "Disease": "Purpura Haemorrhagica",
+        "Symptoms": "Petechiae, ecchymoses, epistaxis, gingival bleeding, haemarthrosis, gastrointestinal bleeding, ascites, neurological signs.",
+        "Clinical_Signs": "Pallor, tachycardia, tachypnea, lethargy, weakness, anorexia, pyrexia, oedema."
+    },
+    {
+        "Disease": "Pyloric Stenosis",
+        "Symptoms": "Vomiting soon after nursing and failure to thrive",
+        "Clinical_Signs": "Palpable mass in cranial abdomen upon physical examination, an enlarged stomach on abdominal radiographs, a delay in gastric emptying time, and abnormal gastric motility"
+    },
+    {
+        "Disease": "Pyodermatitis",
+        "Symptoms": "Pruritus, Erythema, Papules, Pustules, Crusts, Scales, Alopecia, Fever, Lethargy, Anorexia",
+        "Clinical_Signs": "Bacterial infection of the skin, May be localized or generalized, Can be superficial or deep, Can be caused by a variety of bacteria, including Staphylococcus, Streptococcus, and Pseudomonas, Predisposing factors include allergies, skin trauma, and immune deficiencies"
+    },
+    {
+        "Disease": "Pythiosis",
+        "Symptoms": "- Lethargy - Weight loss - Respiratory distress - Difficulty eating - Diarrhea - Neurologic signs (e.g., seizures, tremors)",
+        "Clinical_Signs": "- Skin lesions (e.g., ulcerative dermatitis, pyogranulomatous nodules) - Respiratory signs (e.g., pneumonia, pleuritis) - Gastrointestinal signs (e.g., enteritis, peritonitis) - Neurologic signs (e.g., encephalitis, meningitis) - Ocular signs (e.g., uveitis, keratitis)"
+    },
+    {
+        "Disease": "Rabies",
+        "Symptoms": "- Fever - Headache - Nausea - Vomiting - Diarrhea - Anxiety - Agitation - Hallucinations - Seizures - Coma",
+        "Clinical_Signs": "- Hydrophobia (fear of water) - Difficulty swallowing - Excessive salivation - Paralysis of the limbs and face - Stupor - Death"
+    },
+    {
+        "Disease": "Renal Amyloidosis",
+        "Symptoms": "- Polydipsia (increased thirst) - Polyuria (increased urination) - Weight loss - Lethargy - Anorexia (decreased appetite)",
+        "Clinical_Signs": "- Proteinuria (protein in the urine) - Azotemia (elevated blood urea nitrogen and creatinine levels) - Hyperphosphatemia (elevated blood phosphorus levels) - Anemia (low red blood cell count) - Hypertension (high blood pressure)"
+    },
+    {
+        "Disease": "Renal Parasitism",
+        "Symptoms": "N/A",
+        "Clinical_Signs": "Abnormal urinalysis findings (e.g., proteinuria, hematuria), decreased appetite, lethargy, weight loss, polyuria and polydipsia"
+    },
+    {
+        "Disease": "Respiratory Failure",
+        "Symptoms": "- Dyspnea (difficulty breathing) - Tachypnea (rapid breathing) - Cyanosis (bluish tint to the gums or skin) - Coughing - Wheezing - Nasal discharge - Lethargy - Anorexia (loss of appetite) - Weight loss",
+        "Clinical_Signs": "- Increased respiratory rate - Decreased tidal volume (the amount of air moved in and out of the lungs with each breath) - Abnormal respiratory sounds (e.g., wheezing, crackles) - Cyanosis (bluish tint to the gums or skin) - Hypothermia (low body temperature) - Tachycardia (rapid heart rate) - Hypotension (low blood pressure) - Altered mental status"
+    },
+    {
+        "Disease": "Retinitis",
+        "Symptoms": "- Decreased vision or blindness - Photophobia (sensitivity to light) - Squinting or holding the eyes partially closed - Redness or inflammation of the eyes - Pain in the eyes",
+        "Clinical_Signs": "- Ophthalmoscopic examination reveals inflammation and swelling of the retina - Retinal hemorrhage - Retinal detachment - Papilledema (swelling of the optic nerve head) - Exudative retinal detachment"
+    },
+    {
+        "Disease": "Retinopathy",
+        "Symptoms": "- Decreased vision - Blurred vision - Flashes of light - Floaters - Distorted vision",
+        "Clinical_Signs": "- Redness of the eye(s) - Swelling of the eye(s) - Discharge from the eye(s) - Squinting - Holding the eye(s) shut"
+    },
+    {
+        "Disease": "Rheumatoid Arthritis",
+        "Symptoms": "1. Stiffness and pain in the joints, especially in the morning or after rest 2. Joint swelling, warmth, and redness 3. Fatigue 4. Loss of appetite 5. Weight loss 6. Depression",
+        "Clinical_Signs": "1. Synovial thickening and effusion 2. Joint destruction and deformity 3. Lameness 4. Muscle atrophy 5. Fever 6. Anemia 7. Renal amyloidosis"
+    },
+    {
+        "Disease": "Rhinitis",
+        "Symptoms": "* Nasal discharge (clear, mucoid, purulent, or bloody) * Sneezing * Nasal congestion * Snorting * Epistaxis",
+        "Clinical_Signs": "* Rhinitis is inflammation of the nasal mucosa. * Causes of rhinitis include infectious agents (bacteria, viruses, fungi), irritants, and allergies. * Clinical signs of rhinitis vary depending on the underlying cause."
+    },
+    {
+        "Disease": "Ricket",
+        "Symptoms": "- Weakness - Lethargy - Loss of appetite - Weight loss - Bone pain and swelling",
+        "Clinical_Signs": "- Rickets - Osteoporosis - Pathologic fractures"
+    },
+    {
+        "Disease": "Ringworm (Dermatophytosis)",
+        "Symptoms": "- Circular or oval areas of hair loss - Redness and scaling of the skin - Itching - Crusting or scabbing - Dry, flaky skin",
+        "Clinical_Signs": "- Dermatophytosis is a fungal infection of the skin and hair. - It is caused by a variety of fungi, including Microsporum canis, Microsporum gypseum, and Trichophyton mentagrophytes. - Ringworm is spread through contact with infected animals or objects. - It can cause a variety of symptoms, including hair loss, scaling, redness, and itching. - Dermatophytosis is diagnosed based on the clinical signs and a fungal culture. - Treatment typically involves topical antifungal medications."
+    },
+    {
+        "Disease": "Rocky Mountain Spotted Fever",
+        "Symptoms": "Fever, lethargy, loss of appetite, vomiting, diarrhea, abdominal pain, joint pain, muscle pain, headache, rash",
+        "Clinical_Signs": "High fever, thrombocytopenia, anemia, leukopenia, elevated liver enzymes, elevated creatinine, elevated bilirubin, petechiae, ecchymoses, purpura, splenomegaly, hepatomegaly, lymphadenopathy, uveitis, meningoencephalitis, seizures, coma"
+    },
+    {
+        "Disease": "Rodenticide poisoning",
+        "Symptoms": "- Lethargy - Weakness - Anorexia - Depression - Respiratory distress - Seizures - Coma",
+        "Clinical_Signs": "- Bruising or bleeding - Bleeding from the nose or mouth - Blood in the urine or feces - Pale gums - Elevated heart rate - Elevated respiratory rate - Jaundice - Hypothermia"
+    },
+    {
+        "Disease": "Rumen Microorganisms and their role in Healthy and diseased Conditions",
+        "Symptoms": "The symptoms of rumen microorganisms and their role in healthy and diseased conditions can include:",
+        "Clinical_Signs": "The clinical signs of rumen microorganisms and their role in healthy and diseased conditions can include:"
+    },
+    {
+        "Disease": "Salt Toxicity",
+        "Symptoms": "* Excessive thirst * Excessive urination * Vomiting * Diarrhea * Lethargy * Tremors * Seizures",
+        "Clinical_Signs": "* Dehydration * Electrolyte imbalance * Hypernatremia * Hypochloremia * Metabolic acidosis * Fluid accumulation in the lungs * Brain edema"
+    },
+    {
+        "Disease": "Sarcocystosis",
+        "Symptoms": "Usually asymptomatic, but may include myositis, weakness, recumbency, respiratory distress, and death in severe cases",
+        "Clinical_Signs": "Macroscopic cysts visible in muscle tissue, increased muscle enzyme levels, elevated white blood cell count, and positive serology"
+    },
+    {
+        "Disease": "Scabies",
+        "Symptoms": "Intense itching, skin irritation, and hair loss",
+        "Clinical_Signs": "Red, inflamed skin, scabs, and crusts on the skin"
+    },
+    {
+        "Disease": "Seborrhoeic Dermatitis (Dandruff)",
+        "Symptoms": "Excessive dandruff, Dry or itchy skin, Redness or inflammation of the skin",
+        "Clinical_Signs": "Scales or crusts on the skin, Greasy or oily skin, Hair loss"
+    },
+    {
+        "Disease": "Secondary Gastritis",
+        "Symptoms": "- Vomiting - Diarrhea - Abdominal pain - Loss of appetite - Lethargy",
+        "Clinical_Signs": "- Gastric ulcers - Gastric erosions - Gastric hemorrhage - Gastric perforation - Gastric dilatation-volvulus"
+    },
+    {
+        "Disease": "Secondary Tympany",
+        "Symptoms": "- Acute onset of bloat - Restlessness and anxiety - Pawing at the abdomen - Looking back at the abdomen - Straining to defecate or urinate",
+        "Clinical_Signs": "- Abdominal distension - Tympanic sounds on percussion of the abdomen - Increased respiratory rate and effort - Mucous membranes may be pale or cyanotic - The rumen may be displaced to the left or right"
+    },
+    {
+        "Disease": "Seizures (Epilepsy)",
+        "Symptoms": "- Loss of consciousness - Stiffening of the body - Jerking or twitching of the limbs - Foaming at the mouth - Loss of bladder and bowel control",
+        "Clinical_Signs": "- History of recurrent seizures - Electroencephalography (EEG) abnormalities"
+    },
+    {
+        "Disease": "Selenium deficiency",
+        "Symptoms": "- Weakness - Lethargy - Muscle pain - Joint pain - Stiffness - Loss of appetite - Weight loss - Diarrhea - Skin problems - Hoof problems",
+        "Clinical_Signs": "- Pale mucous membranes - Reduced growth - Poor reproductive performance - Increased susceptibility to infections - Cardiovascular disease - Neurological problems"
+    },
+    {
+        "Disease": "Selenium poisoning",
+        "Symptoms": "* Gastrointestinal: Vomiting, diarrhea, colic, abdominal pain, inappetence * Musculoskeletal: Tremors, weakness, ataxia",
+        "Clinical_Signs": "- Fatigue - GI upset - Muscle tenderness or stiffness - Respiratory distress - Liver and kidney damage"
+    },
+    {
+        "Disease": "Septicemia",
+        "Symptoms": "High fever, lethargy, weakness, loss of appetite, increased thirst, and panting",
+        "Clinical_Signs": "Rapid heart rate, rapid breathing, pale or bluish gums, warm skin, and enlarged lymph nodes"
+    },
+    {
+        "Disease": "Skin Lesions",
+        "Symptoms": "None provided",
+        "Clinical_Signs": "Alopecia (hair loss), Erythema (redness), Papules (small, raised bumps), Pustules (small, pus-filled bumps), Scales, Crusts, Ulcers, Lichenification (thickening and darkening of the skin), Pruritus (itching)"
+    },
+    {
+        "Disease": "Snake Bite",
+        "Symptoms": "* Vomiting * Diarrhea * Abdominal pain * Lethargy * Weakness * Tremors * Seizures * Respiratory distress * Cardiac arrhythmias * Hemolysis * Neurotoxicity * Coagulopathy * Hypovolemia",
+        "Clinical_Signs": "* Fang marks * Swelling at the bite site * Bruising * Ecchymosis * Pain * Tenderness * Local tissue damage * Neurologic signs * Hematologic abnormalities * Electrolyte imbalances * Acid-base disturbances"
+    },
+    {
+        "Disease": "Spasmodic Colic",
+        "Symptoms": "- Recurrent abdominal pain that comes and goes",
+        "Clinical_Signs": "- Colicky horses may switch between lying down and getting up, stretching, pawing the ground, and rolling"
+    },
+    {
+        "Disease": "Sporotrichosis",
+        "Symptoms": "- Cutaneous lesions: firm, nontender, subcutaneous nodules - Ulcerative or verrucous lesions on the skin - Lymphadenopathy (enlarged lymph nodes)",
+        "Clinical_Signs": "- Skin lesions: focal, ulcerative, nodular, or verrucous lesions on the skin and mucous membranes - Lymphadenopathy: enlargement of lymph nodes, often draining the affected area - Ocular involvement: conjunctivitis, keratitis, or uveitis - Respiratory involvement: pneumonia or bronchitis - Disseminated disease: involvement of internal organs such as the lungs, liver, or central nervous system"
+    },
+    {
+        "Disease": "Squamous Cell Carcinoma",
+        "Symptoms": "- Open sores that do not heal - Red, raised areas on the skin - Crusty or scaly skin lesions - Bleeding or discharge from the sores - Pain or discomfort at the site of the tumor - Loss of appetite - Weight loss - Lethargy - Difficulty breathing (if the tumor is located in the respiratory tract) - Difficulty eating (if the tumor is located in the mouth or throat)",
+        "Clinical_Signs": "- Raised, firm, and painless mass - Ulcerated or eroded surface - May be covered by a crust or scab - Bleeding or discharge - Pain or discomfort - Regional lymphadenopathy - Metastasis to distant sites"
+    },
+    {
+        "Disease": "Stomatitis",
+        "Symptoms": "- Excessive drooling - Reluctance to eat or drink - Oral pain or discomfort - Bleeding gums - Bad breath",
+        "Clinical_Signs": "- Redness and swelling of the gums - Ulcers or sores in the mouth - Plaque or tartar accumulation - Loose or missing teeth"
+    },
+    {
+        "Disease": "Subcutaneous Emphysema",
+        "Symptoms": "- Pain or discomfort - Rapid shallow breathing - Cough - Cyanosis (bluish tint to the skin, gums, or tongue) - Anxiety or restlessness - Swollen face or limbs",
+        "Clinical_Signs": "- Crepitus (a crackling sound when the skin is palpated) - Reduced lung sounds on physical exam - Signs of shock (pale gums, rapid weak pulse, cold extremities) - Displacement of organs and tissues - Skin lacerations"
+    },
+    {
+        "Disease": "Systemic Lupus Erythematosus (SLE)",
+        "Symptoms": "Nonspecific symptoms of illness, e.g., weight loss, lethargy, depression",
+        "Clinical_Signs": "- Polyarthritis/polyarthralgia - Skin lesions (dermatitis, discoid lupus, alopecia) - Fever, lymphadenopathy - Hematologic abnormalities (anemia, thrombocytopenia, leukopenia) - Proteinuria, renal disease - Hepatomegaly, hepatitis - Neurologic abnormalities (seizures, tremors, circling, ataxia)"
+    },
+    {
+        "Disease": "Testicular Degeneration",
+        "Symptoms": "None",
+        "Clinical_Signs": "Reduced testicular size, abnormal consistency, loss of scrotal tone, infertility"
+    },
+    {
+        "Disease": "Testicular Tumors",
+        "Symptoms": "- Scrotal swelling or enlargement - Pain or discomfort in the scrotum - Lameness or difficulty walking - Lethargy or weakness - Loss of appetite",
+        "Clinical_Signs": "- Testicular enlargement - Testicular pain or discomfort - Scrotal swelling or edema - Inguinal hernia - Metastasis to regional lymph nodes or distant sites"
+    },
+    {
+        "Disease": "Tetany in Calves",
+        "Symptoms": "Clinical signs associated with hypocalcemia in calves can include:",
+        "Clinical_Signs": "- Apprehension, irritability - Muscle tremors, twitching, especially in ear muscles - Stiff, stilted gait, reluctance to move - Convulsions - Respiratory distress, rapid, labored breathing - Tachycardia - Dilated pupils - Salivation, frothing at the mouth - Sudden death"
+    },
+    {
+        "Disease": "Thyroid Disease",
+        "Symptoms": "Weight gain or loss, changes in appetite, lethargy, vomiting, diarrhea, skin and coat problems, anxiety or aggression",
+        "Clinical_Signs": "Hypothyroidism: low energy levels, weight gain, cold intolerance, dry skin and hair coat; Hyperthyroidism: increased energy levels, weight loss, heat intolerance, increased heart rate"
+    },
+    {
+        "Disease": "Tibial Nerve Paralysis",
+        "Symptoms": "- Lameness",
+        "Clinical_Signs": "- Pain on palpation of the caudal tibia and tarsus - Plantigrade or drop stance of the rear limb(s) - Absent or decreased tarsal flexion and hock extension - Absent or decreased stifle flexion - Absent or decreased withdrawal of foot from noxious stimuli"
+    },
+    {
+        "Disease": "Torsion of Abomasum",
+        "Symptoms": "- Restlessness - Pawing at abdomen - Bloat - Mucus membranes pale - Increased respiratory rate",
+        "Clinical_Signs": "- Distended abdomen on left side - Fluid sounds on auscultation - Tympany on percussion - Gas and fluid splashing on succussion"
+    },
+    {
+        "Disease": "Toxoplasmosis",
+        "Symptoms": "None to mild; may resemble symptoms of feline panleukopenia or feline infectious peritonitis",
+        "Clinical_Signs": "Fever, anorexia, lethargy, conjunctivitis, neurologic signs, respiratory signs, abortion, ocular lesions"
+    },
+    {
+        "Disease": "Traumatic Reticulitis",
+        "Symptoms": "- Anorexia  - Depression  - Rumen stasis",
+        "Clinical_Signs": "- Decreased or absent rumen contractions - Pain on palpation of the reticulum - Reticuloperitonitis - Peritonitis"
+    },
+    {
+        "Disease": "Traumatic Reticuloperitonitis",
+        "Symptoms": "Anorexia, weight loss, fever, lethargy",
+        "Clinical_Signs": "Auscultation reveals ruminal hypomotility, gas distension, and abdominal discomfort, reduced fecal output"
+    },
+    {
+        "Disease": "Tympanitic Colic",
+        "Symptoms": "Abdominal distension, distress, pawing at the abdomen.",
+        "Clinical_Signs": "Tympany, borborygmus, and possible evidence of systemic endotoxemia"
+    },
+    {
+        "Disease": "Urethritis",
+        "Symptoms": "- Frequent urination - Dysuria (painful urination) - Stranguria (difficulty urinating) - Hematuria (blood in the urine) - Pyuria (pus in the urine) - Pollakiuria (frequent urination of small amounts)",
+        "Clinical_Signs": "- Redness and swelling of the urethra - Discharge from the urethra - Pain on palpation of the urethra - Urinary incontinence - Straining to urinate"
+    },
+    {
+        "Disease": "Urinary Tract Infections (UTIs)",
+        "Symptoms": "Frequent urination, Straining to urinate, Urinating small amounts of urine, Cloudy or discolored urine, Bloody urine, Strong-smelling urine, Painful urination, Loss of appetite, Vomiting, Lethargy",
+        "Clinical_Signs": "Fever, Dehydration, Weight loss, Pyuria (pus in urine), Hematuria (blood in urine), Proteinuria (protein in urine), Glucosuria (glucose in urine), Bacteriuria (bacteria in urine)"
+    },
+    {
+        "Disease": "Urolithiasis in canine",
+        "Symptoms": "Increased thirst, frequent urination, straining to urinate, blood in the urine, painful urination, vomiting, loss of appetite, lethargy, depression",
+        "Clinical_Signs": "Physical exam findings may include abdominal pain, a palpable bladder, and decreased urine output"
+    },
+    {
+        "Disease": "Urolithiasis in feline",
+        "Symptoms": "- Straining to urinate - Frequent urination - Dysuria (painful urination) - Hematuria (blood in urine) - Pollakiuria (urinating small amounts frequently) - Urinary incontinence - Crying or discomfort when urinating - Perineal licking",
+        "Clinical_Signs": "- Physical examination findings may include a palpable bladder, discomfort on abdominal palpation, or dehydration. - Urinalysis may reveal hematuria, pyuria (pus in urine), or crystals. - Radiography or ultrasonography may be used to visualize the bladder and urethra and to identify the presence of calculi. - Cystoscopy may be necessary to directly visualize the bladder and urethra and to remove calculi."
+    },
+    {
+        "Disease": "Vagus Indigestion",
+        "Symptoms": "Vomiting, regurgitation, loss of appetite, weight loss, diarrhea, constipation, abdominal distension, and colic.",
+        "Clinical_Signs": "Bradycardia, hypotension, arrhythmias, and respiratory distress."
+    },
+    {
+        "Disease": "Verminous Bronchitis",
+        "Symptoms": "Difficulty breathing, coughing, wheezing",
+        "Clinical_Signs": "Fever, weight loss, poor appetite, anemia"
+    },
+    {
+        "Disease": "Vitamin B-Complex Deficiency",
+        "Symptoms": "Anorexia, weakness, lethargy, weight loss, diarrhea, vomiting, anemia, neurological problems, skin lesions, hair loss",
+        "Clinical_Signs": "Polyneuropathy, ataxia, seizures, muscle weakness, anemia, glossitis, cheilitis, conjunctivitis, dermatitis, hyperesthesia, paresthesia, pruritus, hepatomegaly, splenomegaly, polyuria, polydipsia"
+    },
+    {
+        "Disease": "Vitamin-A Deficiency",
+        "Symptoms": "* Night blindness * Poor growth * Weight loss * Reproductive problems * Immune dysfunction",
+        "Clinical_Signs": "* Xerophthalmia (dryness of the conjunctiva and cornea) * Keratomalacia (softening and ulceration of the cornea) * Night blindness * Poor growth * Weight loss * Reproductive problems * Immune dysfunction"
+    },
+    {
+        "Disease": "Vitamin-D Deficiency",
+        "Symptoms": "* Failure to thrive * Poor muscle development * Weakness or stiffness * Fractures or skeletal deformities * Neurological signs (e.g., seizures, ataxia) * Decreased appetite * Weight loss * Gastrointestinal upset (e.g., vomiting, diarrhea) * Anemia",
+        "Clinical_Signs": "* Hypocalcemia * Hyperphosphatemia * Increased alkaline phosphatase activity * Deformed bones on radiographs * Low serum 25-hydroxyvitamin D concentration"
+    },
+    {
+        "Disease": "Vitamin-E Deficiency",
+        "Symptoms": "Steatitis, encephalopathy, exudative diathesis",
+        "Clinical_Signs": "Neurological (ataxia, paresis, tremors, head tilt, blindness), muscular (myositis, rhabdomyolysis), dermatological (skin lesions, alopecia, hyperkeratosis), gastrointestinal (diarrhea, vomiting, anorexia), and reproductive (abortion, stillbirth)"
+    },
+    {
+        "Disease": "Vitamin-K Deficiency",
+        "Symptoms": "Delayed blood clotting time Prolonged bleeding from wounds Easy bruising Blood in urine or feces Pale gums",
+        "Clinical_Signs": "Anemia Weakness Lethargy Depression Loss of appetite Weight loss Signs of internal bleeding"
+    },
+    {
+        "Disease": "Volvulus",
+        "Symptoms": "Abdominal distention, restlessness, anorexia, vomiting, retching, pain, salivation, and constipation",
+        "Clinical_Signs": "Abdominal distension, abdominal pain, and respiratory distress"
+    },
+    {
+        "Disease": "Wobbler Syndrome",
+        "Symptoms": "Difficulty walking or standing, weakness in the hind legs, stumbling or falling, and neck pain.",
+        "Clinical_Signs": "Proprioceptive deficits, loss of spinal reflexes, and decreased muscle mass in the hindquarters."
+    },
+    {
+        "Disease": "Zinc deficiency",
+        "Symptoms": "Anorexia, weight loss, dull hair coat, poor hoof and skin quality, impaired fertility",
+        "Clinical_Signs": "Dermatitis, parakeratosis, alopecia, delayed wound healing, impaired immune function, growth retardation"
+    },
+    {
+        "Disease": "Adrenal Tumours",
+        "Symptoms": "Increased thirst, Increased urination, Muscle weakness, Lethargy, Loss of hair, Thinning of the skin, Increased abdominal girth, Weight loss, Loss of appetite, Increased respiratory rate, Panting, Diarrhea, Vomiting, Blood in the urine, Blood in the stools, Painful urination, Straining to urinate, Constipation, Seizures, Loss of consciousness, Sudden death",
+        "Clinical_Signs": "Hair loss, Thinning of the skin, Increased abdominal girth, Weight loss, Loss of appetite, Increased thirst, Increased urination, Muscle weakness, Lethargy, Increased respiratory rate, Panting, Diarrhea, Vomiting, Blood in the urine, Blood in the stools, Painful urination, Straining to urinate, Constipation, Seizures, Loss of consciousness, Sudden death"
+    },
+    {
+        "Disease": "Autoimmune Diseases",
+        "Symptoms": "Varies widely depending on the specific autoimmune disease, but may include:",
+        "Clinical_Signs": "* Pruritus * Erythema * Papules * Pustules * Ulcers * Alopecia * Otitis externa * Ocular discharge * Keratoconjunctivitis sicca * Polyarthritis * Lameness * Fever * Lethargy * Anorexia * Weight loss"
+    },
+    {
+        "Disease": "Azotaemia",
+        "Symptoms": "- Lethargy - Weakness - Anorexia - Vomiting - Diarrhea - Weight loss - Polydipsia (excessive thirst) - Polyuria (excessive urination) - Dehydration - Muscle wasting - Anemia - Jaundice (yellowing of the skin and mucous membranes)",
+        "Clinical_Signs": "- Increased blood urea nitrogen (BUN) levels - Increased creatinine levels - Increased uric acid levels - Decreased urine output - Proteinuria (protein in the urine) - Hematuria (blood in the urine) - Pyuria (pus in the urine) - Bacterial cystitis - Renal calculi"
+    },
+    {
+        "Disease": "Candidiasis",
+        "Symptoms": "- Polyuria (excessive urination) - Polydipsia (excessive thirst) - Polyphagia (excessive hunger) - Weight loss - Lethargy - Vomiting - Diarrhea",
+        "Clinical_Signs": "- Oral candidiasis: white or yellowish patches or plaques on the tongue, gums, or inside of the cheeks - Cutaneous candidiasis: red, moist, itchy rash with raised borders, often in moist areas such as skin folds or between the toes - Otitis externa (ear infection): redness, swelling, and discharge from the ear - Vaginitis (inflammation of the vagina): itching, burning, and discharge - Candidal sepsis (a serious infection of the bloodstream): fever, chills, hypotension, and multiple organ failure"
+    },
+    {
+        "Disease": "Canine Acne",
+        "Symptoms": "List of symptoms for the disease",
+        "Clinical_Signs": "- Papules - Pustules - Comedones - Erythema - Scaling - Pruritus - Pain"
+    },
+    {
+        "Disease": "Canine Giardiasis",
+        "Symptoms": "Intermittent or chronic diarrhea, soft or watery stools, occasionally containing blood or mucus, loss of appetite, lethargy, weight loss, vomiting, flatulence, abdominal discomfort",
+        "Clinical_Signs": "Dehydration, electrolyte imbalance, weight loss, malabsorption, pancreatitis, inflammatory bowel disease, anemia, skin lesions"
+    },
+    {
+        "Disease": "Canine Oral Plasmacytoma",
+        "Symptoms": "Swollen gums, bleeding gums, difficulty eating, weight loss, lethargy",
+        "Clinical_Signs": "Ulcerated, proliferative or mixed masses in the oral cavity, often involving the gingiva, occasionally the tonsils or tongue"
+    },
+    {
+        "Disease": "Colitis (Inflammation of the Colon)",
+        "Symptoms": "* Diarrhea, often with blood or mucus * Abdominal pain * Straining to defecate * Tenesmus (frequent, unsuccessful attempts to defecate) * Weight loss * Lethargy * Anorexia",
+        "Clinical_Signs": "* Rectal examination: may reveal inflammation, swelling, or ulceration of the colon * Blood tests: may show elevated white blood cell count and other signs of inflammation * Fecal examination: may reveal blood, mucus, or parasites * Radiography or ultrasonography: may show thickening or inflammation of the colon"
+    },
+    {
+        "Disease": "Dermatitis",
+        "Symptoms": "- Itching - Redness - Swelling - Pain - Heat - Discharge",
+        "Clinical_Signs": "- Pruritic skin lesions (e.g., erythema, papules, pustules, vesicles, wheals, excoriations, alopecia) - Scaling skin lesions (e.g., dandruff, plaques, crusts) - Hyperpigmentation - Hypopigmentation - Lichenification - Excoriation - Ulceration - Crusting - Scaling - Papules - Pustules - Vesicles - Wheals - Erosions - Fissures"
+    },
+    {
+        "Disease": "Empyema",
+        "Symptoms": "Increased respiratory rate, Coughing, Dyspnea, Reluctance to exercise, Exercise intolerance, Decreased appetite, Weight loss, Lethargy, Fever, Depression, Thoracic pain, Muffled heart sounds.",
+        "Clinical_Signs": "Crackles or wheezes on thoracic auscultation, Muffled heart sounds, Pleural effusion on thoracic radiography or ultrasound, Pyrexia, Leukocytosis, Increased sedimentation rate, Thoracic pain, Dyspnea, Tachypnea, Cyanosis, Coughing."
+    },
+    {
+        "Disease": "Feline Lungworms",
+        "Symptoms": "Persistent mild cough, wheezing, and respiratory distress",
+        "Clinical_Signs": "Tachypnea, dyspnea, cyanosis, weight loss, and anorexia"
+    },
+    {
+        "Disease": "Feline Roundworms",
+        "Symptoms": "- Vomiting - Diarrhea - Weight loss - Abdominal pain",
+        "Clinical_Signs": "- Pot-bellied appearance - Dull coat - Lethargy"
+    },
+    {
+        "Disease": "Giardiasis",
+        "Symptoms": "* Diarrhea, often foul-smelling and frothy * Vomiting * Weight loss * Abdominal pain * Lethargy * Dehydration",
+        "Clinical_Signs": "* Giardia cysts in the feces * Positive fecal antigen test * Positive PCR test"
+    },
+    {
+        "Disease": "Hepatic Lipidosis (Fatty Liver Disease)",
+        "Symptoms": "Loss of appetite, Weight loss, Lethargy, Vomiting, Diarrhea",
+        "Clinical_Signs": "Jaundice, Enlarged liver, Ascites, Abdominal pain, Neurological signs (e.g., seizures, coma)"
+    },
+    {
+        "Disease": "Hypothyroidism (Dogs)",
+        "Symptoms": "- Lethargy - Weight gain - Cold intolerance - Dry skin and coat - Increased shedding - Hair loss - Skin infections - Ear infections - Constipation - Muscle weakness - Elevated cholesterol levels - Anemia",
+        "Clinical_Signs": "- Bradycardia - Pericardial effusion - Ascites - Hepatomegaly - Splenomegaly - Muscle atrophy - Neurologic abnormalities (e.g., seizures, ataxia, dementia) - Reproductive disorders (e.g., infertility, abortion)"
+    },
+    {
+        "Disease": "Lymphoma",
+        "Symptoms": "Lethargy, Loss of appetite, Weight loss, Fever, Night sweats",
+        "Clinical_Signs": "Enlarged lymph nodes (lymphadenopathy), Hepatomegaly (enlarged liver), Splenomegaly (enlarged spleen), Pale gums (anemia), Icterus (jaundice)"
+    },
+    {
+        "Disease": "Myositis",
+        "Symptoms": "- Muscle weakness or pain - Stiffness or reluctance to move - Swollen or painful muscles - Exercise intolerance - Weight loss",
+        "Clinical_Signs": "- Muscle atrophy or weakness - Stiff or painful gait - Muscle swelling or tenderness - Exercise intolerance - Lameness"
+    },
+    {
+        "Disease": "Neosporosis",
+        "Symptoms": "Abortions, stillbirths, congenital abnormalities, weakness, poor growth, CNS signs, ocular lesions",
+        "Clinical_Signs": "None, or weight loss, respiratory distress, depression, anorexia in some cases"
+    },
+    {
+        "Disease": "Osteodystrophia Fibrosa (Renal Ricket, Rubber Jaw)",
+        "Symptoms": "* Enlargement of jaw (Rubber Jaw) * Spontaneous fractures * Limb deformities * Muscle weakness",
+        "Clinical_Signs": "* Chronic renal failure and polyuria/polydipsia * Hypocalcemia * Hyperphosphatemia * Anemia * Metabolic acidosis"
+    },
+    {
+        "Disease": "Posterior Uveitis",
+        "Symptoms": "Photophobia, blepharospasm, miosis, and pain",
+        "Clinical_Signs": "Retinal detachment, vitreal hemorrhage, and optic nerve head swelling"
+    },
+    {
+        "Disease": "Pregnancy Toxaemia",
+        "Symptoms": "The animal may appear dull, lethargic and reluctant to move. The animal may lose its appetite. The animal may become constipated. The animal may develop a fever. The animal may show signs of dehydration, such as dry mouth, sunken eyes and reduced skin elasticity.",
+        "Clinical_Signs": "The animal may have a history of being overfed during pregnancy. The animal may be in the last trimester of pregnancy. The animal may be carrying multiple fetuses. The animal may have a history of giving birth to large litters. The animal may have a history of being overweight or obese. The animal may have a history of metabolic disorders, such as diabetes or Cushing's disease."
+    },
+    {
+        "Disease": "Pylonephritis",
+        "Symptoms": "- Dysuria (painful urination) - Pollakiuria (frequent urination) - Stranguria (difficulty urinating) - Hematuria (blood in the urine) - Pyuria (pus in the urine) - Fever - Anorexia - Lethargy",
+        "Clinical_Signs": "- Enlarged, painful kidneys - Urethral discharge - Testicular pain (in males) - Epididymitis (inflammation of the epididymis in males) - Orchitis (inflammation of the testes in males)"
+    },
+    {
+        "Disease": "Pyometra (Infectious Uterine Disease)",
+        "Symptoms": "Lethargy, Anorexia, Polyuria (increased urination), Polydipsia (increased thirst), Vomiting, Diarrhea",
+        "Clinical_Signs": "Fever, Abdominal distension, Vaginal discharge (may be purulent or bloody), Uterine enlargement, Cervical edema, Lymphadenopathy (enlarged lymph nodes), Sepsis (in severe cases)"
+    },
+    {
+        "Disease": "Ruminal Dysfunction",
+        "Symptoms": "Decreased or absent rumen motility, Reduced or absent appetite, Weight loss, Bloating, Rumen distension, Constipation or diarrhea, Lethargy, Depression, Dehydration",
+        "Clinical_Signs": "Physical examination findings consistent with rumen dysfunction, such as distension, tympany, or decreased motility, Bloodwork findings suggestive of metabolic acidosis, such as decreased pH and increased lactate levels, Radiographic or ultrasonographic findings consistent with ruminal dysfunction, such as gas distension or fluid accumulation"
+    },
+    {
+        "Disease": "Ruminal Tympany",
+        "Symptoms": "- Bloating of the rumen - Distension of the left flank - Inappetance - Retching - Dyspnea",
+        "Clinical_Signs": "- Increased respiratory rate - Increased heart rate - Mucous membranes cyanotic - Distended abdomen - Gasping - Frothy salivation"
+    },
+    {
+        "Disease": "Urinary Incontinence",
+        "Symptoms": "- Involuntary leakage of urine - Frequent urination - Straining or difficulty urinating - Pain or discomfort while urinating - Blood in the urine",
+        "Clinical_Signs": "- Physical examination to evaluate the animal's overall health and rule out any underlying medical conditions - Urinalysis to check for abnormalities in the urine, such as the presence of bacteria or crystals - Ultrasound of the urinary tract to visualize the bladder, urethra, and surrounding structures - Cystogram to evaluate the bladder's function and identify any abnormalities - Blood tests to rule out any underlying medical conditions"
+    },
+    {
+        "Disease": "Feline Bordetellosis",
+        "Symptoms": "Sneezing, Nasal discharge, Conjunctivitis, Ocular discharge, Lethargy",
+        "Clinical_Signs": "Respiratory signs such as dyspnea, tachypnea, and coughing"
+    },
+    {
+        "Disease": "Strangulation",
+        "Symptoms": "* Difficulty breathing * Coughing * Wheezing * Gagging * Drooling * Vomiting * Diarrhea * Abdominal pain * Loss of appetite * Weight loss * Lethargy * Depression",
+        "Clinical_Signs": "* Neck pain * Swelling of the neck * Bruising of the neck * Difficulty swallowing * Hoarseness * Stridor * Cyanosis * Respiratory distress * Cardiovascular collapse"
+    }
+]
