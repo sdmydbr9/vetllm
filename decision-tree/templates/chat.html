@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VetLLM Conversational UI</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      body {
+        background-color: #f0f2f5;
+      }
+      #conversation {
+        height: 70vh;
+        overflow-y: auto;
+        background: #fff;
+        border: 1px solid #ccc;
+        padding: 15px;
+        border-radius: 5px;
+      }
+      .message {
+        margin-bottom: 15px;
+      }
+      .message.user .bubble {
+        background-color: #d1e7dd;
+        text-align: right;
+      }
+      .message.bot .bubble {
+        background-color: #e2e3e5;
+        text-align: left;
+      }
+      .bubble {
+        display: inline-block;
+        padding: 10px 15px;
+        border-radius: 15px;
+        max-width: 80%;
+        position: relative;
+      }
+      /* Style for the Reference link */
+      .reference-link {
+        font-size: 0.8em;
+        margin-left: 5px;
+        vertical-align: super;
+        cursor: pointer;
+        color: blue;
+        text-decoration: underline;
+      }
+      .hidden-reference {
+        display: none;
+        font-size: 0.9em;
+        margin-top: 5px;
+        padding-top: 5px;
+        border-top: 1px solid #ccc;
+      }
+      #preset-buttons button {
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container py-4">
+      <h1 class="mb-4">VetLLM Conversational UI</h1>
+      <!-- Provider Selection -->
+      <div class="mb-3">
+        <label for="providerSelect" class="form-label">Select LLM Provider:</label>
+        <select class="form-select w-auto" id="providerSelect">
+          <option value="Ollama" {% if provider == 'Ollama' %} selected {% endif %}>Ollama</option>
+          <option value="Gemini" {% if provider == 'Gemini' %} selected {% endif %}>Gemini</option>
+        </select>
+      </div>
+      <!-- Preset Prompt Buttons -->
+      <div id="preset-buttons" class="mb-3">
+        {% for key, action in actions.items() %}
+          <button class="btn btn-outline-secondary preset-btn" data-key="{{ key }}">
+            {{ action.display }}
+          </button>
+        {% endfor %}
+      </div>
+      <!-- Conversation Area -->
+      <div id="conversation" class="mb-3"></div>
+      <!-- Input Area -->
+      <form id="chat-form">
+        <div class="input-group">
+          <input type="text" id="chat-input" class="form-control" placeholder="Type your message here..." autocomplete="off" required>
+          <button class="btn btn-primary" type="submit">Send</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const chatForm = document.getElementById('chat-form');
+      const chatInput = document.getElementById('chat-input');
+      const conversation = document.getElementById('conversation');
+      const providerSelect = document.getElementById('providerSelect');
+      const presetButtons = document.querySelectorAll('.preset-btn');
+
+      // Preset prompt prefixes from server-side
+      const promptPrefixes = {{ prompt_prefixes|tojson }};
+
+      // Variables to handle multi-step input for calculate_dose_rate
+      let multiStepAction = null;
+      let multiStepStep = 0;
+      let multiStepAnswers = {};
+
+      // When a preset button is clicked
+      presetButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const key = button.getAttribute('data-key');
+          if (key === 'calculate_dose_rate') {
+            // Start multi-step process for Calculate Dose Rate
+            multiStepAction = 'calculate_dose_rate';
+            multiStepStep = 1;
+            multiStepAnswers = {};
+            appendMessage('bot', 'Please enter the drug name:');
+            chatInput.value = '';
+            chatInput.focus();
+            return;
+          } else {
+            // For other actions, simply insert the prompt prefix
+            let promptText = promptPrefixes[key] || '';
+            chatInput.value = promptText;
+            chatInput.focus();
+          }
+        });
+      });
+
+      // Append a message to the conversation
+      function appendMessage(sender, text, matches = null) {
+        const messageDiv = document.createElement('div');
+        messageDiv.classList.add('message', sender);
+        const bubbleDiv = document.createElement('div');
+        bubbleDiv.classList.add('bubble');
+
+        const mainText = document.createElement('span');
+        mainText.innerText = text;
+        bubbleDiv.appendChild(mainText);
+
+        // For bot messages with matches, add a Reference hyperlink
+        if (sender === 'bot' && matches) {
+          const refLink = document.createElement('a');
+          refLink.href = "#";
+          refLink.innerText = " Reference";
+          refLink.classList.add("reference-link");
+          bubbleDiv.appendChild(refLink);
+
+          const hiddenDiv = document.createElement('div');
+          hiddenDiv.classList.add("hidden-reference");
+          hiddenDiv.innerText = matches;
+          bubbleDiv.appendChild(hiddenDiv);
+
+          refLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            hiddenDiv.style.display = hiddenDiv.style.display === "block" ? "none" : "block";
+          });
+        }
+
+        messageDiv.appendChild(bubbleDiv);
+        conversation.appendChild(messageDiv);
+        conversation.scrollTop = conversation.scrollHeight;
+      }
+
+      // Function to send a chat request to the server
+      async function sendChatRequest(message) {
+        const provider = providerSelect.value;
+        try {
+          const response = await fetch('/chat', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ message: message, provider: provider })
+          });
+          const data = await response.json();
+          if (data.error) {
+            appendMessage('bot', 'Error: ' + data.error);
+          } else {
+            appendMessage('bot', data.response, data.matches);
+          }
+        } catch (error) {
+          appendMessage('bot', 'Error: ' + error.message);
+        }
+      }
+
+      // Handle chat form submission
+      chatForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const message = chatInput.value.trim();
+        if (!message) return;
+        
+        // Check if we're in a multi-step process for calculate_dose_rate
+        if (multiStepAction === 'calculate_dose_rate') {
+          appendMessage('user', message);
+          if (multiStepStep === 1) {
+            // Store drug name and ask for species
+            multiStepAnswers.drugname = message;
+            multiStepStep = 2;
+            appendMessage('bot', 'Please enter the species:');
+          } else if (multiStepStep === 2) {
+            // Store species and ask for body weight
+            multiStepAnswers.species = message;
+            multiStepStep = 3;
+            appendMessage('bot', 'Please enter the body weight:');
+          } else if (multiStepStep === 3) {
+            // Store body weight and then compose & send the final prompt
+            multiStepAnswers.bodyweight = message;
+            // Construct the prompt using the answers collected.
+            let prompt = promptPrefixes['calculate_dose_rate']
+                          .replace('{ingredient}', multiStepAnswers.drugname)
+                          .replace('{weight}', multiStepAnswers.bodyweight)
+                          .replace('{species}', multiStepAnswers.species);
+            // Reset the multi-step state
+            multiStepAction = null;
+            multiStepStep = 0;
+            multiStepAnswers = {};
+            // Send the composed prompt to the server
+            sendChatRequest(prompt);
+          }
+          chatInput.value = '';
+          return;
+        }
+
+        // For normal messages (non multi-step), send immediately.
+        appendMessage('user', message);
+        chatInput.value = '';
+        
+        const provider = providerSelect.value;
+        try {
+          const response = await fetch('/chat', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ message: message, provider: provider })
+          });
+          const data = await response.json();
+          if (data.error) {
+            appendMessage('bot', 'Error: ' + data.error);
+          } else {
+            appendMessage('bot', data.response, data.matches);
+          }
+        } catch (error) {
+          appendMessage('bot', 'Error: ' + error.message);
+        }
+      });
+    </script>
+  </body>
+</html>

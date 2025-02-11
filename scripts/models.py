@@ -34,6 +34,9 @@ def progressive_condition_score(query: str, doc: str) -> float:
     """
     Extracts the condition from the document (assumed to be in the line starting with "Disease:")
     and computes a score based on the longest common prefix of tokens.
+    For example, if the query is "canine oral" and the condition is "canine oral plasmacytoma",
+    the score will be 1.0 (if both tokens match). If the condition is "canine parvovirus",
+    only the first token matches, and the score will be 0.5.
     """
     lines = doc.splitlines()
     disease_line = None
@@ -48,7 +51,6 @@ def progressive_condition_score(query: str, doc: str) -> float:
     query_tokens = query.lower().split()
     condition_tokens = condition.split()
     match_count = 0
-    # Compare tokens in order (progressively matching)
     for qt, ct in zip(query_tokens, condition_tokens):
         if qt == ct:
             match_count += 1
@@ -56,13 +58,12 @@ def progressive_condition_score(query: str, doc: str) -> float:
             break
     return match_count / len(query_tokens)
 
-# Set up spaCy and PhraseMatcher for simple keyword matching (used for other categories)
+# Set up spaCy and PhraseMatcher for simple keyword matching
 nlp = spacy.load("en_core_web_sm")
 pharma_keywords = [
     "indication", "tradename", "brand name", "active ingredient", "dose rate",
     "dosage", "administration", "contraindication", "food timing",
-    "meal timing", "mechanism", "mechanism of action", "products",
-    "medications", "drugs"
+    "meal timing", "mechanism", "mechanism of action", "products"
 ]
 clinical_keywords = [
     "line of treatment", "treatment plan", "treatment protocol", "synonyms",
@@ -96,17 +97,21 @@ def determine_category_spacy(query: str) -> str:
 
 def hybrid_search(query: str, doc_collections: dict, top_k_vector: int = 3, top_candidates: int = 5, alpha: float = 0.5):
     """
-    Expects doc_collections as a dict with keys "clinical", "disease", "pharma".
+    Expects doc_collections as a dict. Typically with keys "clinical", "disease", "pharma".
     Each value is a tuple: (list_of_documents, corresponding_FAISS_index)
+
+    If the determined category (via spaCy) is not found in doc_collections,
+    then the function falls back to using the first (or only) key provided.
     """
     category = determine_category_spacy(query)
-    print(f"Query routed to category: {category}")
-    if category == "pharma":
-        docs, index_obj = doc_collections["pharma"]
-    elif category == "disease":
-        docs, index_obj = doc_collections["disease"]
+    if category in doc_collections:
+        docs, index_obj = doc_collections[category]
     else:
-        docs, index_obj = doc_collections["clinical"]
+        key = list(doc_collections.keys())[0]
+        # Update category to the fallback key
+        category = key
+        docs, index_obj = doc_collections[key]
+    print(f"Query routed to category: {category}")
     
     query_vector = encoder.encode([query], convert_to_numpy=True).astype('float32')
     distances, indices = index_obj.search(query_vector, top_k_vector)
@@ -122,6 +127,7 @@ def hybrid_search(query: str, doc_collections: dict, top_k_vector: int = 3, top_
     
     fulltext_candidates = []
     for i, doc in enumerate(docs):
+        # Use progressive condition scoring for disease category, otherwise simple scoring.
         if category == "disease":
             ft_score = progressive_condition_score(query, doc)
         else:
@@ -133,7 +139,7 @@ def hybrid_search(query: str, doc_collections: dict, top_k_vector: int = 3, top_
                 "fulltext_score": ft_score,
             })
     
-    # Merge candidates and compute a hybrid score
+    # Merge vector and fulltext candidates.
     candidates = {}
     for cand in vector_candidates:
         candidates[cand["id"]] = {
@@ -152,9 +158,30 @@ def hybrid_search(query: str, doc_collections: dict, top_k_vector: int = 3, top_
                 "vector_score": 0.0,
                 "fulltext_score": cand["fulltext_score"],
             }
+    # Compute the final hybrid score.
     for cand in candidates.values():
         cand["hybrid_score"] = alpha * cand["vector_score"] + (1 - alpha) * cand["fulltext_score"]
     
     sorted_candidates = sorted(candidates.values(), key=lambda x: x["hybrid_score"], reverse=True)
     top_cands = sorted_candidates[:top_candidates]
     return top_cands
+
+def format_pharma(item):
+    """
+    Returns a formatted string representation of a pharma document.
+    Now includes the key "metabolism_and_elimination" if available.
+    """
+    pharma_info = item.get("pharma_info", {})
+    text = (
+        f"Active Ingredient: {item.get('Active Ingredient', '')}\n"
+        f"Trade Name: {item.get('Trade Name', '')}\n"
+        f"Ingredient: {item.get('Ingredient', '')}\n"
+        f"Dose Rate: {pharma_info.get('dose_rate', '')}\n"
+        f"Indication: {pharma_info.get('indication', '')}\n"
+        f"Contraindication: {pharma_info.get('contraindication', '')}\n"
+        f"Food Timing: {pharma_info.get('food_timing', '')}\n"
+        f"Mechanism: {pharma_info.get('mechanism_of_action', '')}\n"
+        f"Metabolism and Elimination: {pharma_info.get('metabolism_and_elimination', '')}\n"
+        f"Products: {pharma_info.get('products', '')}"
+    )
+    return text

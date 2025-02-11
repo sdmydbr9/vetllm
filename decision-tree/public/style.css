@@ -1,0 +1,343 @@
+/* --------------------------
+   Landing Page Styling
+-------------------------- */
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f2f5;
+}
+
+/* --------------------------
+   Chat Icon Styling
+-------------------------- */
+.chat-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #0084ff;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+/* Bounce animation for chat icon */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+
+/* --------------------------
+   Chat Window Styling
+-------------------------- */
+.chat-window {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 350px;
+  height: 500px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+/* Full screen mode for large devices */
+.chat-window.fullscreen {
+  width: 75vw;
+  height: 75vh;
+  top: 12.5vh;
+  left: 12.5vw;
+  bottom: auto;
+  right: auto;
+}
+
+/* Chat Window Header */
+.chat-header {
+  background-color: #0084ff;
+  color: white;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Chat Title */
+.chat-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Chat Header Buttons Container */
+.chat-header-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+/* Chat Body */
+.chat-body {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  background-color: #f0f0f0;
+}
+
+/* Chat Input Area */
+.chat-input-area {
+  padding: 10px;
+  background-color: #eee;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* --------------------------
+   Chat Message Styling
+-------------------------- */
+.message {
+  margin-bottom: 10px;
+  display: flex;
+}
+
+/* User messages */
+.message.user {
+  justify-content: flex-end;
+}
+.message.user .bubble {
+  background-color: #0084ff;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 15px 15px 0 15px;
+  max-width: 80%;
+}
+
+/* Bot messages */
+.message.bot {
+  justify-content: flex-start;
+}
+.message.bot .bubble {
+  background-color: #e4e6eb;
+  color: black;
+  padding: 8px 12px;
+  border-radius: 15px 15px 15px 0;
+  max-width: 80%;
+}
+
+/* Fade-in animation */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* --------------------------
+   Loading Animation Styling
+-------------------------- */
+.loading-bubble {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.loading-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin: 0 2px;
+  background-color: #555;
+  border-radius: 50%;
+  animation: blink 1.4s infinite both;
+}
+.loading-dot:nth-child(1) { animation-delay: 0s; }
+.loading-dot:nth-child(2) { animation-delay: 0.2s; }
+.loading-dot:nth-child(3) { animation-delay: 0.4s; }
+@keyframes blink {
+  0% { opacity: 0.2; }
+  20% { opacity: 1; }
+  100% { opacity: 0.2; }
+}
+
+/* --------------------------
+   Reference Link Styling
+-------------------------- */
+.reference-link {
+  font-size: 0.8em;
+  margin-left: 5px;
+  vertical-align: super;
+  cursor: pointer;
+  color: #0084ff;
+  text-decoration: underline;
+}
+.hidden-reference {
+  display: none;
+  font-size: 0.9em;
+  margin-top: 5px;
+  padding-top: 5px;
+  border-top: 1px solid #ccc;
+}
+
+/* --------------------------
+   Options Container Styling
+-------------------------- */
+.options-container button {
+  margin: 5px;
+}
+
+/* --------------------------
+   Formatting for ordered lists in chat bubbles
+-------------------------- */
+.bubble ol {
+  margin: 0;
+  padding-left: 20px;
+}
+
+/* --------------------------
+   Typeahead Suggestions Styling
+-------------------------- */
+.typeahead-container {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 1001;
+}
+
+.typeahead-suggestion {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.typeahead-suggestion:hover {
+  background-color: #f0f0f0;
+}
+
+/* --------------------------
+   Mobile Specific Styling & Animations
+-------------------------- */
+@media (max-width: 768px) {
+  /* Reset default margins/padding for full-width mobile display */
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Hide the landing page on mobile */
+  .landing-page {
+    display: none;
+  }
+
+  /* Full screen chat window on mobile with safe-area insets */
+  .chat-window {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100dvh; /* Use dynamic viewport height if supported */
+    box-sizing: border-box;
+    /* Add bottom padding so the content never touches the very bottom */
+    padding-bottom: env(safe-area-inset-bottom);
+    display: flex;
+    flex-direction: column;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    z-index: 1000;
+    transition: none;
+  }
+
+  /* Chat Header: Adjust as needed for full width */
+  .chat-header {
+    border-radius: 0;
+  }
+
+  /* Chat Body: Allow room for the input area and safe-area */
+  .chat-body {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #f0f0f0;
+    margin-bottom: 20px;
+  }
+
+  /* Place the chat input area inside the chat window flow */
+  .chat-input-area {
+    position: relative;
+    background-color: #eee;
+    padding: 10px;
+    /* Extra bottom padding for safe area (home indicator, address bar, etc.) */
+    padding-bottom: calc(10px + env(safe-area-inset-bottom));
+    border-top: 1px solid #ccc;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-top: 10px;
+  }
+  
+  /* Extra margin for the disclaimer text if needed */
+  .chat-input-area .disclaimer {
+    margin-bottom: 20px;
+  }
+  
+  /* Ensure the typeahead suggestions appear correctly on mobile */
+  .typeahead-container {
+    z-index: 1002 !important;
+    position: absolute;
+    top: 100%; /* Places it right below the input field */
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    display: block !important;
+    max-height: 150px;
+    overflow-y: auto;
+  }
+  
+
+  /* Slide-in and slide-out animations for the chat window */
+  .mobile-slide-in {
+    animation: slideInUp 0.3s ease-out forwards;
+  }
+  .mobile-slide-out {
+    animation: slideOutDown 0.3s ease-out forwards;
+  }
+}
+
+/* Slide in from bottom */
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Slide out to bottom */
+@keyframes slideOutDown {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}

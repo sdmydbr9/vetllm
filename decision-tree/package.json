@@ -1,0 +1,18 @@
+{
+  "name": "vetllm-chatbot",
+  "version": "1.0.0",
+  "description": "A chat application for VetLLM using Express and a FastAPI backend.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

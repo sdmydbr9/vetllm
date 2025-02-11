@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VetLLM Interactive Decision Tree App</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jsTree CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.12/themes/default/style.min.css" />
+    <style>
+      body {
+        background-color: #f0f2f5;
+      }
+      .container {
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>VetLLM Interactive Decision Tree App</h1>
+      <!-- LLM Provider Selection -->
+      <div class="mb-4">
+        <form id="provider-form">
+          <label for="provider" class="form-label">Select LLM Provider:</label>
+          <select id="provider" name="provider" class="form-select w-auto d-inline-block">
+            <option value="Ollama" {% if provider == 'Ollama' %} selected {% endif %}>Ollama</option>
+            <option value="Gemini" {% if provider == 'Gemini' %} selected {% endif %}>Gemini</option>
+          </select>
+        </form>
+      </div>
+      <!-- Decision Tree Container -->
+      <div id="decision-tree"></div>
+    </div>
+    <!-- jQuery (required for jsTree) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- jsTree JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.12/jstree.min.js"></script>
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      $(function() {
+          // Define the tree structure data.
+          var treeData = [
+              {
+                  "text": "Clinical Data",
+                  "children": [
+                      { "text": "Synonym", "data": { "action": "synonym" } },
+                      { "text": "Diagnostic Workup", "data": { "action": "diagnostic_workup" } },
+                      { "text": "Drug of Choice", "data": { "action": "drug_of_choice" } },
+                      { "text": "Differential Diagnosis", "data": { "action": "differential_diagnosis" } },
+                      { "text": "Line of Treatment", "data": { "action": "line_of_treatment" } },
+                      { "text": "Prognosis", "data": { "action": "prognosis" } }
+                  ]
+              },
+              {
+                  "text": "Disease Symptoms",
+                  "children": [
+                      { "text": "Describe Clinical Signs and Symptoms", "data": { "action": "describe_clinical_signs" } },
+                      { "text": "Symptoms", "data": { "action": "symptoms" } },
+                      { "text": "Reverse Symptom Lookup", "data": { "action": "reverse_symptom_lookup" } }
+                  ]
+              },
+              {
+                  "text": "Pharma",
+                  "children": [
+                      { "text": "Calculate Dose Rate", "data": { "action": "calculate_dose_rate" } },
+                      { "text": "Indication", "data": { "action": "indication" } },
+                      { "text": "Contraindication", "data": { "action": "contraindication" } },
+                      { "text": "Mechanism of Action", "data": { "action": "mechanism_of_action" } },
+                      { "text": "Metabolism and Elimination", "data": { "action": "metabolism_and_elimination" } },
+                      { "text": "Products", "data": { "action": "products" } }
+                  ]
+              }
+          ];
+
+          // Initialize jsTree with the defined data.
+          $('#decision-tree').jstree({
+              'core': {
+                  'data': treeData
+              }
+          });
+
+          // When a node is selected, redirect to its action page.
+          $('#decision-tree').on("select_node.jstree", function (e, data) {
+              var action = data.node.data.action;
+              if (action) {
+                  // Get the selected provider from the dropdown.
+                  var provider = $('#provider').val();
+                  // Redirect to the action page (which will display the corresponding form).
+                  window.location.href = "/action/" + action + "?provider=" + encodeURIComponent(provider);
+              }
+          });
+      });
+    </script>
+  </body>
+</html>

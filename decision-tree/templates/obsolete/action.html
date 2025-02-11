@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VetLLM Conversational UI</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      body {
+        background-color: #f0f2f5;
+      }
+      #conversation {
+        height: 70vh;
+        overflow-y: auto;
+        background: #fff;
+        border: 1px solid #ccc;
+        padding: 15px;
+        border-radius: 5px;
+      }
+      .message {
+        margin-bottom: 15px;
+      }
+      .message.user .bubble {
+        background-color: #d1e7dd;
+        text-align: right;
+      }
+      .message.bot .bubble {
+        background-color: #e2e3e5;
+        text-align: left;
+      }
+      .bubble {
+        display: inline-block;
+        padding: 10px 15px;
+        border-radius: 15px;
+        max-width: 80%;
+        position: relative;
+      }
+      /* Style for the Reference link */
+      .reference-link {
+        font-size: 0.8em;
+        margin-left: 5px;
+        vertical-align: super;
+        cursor: pointer;
+        color: blue;
+        text-decoration: underline;
+      }
+      .hidden-reference {
+        display: none;
+        font-size: 0.9em;
+        margin-top: 5px;
+        padding-top: 5px;
+        border-top: 1px solid #ccc;
+      }
+      /* Options buttons styling inside a bubble */
+      .options-container button {
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container py-4">
+      <h1 class="mb-4">VetLLM Conversational UI</h1>
+      <!-- Conversation Area -->
+      <div id="conversation" class="mb-3"></div>
+      <!-- Input Area -->
+      <form id="chat-form">
+        <div class="input-group">
+          <input type="text" id="chat-input" class="form-control" placeholder="Type your message here..." autocomplete="off" required>
+          <button class="btn btn-primary" type="submit">Send</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Global state variables
+      let selectedProvider = null;
+      let selectedCategory = null;
+      let selectedAction = null;
+      let conversationState = "selectModel"; // states: selectModel, selectCategory, selectAction, normalChat, multiStepAction
+      let multiStepAction = null;
+      let multiStepStep = 0;
+      let multiStepAnswers = {};
+
+      // Data from Flask
+      const actions = {{ actions|tojson }};
+      const promptPrefixes = {{ prompt_prefixes|tojson }};
+      // Grouping of actions into categories
+      const menuCategories = {
+        "Clinical Data": ["synonym", "diagnostic_workup", "drug_of_choice", "differential_diagnosis", "line_of_treatment", "prognosis"],
+        "Disease Symptoms": ["describe_clinical_signs", "symptoms", "reverse_symptom_lookup"],
+        "Pharma": ["calculate_dose_rate", "indication", "contraindication", "mechanism_of_action", "metabolism_and_elimination", "products"]
+      };
+
+      const conversation = document.getElementById('conversation');
+      const chatForm = document.getElementById('chat-form');
+      const chatInput = document.getElementById('chat-input');
+
+      // Append a chat bubble message
+      function appendMessage(sender, text, matches = null) {
+        const messageDiv = document.createElement('div');
+        messageDiv.classList.add('message', sender);
+        const bubbleDiv = document.createElement('div');
+        bubbleDiv.classList.add('bubble');
+
+        const mainText = document.createElement('span');
+        mainText.innerText = text;
+        bubbleDiv.appendChild(mainText);
+
+        // For bot messages with matches, add a Reference hyperlink
+        if (sender === 'bot' && matches) {
+          const refLink = document.createElement('a');
+          refLink.href = "#";
+          refLink.innerText = " Reference";
+          refLink.classList.add("reference-link");
+          bubbleDiv.appendChild(refLink);
+
+          const hiddenDiv = document.createElement('div');
+          hiddenDiv.classList.add("hidden-reference");
+          hiddenDiv.innerText = matches;
+          bubbleDiv.appendChild(hiddenDiv);
+
+          refLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            hiddenDiv.style.display = hiddenDiv.style.display === "block" ? "none" : "block";
+          });
+        }
+
+        messageDiv.appendChild(bubbleDiv);
+        conversation.appendChild(messageDiv);
+        conversation.scrollTop = conversation.scrollHeight;
+      }
+
+      // Append a set of option buttons inside a bubble and register a callback
+      function appendOptions(options, callback) {
+        const container = document.createElement('div');
+        container.classList.add('options-container');
+        options.forEach(option => {
+          const btn = document.createElement('button');
+          btn.type = "button";
+          btn.classList.add('btn', 'btn-outline-secondary');
+          // Option can be a simple string or an object with label/value
+          const label = (typeof option === 'object') ? option.label : option;
+          btn.innerText = label;
+          btn.addEventListener('click', () => {
+              callback((typeof option === 'object') ? option.value : option);
+              container.remove();
+          });
+          container.appendChild(btn);
+        });
+        // Append container as a new bot bubble
+        const messageDiv = document.createElement('div');
+        messageDiv.classList.add('message', 'bot');
+        const bubbleDiv = document.createElement('div');
+        bubbleDiv.classList.add('bubble');
+        bubbleDiv.appendChild(container);
+        messageDiv.appendChild(bubbleDiv);
+        conversation.appendChild(messageDiv);
+        conversation.scrollTop = conversation.scrollHeight;
+      }
+
+      // Start conversation: ask to select the LLM model
+      function startConversation() {
+        appendMessage('bot', 'Welcome to VetLLM Chat. Please select an LLM model:');
+        appendOptions(["Ollama", "Gemini"], function(selected) {
+          selectedProvider = selected;
+          appendMessage('bot', 'Model selected: ' + selectedProvider);
+          conversationState = "selectCategory";
+          showCategoryOptions();
+        });
+      }
+
+      // Show the three menu categories as options
+      function showCategoryOptions() {
+        appendMessage('bot', 'Please select a category:');
+        const categories = Object.keys(menuCategories);
+        appendOptions(categories, function(selected) {
+          selectedCategory = selected;
+          appendMessage('bot', 'Category selected: ' + selectedCategory);
+          conversationState = "selectAction";
+          showActionOptions(selectedCategory);
+        });
+      }
+
+      // Show the actions available in the chosen category
+      function showActionOptions(category) {
+        appendMessage('bot', 'Please select an action:');
+        const actionKeys = menuCategories[category];
+        const options = actionKeys.map(key => ({ label: actions[key].display, value: key }));
+        appendOptions(options, function(selected) {
+          selectedAction = selected;
+          appendMessage('bot', 'Action selected: ' + actions[selectedAction].display);
+          // For "Calculate Dose Rate" start multi-step process; for others, prefill input
+          if(selectedAction === 'calculate_dose_rate'){
+            conversationState = "multiStepAction";
+            multiStepAction = 'calculate_dose_rate';
+            multiStepStep = 1;
+            multiStepAnswers = {};
+            appendMessage('bot', 'Please enter the drug name:');
+          } else {
+            conversationState = "normalChat";
+            chatInput.value = promptPrefixes[selectedAction] || '';
+            chatInput.focus();
+          }
+        });
+      }
+
+      // Send the chat request to the backend API
+      async function sendChatRequest(message) {
+        try {
+          const response = await fetch('/chat', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ message: message, provider: selectedProvider })
+          });
+          const data = await response.json();
+          if(data.error) {
+            appendMessage('bot', 'Error: ' + data.error);
+          } else {
+            appendMessage('bot', data.response, data.matches);
+          }
+        } catch(error) {
+          appendMessage('bot', 'Error: ' + error.message);
+        }
+      }
+
+      // Chat form submission handler
+      chatForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const message = chatInput.value.trim();
+        if(!message) return;
+        appendMessage('user', message);
+        chatInput.value = '';
+
+        // If in a multi-step process for Calculate Dose Rate
+        if(conversationState === "multiStepAction" && multiStepAction === 'calculate_dose_rate'){
+          if(multiStepStep === 1){
+            multiStepAnswers.drugname = message;
+            multiStepStep = 2;
+            appendMessage('bot', 'Please enter the species:');
+          } else if(multiStepStep === 2){
+            multiStepAnswers.species = message;
+            multiStepStep = 3;
+            appendMessage('bot', 'Please enter the body weight:');
+          } else if(multiStepStep === 3){
+            multiStepAnswers.bodyweight = message;
+            let prompt = promptPrefixes['calculate_dose_rate']
+                          .replace('{ingredient}', multiStepAnswers.drugname)
+                          .replace('{weight}', multiStepAnswers.bodyweight)
+                          .replace('{species}', multiStepAnswers.species);
+            // Reset multi-step state
+            conversationState = "normalChat";
+            multiStepAction = null;
+            multiStepStep = 0;
+            multiStepAnswers = {};
+            sendChatRequest(prompt);
+          }
+          return;
+        }
+        // For normal messages, send immediately.
+        sendChatRequest(message);
+      });
+
+      // Start the conversation when the page loads
+      startConversation();
+    </script>
+  </body>
+</html>

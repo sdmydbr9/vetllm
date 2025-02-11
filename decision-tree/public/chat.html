@@ -1,0 +1,799 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta charset="utf-8">
+   
+    <title>VetLLM Chat</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+    <!-- Additional CSS for typeahead -->
+    <style>
+      .typeahead-container {
+        position: absolute;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        width: 100%;
+        max-height: 150px;
+        overflow-y: auto;
+        z-index: 1001;
+      }
+      .typeahead-suggestion {
+        padding: 8px;
+        cursor: pointer;
+      }
+      .typeahead-suggestion:hover {
+        background-color: #f0f0f0;
+      }
+      /* Ensure the typeahead container appears below the input */
+      .chat-input-area {
+        position: relative;
+      }
+      /* Quick Start Container styling */
+      .quick-start-container {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 10px;
+        background-color: #f9f9f9;
+        margin-bottom: 10px;
+        font-family: 'Arial', sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Landing Page (only visible on large devices) -->
+    <div id="landing-page" class="landing-page">
+      <h1>Welcome to VetLLM</h1>
+    </div>
+
+    <!-- Chat Window -->
+    <div id="chat-window" class="chat-window">
+      <div class="chat-header">
+        <span class="chat-title">
+          <i class="bi bi-chat-dots-fill"></i> VetLLM Chat
+        </span>
+        <div class="chat-header-buttons">
+          <!-- Refresh Button -->
+          <button id="refresh-chat" class="btn btn-sm btn-outline-info" title="Refresh Chat">
+            <i class="bi bi-arrow-clockwise"></i>
+          </button>
+          <button id="toggle-fullscreen" class="btn btn-sm btn-secondary" title="Full Screen">
+            <i class="bi bi-arrows-fullscreen"></i>
+          </button>
+          <button id="close-chat" class="btn btn-sm btn-danger" title="Close Chat">
+            <i class="bi bi-x"></i>
+          </button>
+        </div>
+      </div>
+      <!-- Chat Body -->
+      <div id="conversation" class="chat-body">
+        <!-- When no menus are selected, a quick start prompt is prepended here via JS -->
+      </div>
+      <!-- Chat Input Area -->
+      <div class="chat-input-area">
+        <form id="chat-form">
+          <div class="input-group">
+            <input type="text" id="chat-input" class="form-control" placeholder="Type your message here..." autocomplete="off" required>
+            <button class="btn btn-primary" type="submit">
+              <i class="bi bi-send-fill"></i>
+            </button>
+          </div>
+        </form>
+        <!-- Disclaimer so the input isn’t flush at the very bottom -->
+        <p class="disclaimer text-muted small mt-2">
+          Responses may display inaccurate or offensive information that doesn't represent VetLLM's views. 
+          <a href="https://chat.clinicpaws.com/api/doc" target="_blank">Additional details</a>.
+        </p>
+        <!-- The typeahead containers will be created dynamically inside .chat-input-area -->
+      </div>
+    </div>
+
+    <!-- Chat Icon Button (Floating Messenger-style button) -->
+    <button id="chat-icon" class="chat-icon" title="Open Chat">
+      <i class="bi bi-chat-dots-fill"></i>
+    </button>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      /* ===============================
+         Load Configuration from config.json
+      =============================== */
+      // Set a default value (in case config.json fails to load)
+      let config = { apiBaseUrl: "https://chat.clinicpaws.com/api" };
+
+      fetch("config.json")
+        .then(response => response.json())
+        .then(data => {
+          config = data;
+          console.log("Loaded config:", config);
+        })
+        .catch(error => {
+          console.error("Error loading config.json:", error);
+        });
+
+      /* ============================
+         Chat Functionality Code
+      ============================ */
+
+      // Global state variables
+      let selectedProvider = null;
+      let selectedCategory = null;
+      let selectedAction = null;
+      let conversationState = "selectCategory"; // states: selectCategory, selectAction, normalChat, multiStepAction
+      let currentMenuState = "category"; // values: category, action
+      let multiStepAction = null;
+      let multiStepStep = 0;
+      let multiStepAnswers = {};
+
+      // Global variables for typeahead data
+      let pharmaIngredients = [];
+      let diseaseNames = [];
+
+      // Hardcoded actions and prompts
+      const actionsInfo = {
+        "synonym": { "display": "Synonym" },
+        "diagnostic_workup": { "display": "Diagnostic Workup" },
+        "drug_of_choice": { "display": "Drug of Choice" },
+        "differential_diagnosis": { "display": "Differential Diagnosis" },
+        "line_of_treatment": { "display": "Line of Treatment" },
+        "prognosis": { "display": "Prognosis" },
+        "describe_clinical_signs": { "display": "Describe Clinical Signs and Symptoms" },
+        "symptoms": { "display": "Symptoms" },
+        "reverse_symptom_lookup": { "display": "Reverse Symptom Lookup" },
+        "calculate_dose_rate": { "display": "Calculate Dose Rate" },
+        "indication": { "display": "Indication" },
+        "contraindication": { "display": "Contraindication" },
+        "mechanism_of_action": { "display": "Mechanism of Action" },
+        "metabolism_and_elimination": { "display": "Metabolism and Elimination" },
+        "products": { "display": "Products" }
+      };
+
+      const promptInfo = {
+        "synonym": "Return the disease synonyms for: ",
+        "diagnostic_workup": "Return the diagnostic workup for: ",
+        "drug_of_choice": "what is the drug of choice for: ",
+        "differential_diagnosis": "Return the differential diagnosis for: ",
+        "line_of_treatment": "Return the line of treatment for: ",
+        "prognosis": "Return the prognosis for: ",
+        "describe_clinical_signs": "Describe the clinical signs and symptoms for: ",
+        "symptoms": "Return the list of matched diseases for the symptoms: ",
+        "reverse_symptom_lookup": "Return the clinical signs and symptoms for disease: ",
+        "calculate_dose_rate": "calculate the dose rate of {ingredient} in a {weight} {unit} {species}.",
+        "indication": "Return the indications for the drug: ",
+        "contraindication": "Return the contraindications for the drug: ",
+        "mechanism_of_action": "Return the mechanism of action for the drug {drug}",
+        "metabolism_and_elimination": "Return the metabolism and elimination details for the drug: ",
+        "products": "Return the products for the drug: "
+      };
+
+      const menuCategories = {
+        "Clinical Data": ["synonym", "diagnostic_workup", "drug_of_choice", "differential_diagnosis", "line_of_treatment", "prognosis"],
+        "Disease Symptoms": ["describe_clinical_signs", "symptoms", "reverse_symptom_lookup"],
+        "Pharma": ["calculate_dose_rate", "indication", "contraindication", "mechanism_of_action", "metabolism_and_elimination", "products"]
+      };
+
+      // DOM references
+      const conversation = document.getElementById('conversation');
+      const chatForm = document.getElementById('chat-form');
+      const chatInput = document.getElementById('chat-input');
+      const chatIcon = document.getElementById('chat-icon');
+      const chatWindow = document.getElementById('chat-window');
+      const landingPage = document.getElementById('landing-page');
+      const closeChatBtn = document.getElementById('close-chat');
+      const toggleFullScreenBtn = document.getElementById('toggle-fullscreen');
+
+      /**
+       * Recursively format a value (object, array, or primitive) into HTML.
+       */
+      function formatValue(value) {
+        if (Array.isArray(value)) {
+          let html = "<ol start='1'>";
+          for (let i = 0; i < value.length; i++) {
+            html += "<li>" + formatValue(value[i]) + "</li>";
+          }
+          html += "</ol>";
+          return html;
+        } else if (value !== null && typeof value === 'object') {
+          let html = "<ul>";
+          for (const key in value) {
+            html += "<li><strong>" + key + ":</strong> " + formatValue(value[key]) + "</li>";
+          }
+          html += "</ul>";
+          return html;
+        } else {
+          return value;
+        }
+      }
+
+      /**
+       * Format the response text into nicely aligned HTML.
+       */
+      function formatResponseText(responseText) {
+        try {
+          const obj = JSON.parse(responseText);
+          let html = "";
+          if (Array.isArray(obj)) {
+            html += "<ol start='1'>";
+            obj.forEach(item => {
+              html += "<li>" + formatValue(item) + "</li>";
+            });
+            html += "</ol>";
+          } else {
+            for (const key in obj) {
+              const title = key.replace(/_/g, " ");
+              html += "<p><strong>" + title.charAt(0).toUpperCase() + title.slice(1) + ":</strong></p>";
+              html += formatValue(obj[key]);
+            }
+          }
+          return html;
+        } catch (e) {
+          return "<p>" + responseText + "</p>";
+        }
+      }
+
+      /**
+       * Append a chat bubble to the conversation.
+       */
+      function appendMessage(sender, text, matches = null, isHTML = false) {
+        const messageDiv = document.createElement('div');
+        messageDiv.classList.add('message', sender);
+        const bubbleDiv = document.createElement('div');
+        bubbleDiv.classList.add('bubble', 'fade-in');
+        const contentSpan = document.createElement('span');
+        contentSpan[isHTML ? "innerHTML" : "innerText"] = text;
+        bubbleDiv.appendChild(contentSpan);
+
+        if (sender === 'bot' && matches) {
+          const refLink = document.createElement('a');
+          refLink.href = "#";
+          refLink.innerText = " Reference";
+          refLink.classList.add("reference-link");
+          bubbleDiv.appendChild(refLink);
+
+          const hiddenDiv = document.createElement('div');
+          hiddenDiv.classList.add("hidden-reference");
+          hiddenDiv.innerText = matches;
+          bubbleDiv.appendChild(hiddenDiv);
+
+          refLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            hiddenDiv.style.display = hiddenDiv.style.display === "block" ? "none" : "block";
+          });
+        }
+
+        messageDiv.appendChild(bubbleDiv);
+        conversation.appendChild(messageDiv);
+        conversation.scrollTop = conversation.scrollHeight;
+      }
+
+      /**
+       * Append options (buttons) with a Back button.
+       */
+      function appendOptionsWithBack(options, callback, backCallback) {
+        const container = document.createElement('div');
+        container.classList.add('options-container');
+        options.forEach(option => {
+          const btn = document.createElement('button');
+          btn.type = "button";
+          btn.classList.add('btn', 'btn-outline-secondary');
+          const label = (typeof option === 'object') ? option.label : option;
+          btn.innerText = label;
+          btn.addEventListener('click', () => {
+            callback((typeof option === 'object') ? option.value : option);
+            container.remove();
+          });
+          container.appendChild(btn);
+        });
+        const backBtn = document.createElement('button');
+        backBtn.type = "button";
+        backBtn.classList.add('btn', 'btn-secondary');
+        backBtn.innerText = "Back";
+        backBtn.style.marginTop = "10px";
+        backBtn.addEventListener('click', () => {
+          if (backCallback) {
+            backCallback();
+          }
+          container.remove();
+        });
+        container.appendChild(backBtn);
+
+        const messageDiv = document.createElement('div');
+        messageDiv.classList.add('message', 'bot');
+        const bubbleDiv = document.createElement('div');
+        bubbleDiv.classList.add('bubble', 'fade-in');
+        bubbleDiv.appendChild(container);
+        messageDiv.appendChild(bubbleDiv);
+        conversation.appendChild(messageDiv);
+        conversation.scrollTop = conversation.scrollHeight;
+      }
+
+      /**
+       * Create and append a loading message with a three-dot animation.
+       */
+      function showLoadingMessage() {
+        const messageDiv = document.createElement('div');
+        messageDiv.classList.add('message', 'bot');
+        const bubbleDiv = document.createElement('div');
+        bubbleDiv.classList.add('bubble', 'loading-bubble');
+        for (let i = 0; i < 3; i++) {
+          const dot = document.createElement('span');
+          dot.classList.add('loading-dot');
+          bubbleDiv.appendChild(dot);
+        }
+        messageDiv.appendChild(bubbleDiv);
+        conversation.appendChild(messageDiv);
+        conversation.scrollTop = conversation.scrollHeight;
+        return messageDiv;
+      }
+
+      // ===============================
+      // DYNAMIC PHARMA & DISEASE TYPE-AHEAD CODE
+      // ===============================
+
+      // Fetch the full list of pharma ingredients using the base URL from config.
+      async function fetchPharmaIngredients() {
+        try {
+          const response = await fetch(`${config.apiBaseUrl}/pharma/ingredient`);
+          const data = await response.json();
+          console.log("Fetched pharma data:", data);
+          pharmaIngredients = data.ingredients || [];
+        } catch (error) {
+          console.error("Error fetching pharma ingredients:", error);
+        }
+      }
+
+      // Fetch the list of disease names.
+      async function fetchDiseaseNames() {
+        try {
+          const response = await fetch(`${config.apiBaseUrl}/diseases`);
+          const data = await response.json();
+          console.log("Fetched disease data:", data);
+          diseaseNames = data.diseases || [];
+        } catch (error) {
+          console.error("Error fetching disease names:", error);
+        }
+      }
+
+      // Show typeahead suggestions for pharma ingredients.
+      function showTypeAheadSuggestions(query) {
+        if (!query) {
+          hideTypeAheadSuggestions();
+          return;
+        }
+        // Filter ingredients based on query (case-insensitive).
+        const matches = pharmaIngredients.filter(ing =>
+          ing.toLowerCase().includes(query.toLowerCase())
+        );
+        console.log('Pharma Query:', query, 'Matches:', matches);
+        let container = document.getElementById("typeahead-container");
+        if (!container) {
+          container = document.createElement("div");
+          container.id = "typeahead-container";
+          container.classList.add("typeahead-container");
+          // Append container inside the chat-input-area so it positions relative to the input.
+          const chatInputArea = document.querySelector('.chat-input-area');
+          chatInputArea.appendChild(container);
+        }
+        container.innerHTML = "";
+        matches.forEach(match => {
+          const suggestion = document.createElement("div");
+          suggestion.classList.add("typeahead-suggestion");
+          suggestion.innerText = match;
+          suggestion.addEventListener("click", () => {
+            chatInput.value = match;
+            hideTypeAheadSuggestions();
+          });
+          container.appendChild(suggestion);
+        });
+        container.style.display = matches.length ? "block" : "none";
+      }
+
+      function hideTypeAheadSuggestions() {
+        const container = document.getElementById("typeahead-container");
+        if (container) {
+          container.innerHTML = "";
+          container.style.display = "none";
+        }
+      }
+
+      // Show typeahead suggestions for disease names with duplicates removed.
+      function showDiseaseSuggestions(query) {
+        if (!query) {
+          hideDiseaseSuggestions();
+          return;
+        }
+        // Filter diseases based on query (case-insensitive).
+        let matches = diseaseNames.filter(disease =>
+          disease.toLowerCase().includes(query.toLowerCase())
+        );
+        // Remove duplicate suggestions.
+        matches = Array.from(new Set(matches));
+        console.log('Disease Query:', query, 'Unique Matches:', matches);
+        let container = document.getElementById("disease-typeahead-container");
+        if (!container) {
+          container = document.createElement("div");
+          container.id = "disease-typeahead-container";
+          container.classList.add("typeahead-container");
+          const chatInputArea = document.querySelector('.chat-input-area');
+          chatInputArea.appendChild(container);
+        }
+        container.innerHTML = "";
+        matches.forEach(match => {
+          const suggestion = document.createElement("div");
+          suggestion.classList.add("typeahead-suggestion");
+          suggestion.innerText = match;
+          suggestion.addEventListener("click", () => {
+            chatInput.value = match;
+            hideDiseaseSuggestions();
+          });
+          container.appendChild(suggestion);
+        });
+        container.style.display = matches.length ? "block" : "none";
+      }
+
+      function hideDiseaseSuggestions() {
+        const container = document.getElementById("disease-typeahead-container");
+        if (container) {
+          container.innerHTML = "";
+          container.style.display = "none";
+        }
+      }
+
+      // Attach an input event listener for the typeahead functionality.
+      chatInput.addEventListener("input", function(e) {
+        // For Pharma multi-step (drug name entry)
+        if (conversationState === "multiStepAction" &&
+            selectedCategory === "Pharma" &&
+            multiStepStep === 1) {
+          showTypeAheadSuggestions(chatInput.value);
+        }
+        // For Clinical Data actions, show disease suggestions
+        else if (selectedCategory === "Clinical Data" && conversationState === "normalChat") {
+          showDiseaseSuggestions(chatInput.value);
+        }
+      });
+
+      // Hide both suggestions on blur.
+      chatInput.addEventListener("blur", function(e) {
+        setTimeout(() => {
+          hideTypeAheadSuggestions();
+          hideDiseaseSuggestions();
+        }, 200);
+      });
+
+      // ===============================
+      // CONVERSATION FLOW FUNCTIONS
+      // ===============================
+
+      // Since we removed model selection, set provider to "Gemini" by default.
+      function startConversation() {
+        selectedProvider = "Gemini";
+        appendMessage('bot', 'Welcome to VetLLM Chat. Model selected: Gemini');
+        conversationState = "selectCategory";
+        currentMenuState = "category";
+        
+        // Append the quick start prompt message at the top of the conversation.
+        const quickStartContainer = document.createElement('div');
+        quickStartContainer.classList.add('quick-start-container');
+        quickStartContainer.innerHTML = `
+          <p class="mb-0" style="font-style: italic;">Not sure what to ask? Click below for suggestions!</p>
+          <button id="quick-start-btn" class="btn btn-info btn-sm mt-2">
+            <i class="bi bi-lightbulb"></i> Show Quick Start Prompts
+          </button>
+        `;
+        const messageDiv = document.createElement('div');
+        messageDiv.classList.add('message', 'bot');
+        const bubbleDiv = document.createElement('div');
+        bubbleDiv.classList.add('bubble', 'fade-in');
+        bubbleDiv.appendChild(quickStartContainer);
+        messageDiv.appendChild(bubbleDiv);
+        // Prepend the quick start message so that it appears at the top.
+        conversation.insertBefore(messageDiv, conversation.firstChild);
+        
+        // When the button is clicked, show the category options.
+        document.getElementById('quick-start-btn').addEventListener('click', () => {
+          quickStartContainer.remove();
+          showCategoryOptions();
+        });
+      }
+
+      function showCategoryOptions() {
+        appendMessage('bot', 'Please select a category:');
+        const categories = Object.keys(menuCategories);
+        appendOptionsWithBack(categories, function(selected) {
+          selectedCategory = selected;
+          appendMessage('bot', 'Category selected: ' + selectedCategory);
+          conversationState = "selectAction";
+          currentMenuState = "action";
+          showActionOptions();
+        }, function() {
+          currentMenuState = "category";
+          startConversation();
+        });
+      }
+
+      function showActionOptions() {
+        appendMessage('bot', 'Please select an action:');
+        const actionKeys = menuCategories[selectedCategory];
+        const options = actionKeys.map(key => ({ label: actionsInfo[key].display, value: key }));
+        appendOptionsWithBack(options, async function(selected) {
+          selectedAction = selected;
+          appendMessage('bot', 'Action selected: ' + actionsInfo[selectedAction].display);
+          // If the selected category is Pharma, trigger the multi-step flow with drug name entry
+          if (selectedCategory === "Pharma") {
+            conversationState = "multiStepAction";
+            multiStepAction = selectedAction;
+            multiStepStep = 1;
+            multiStepAnswers = {};
+            if (!pharmaIngredients.length) {
+              await fetchPharmaIngredients();
+            }
+            hideTypeAheadSuggestions();
+            appendMessage('bot', 'Please enter the drug name (select from suggestions):');
+          }
+          // For Clinical Data, clear the input and use the prompt as placeholder (so suggestions are visible)
+          else if (selectedCategory === "Clinical Data") {
+            conversationState = "normalChat";
+            chatInput.placeholder = promptInfo[selectedAction] || '';
+            chatInput.value = '';
+            chatInput.focus();
+          }
+          // For other categories (e.g. Disease Symptoms) use the default behavior.
+          else {
+            conversationState = "normalChat";
+            chatInput.value = promptInfo[selectedAction] || '';
+            chatInput.focus();
+          }
+        }, function() {
+          currentMenuState = "category";
+          showCategoryOptions();
+        });
+      }
+
+      function showMenuForCurrentState() {
+        if (currentMenuState === "action") {
+          showActionOptions();
+        } else if (currentMenuState === "category") {
+          showCategoryOptions();
+        }
+      }
+
+      /**
+       * Helper function to compute the proper endpoint URL based on the selected category and action.
+       */
+      function getEndpointURL() {
+        let categoryKey = '';
+        if (selectedCategory === "Clinical Data") {
+          categoryKey = "clinical";
+        } else if (selectedCategory === "Disease Symptoms") {
+          categoryKey = "disease";
+        } else if (selectedCategory === "Pharma") {
+          categoryKey = "pharma";
+        }
+        if (categoryKey && selectedAction) {
+          return `${config.apiBaseUrl}/${categoryKey}/${selectedAction}`;
+        }
+        return `${config.apiBaseUrl}/chat`;
+      }
+
+      // Send query to backend API.
+      async function sendChatRequest(message) {
+  const loadingMessage = showLoadingMessage();
+  try {
+    const endpointURL = getEndpointURL();
+    const response = await fetch(endpointURL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ query: message, provider: selectedProvider, endpoint: selectedAction })
+    });
+    const data = await response.json();
+    console.log("API Response:", data); // Logs the API response
+
+    conversation.removeChild(loadingMessage);
+    
+    if (data.error) {
+      appendMessage('bot', 'Error: ' + data.error);
+    } else {
+      const formattedResponse = formatResponseText(data.response);
+      // Use data.reference since that's what your API returns
+      appendMessage('bot', formattedResponse, data.reference, true);
+    }
+    showMenuForCurrentState();
+  } catch (error) {
+    conversation.removeChild(loadingMessage);
+    appendMessage('bot', 'Error: ' + error.message);
+  }
+}
+
+
+      // Chat form submission handler.
+      chatForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const message = chatInput.value.trim();
+        if (!message) return;
+        appendMessage('user', message);
+        chatInput.value = '';
+        hideTypeAheadSuggestions();
+        hideDiseaseSuggestions();
+
+        // Multi-step flow for Pharma actions
+        if (conversationState === "multiStepAction") {
+          // Step 1: Drug name entry.
+          if (multiStepStep === 1) {
+            if (!pharmaIngredients.includes(message)) {
+              appendMessage('bot', 'Please select a valid drug name from the suggestions.');
+              return;
+            }
+            multiStepAnswers.drugname = message;
+            // For "Calculate Dose Rate", go to species selection.
+            if (multiStepAction === "calculate_dose_rate") {
+              multiStepStep = 2;
+              const speciesList = await fetchSpeciesForIngredient(multiStepAnswers.drugname);
+              if (speciesList.length === 0) {
+                appendMessage('bot', 'No species found for the selected ingredient. Please try another.');
+                multiStepStep = 1;
+                return;
+              }
+              appendOptionsWithBack(speciesList, function(selectedSpecies) {
+                multiStepAnswers.species = selectedSpecies;
+                multiStepStep = 3;
+                appendMessage('bot', 'Please enter the body weight (in kg):');
+                chatInput.type = 'number';
+                chatInput.placeholder = 'Enter weight in kg';
+                chatInput.value = '';
+              }, function() {
+                multiStepStep = 1;
+                appendMessage('bot', 'Please re-enter the drug name (select from suggestions):');
+              });
+            }
+            // For all other Pharma actions, simply build the prompt using the drug name.
+            else {
+              let prompt = promptInfo[multiStepAction];
+              if (prompt.includes('{drug}')) {
+                prompt = prompt.replace('{drug}', multiStepAnswers.drugname);
+              } else {
+                prompt += multiStepAnswers.drugname;
+              }
+              conversationState = "normalChat";
+              multiStepAction = null;
+              multiStepStep = 0;
+              multiStepAnswers = {};
+              await sendChatRequest(prompt);
+            }
+            return;
+          }
+          // Step 3 for "Calculate Dose Rate": Get body weight and then prompt for unit.
+          else if (multiStepAction === "calculate_dose_rate" && multiStepStep === 3) {
+            if (isNaN(message) || message.trim() === '') {
+              appendMessage('bot', 'Please enter a valid number for weight.');
+              return;
+            }
+            multiStepAnswers.bodyweight = message;
+            multiStepStep = 4;
+            appendOptionsWithBack(["Kilogram", "Gram"], function(selectedUnit) {
+              multiStepAnswers.unit = selectedUnit;
+	      const unitFormatted = selectedUnit.toLowerCase() === 'kilogram' ? 'kg' : (selectedUnit.toLowerCase() === 'gram' ? 'g' : selectedUnit.toLowerCase());
+              const prompt = promptInfo['calculate_dose_rate']
+                              .replace('{ingredient}', multiStepAnswers.drugname)
+                              .replace('{weight}', multiStepAnswers.bodyweight)
+                              .replace('{unit}', unitFormatted)
+                              .replace('{species}', multiStepAnswers.species);
+              conversationState = "normalChat";
+              multiStepAction = null;
+              multiStepStep = 0;
+              multiStepAnswers = {};
+              chatInput.type = 'text';
+              chatInput.placeholder = 'Type your message here...';
+              sendChatRequest(prompt);
+            }, function() {
+              multiStepStep = 3;
+              appendMessage('bot', 'Please re-enter the body weight (in kg):');
+            });
+            return;
+          }
+        }
+
+        // For normal messages:
+        await sendChatRequest(message);
+      });
+
+      // Fetch species for a given ingredient.
+      async function fetchSpeciesForIngredient(ingredient) {
+        try {
+          const encodedIngredient = encodeURIComponent(ingredient);
+          const response = await fetch(`${config.apiBaseUrl}/pharma/${encodedIngredient}/species`);
+          const data = await response.json();
+          return data.species;
+        } catch (error) {
+          console.error("Error fetching species for ingredient:", error);
+          return [];
+        }
+      }
+
+      // Start conversation on page load.
+      document.addEventListener('DOMContentLoaded', () => {
+        if (window.innerWidth <= 768) {
+          landingPage.style.display = 'none';
+        }
+        startConversation();
+        // Fetch disease names for Clinical Data suggestions.
+        fetchDiseaseNames();
+      });
+
+      /* ===============================
+         Chat Window & Icon Toggle
+      =============================== */
+      chatIcon.addEventListener('mouseover', () => {
+        chatIcon.style.animation = 'bounce 0.6s';
+      });
+      chatIcon.addEventListener('animationend', () => {
+        chatIcon.style.animation = '';
+      });
+
+      chatIcon.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          chatWindow.style.display = 'flex';
+          chatWindow.classList.add('mobile-slide-in');
+          chatIcon.style.display = 'none';
+        } else {
+          landingPage.style.display = 'none';
+          chatWindow.style.display = 'flex';
+          chatIcon.style.display = 'none';
+        }
+      });
+
+      closeChatBtn.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          chatWindow.classList.remove('mobile-slide-in');
+          chatWindow.classList.add('mobile-slide-out');
+          chatWindow.addEventListener('animationend', () => {
+            chatWindow.style.display = 'none';
+            chatWindow.classList.remove('mobile-slide-out');
+            chatIcon.style.display = 'block';
+          }, { once: true });
+        } else {
+          chatWindow.style.display = 'none';
+          chatIcon.style.display = 'block';
+        }
+      });
+
+      let isFullScreen = false;
+      toggleFullScreenBtn.addEventListener('click', () => {
+        isFullScreen = !isFullScreen;
+        chatWindow.classList.toggle('fullscreen', isFullScreen);
+        const icon = toggleFullScreenBtn.querySelector('i');
+        if (isFullScreen) {
+          icon.classList.remove('bi-arrows-fullscreen');
+          icon.classList.add('bi-fullscreen-exit');
+        } else {
+          icon.classList.remove('bi-fullscreen-exit');
+          icon.classList.add('bi-arrows-fullscreen');
+        }
+      });
+
+      // Refresh button functionality: clear only the chat area
+document.getElementById('refresh-chat').addEventListener('click', () => {
+  // Clear the conversation area
+  conversation.innerHTML = '';
+
+  // Reset state variables to their defaults
+  selectedCategory = null;
+  selectedAction = null;
+  conversationState = "selectCategory";
+  currentMenuState = "category";
+  multiStepAction = null;
+  multiStepStep = 0;
+  multiStepAnswers = {};
+
+  // Restart the conversation (this will re-add the quick start prompt)
+  startConversation();
+});
+
+    </script>
+  </body>
+</html>
